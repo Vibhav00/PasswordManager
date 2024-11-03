@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <resources>
+        <string name="app_name">পাসওয়ার্ড ম্যানেজার</string>
+        <string name="hello_world">হ্যালো ওয়ার্ল্ড!</string>
+        <string name="open_drawer">ড্রয়ার খুলুন</string>
+        <string name="close_drawer">ড্রয়ার বন্ধ করুন</string>
+        <string name="hello_blank_fragment">হ্যালো ব্ল্যাঙ্ক ফ্র্যাগমেন্ট</string>
+        <string name="passkey_strength">পাসকি শক্তি</string>
+        <string name="encryption_key_strength">এনক্রিপশন কী শক্তি</string>
+        <string name="save_database">ডাটাবেস সংরক্ষণ করুন</string>
+        <string name="restore_database">ডাটাবেস পুনরুদ্ধার করুন</string>
+        <string name="export_csv">সিএসভি রপ্তানি করুন</string>
+        <string name="print_pdf">পিডিএফ প্রিন্ট করুন</string>
+        <string name="language">ভাষা</string>
+        <string name="theme">থিম</string>
+        <string name="passkey">পাসকি</string>
+        <string name="contact_me">আমার সাথে যোগাযোগ করুন</string>
+        <string name="rate_us_in_play_store">প্লে স্টোরে আমাদের রেট করুন</string>
+        <string name="my_apps">আমার অ্যাপগুলি</string>
+        <string name="import_export">আমদানি/রপ্তানি</string>
+        <string name="general">সাধারণ</string>
+        <string name="about_devloper">বিকাশকারীর সম্পর্কে</string>
+        <string name="title">শিরোনাম</string>
+        <string name="username">ব্যবহারকারীর নাম</string>
+        <string name="password">পাসওয়ার্ড</string>
+        <string name="details">বিস্তারিত</string>
+        <string name="website">ওয়েবসাইট</string>
+        <string name="copy_pass">পাসওয়ার্ড কপি করুন</string>
+        <string name="like">পছন্দ</string>
+        <string name="delete">মুছে ফেলুন</string>
+        <string name="all">সব</string>
+        <string name="liked">পছন্দ হয়েছে</string>
+        <string name="recent">সাম্প্রতিক</string>
+        <string name="enteryourpin">আপনার পিন প্রবেশ করান</string>
+        <string name="enternewpin">নতুন পিন প্রবেশ করান</string>
+        <string name="wrongpin">ভুল পিন</string>
+        <string name="pinsetsuccessfully">পিন সফলভাবে সেট করা হয়েছে</string>
+        <string name="confirmationpiniswrong">নিশ্চিতকরণের পিনটি ভুল</string>
+        <string name="pindeactivated">পিন নিষ্ক্রিয় করা হয়েছে</string>
+        <string name="pinisnotdeactivated">পিন নিষ্ক্রিয় করা হয়নি</string>
+        <string name="pleasesetyournewpin">দয়া করে নতুন পিন সেট করুন</string>
+        <string name="setnewpin">নতুন পিন সেট করুন</string>
+        <string name="enternewpinagain">আবার নতুন পিন প্রবেশ করান</string>
+        <string name="wronganswer">ভুল উত্তর</string>
+        <string name="kindattention">আপনার মনোযোগ প্রয়োজন</string>
+        <string name="notsetanyrecoveryqnandanswer">কোনও পুনরুদ্ধার প্রশ্ন ও উত্তর সেট করা হয়নি</string>
+        <string name="back">ফিরে যান</string>
+        <string name="enteryourrecoveryquestionandanswer">আপনার পুনরুদ্ধার প্রশ্ন ও উত্তর প্রবেশ করান</string>
+        <string name="enteryourrecoveryanswer">পুনরুদ্ধার উত্তর প্রবেশ করান</string>
+        <string name="_0">০</string>
+        <string name="_9">৯</string>
+        <string name="_8">৮</string>
+        <string name="_7">৭</string>
+        <string name="_6">৬</string>
+        <string name="_5">৫</string>
+        <string name="_4">৪</string>
+        <string name="_3">৩</string>
+        <string name="_2">২</string>
+        <string name="_1">১</string>
+    </resources>
+

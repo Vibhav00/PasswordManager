@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="themes">
+        <attr name="myWindowBackground" format="reference" />
+
+        <!--        tab colors -->
+        <attr name="myTabBackgroundColor" format="reference" />
+        <attr name="myTabTextColor" format="reference" />
+        <attr name="myTabTextSelectedColor" format="reference" />
+        <attr name="myTabIndicatorColor" format="reference" />
+
+        <!--        text colors -->
+        <attr name="myPrimaryTextColor" format="reference" />
+        <attr name="mySecondaryTextColor" format="reference" />
+        <!--        my drawables -->
+        <attr name="drawable_btn" format="reference" />
+
+        <attr name="my_icon_front_color" format="reference"/>
+        <attr name="my_icon_back_color" format="reference"/>
+        <attr name="my_ripple_color" format="reference"/>
+        <attr name="my_icon_color" format="reference"/>
+
+<!--        for any pop up drawables -->
+        <attr name="drawable_popup_background" format="reference"/>
+
+
+        <!--        for icon -->
+<!--        <attr name="myIconColor" format="reference" />-->
+<!--        <attr name="myIconColorSecondary" format="reference" />-->
+    </declare-styleable>
+</resources>

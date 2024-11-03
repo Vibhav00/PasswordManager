@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/myTabBackgroundColor"
+            app:tint="?attr/my_icon_color"
+            app:title="">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/app_name"
+                    android:textAlignment="textEnd"
+                    android:textColor="?attr/myPrimaryTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/lock_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_background"
+                    android:contentDescription="TODO"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/baseline_lock_24"
+                    android:visibility="visible"
+                    app:tint="?attr/my_icon_color" />
+
+                <ImageButton
+                    android:id="@+id/search_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_background"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/baseline_search_24"
+                    android:visibility="visible"
+                    app:tint="?attr/my_icon_color" />
+
+                <ImageButton
+                    android:id="@+id/sort_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/icon_background"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/baseline_filter_cutom_24"
+                    android:visibility="visible"
+                    app:tint="?attr/my_icon_color" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/myWindowBackground">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/search_text_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="?attr/myTabBackgroundColor"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:textColorHint="?attr/myPrimaryTextColor"
+                app:boxStrokeColor="?attr/myTabTextColor"
+                app:cursorColor="?attr/myTabIndicatorColor"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconTint="@color/white"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/search_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search"
+                    android:imeOptions="actionSearch"
+                    android:lines="1"
+                    android:text=""
+                    android:textColor="?attr/myPrimaryTextColor"
+                    android:textSize="15sp" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/table_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/title_bar_backgroud"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_text_container"
+                app:tabIndicatorColor="?attr/myTabIndicatorColor"
+                app:tabRippleColor="?attr/myWindowBackground"
+                app:tabSelectedTextColor="?attr/myTabTextSelectedColor"
+                app:tabTextColor="?attr/myTabTextColor">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="72dp" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.tabs.TabLayout>
+
+
+            <androidx.viewpager2.widget.ViewPager2
+
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="?attr/myWindowBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/table_layout" />
+
+
+            <ImageButton
+                android:id="@+id/addnewpassword"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/ripple_effect_btn_green"
+
+                android:contentDescription="TODO"
+                android:scaleType="fitXY"
+                android:src="@drawable/add_icon"
+                android:textColor="?attr/myTabTextColor"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tint="?attr/my_icon_color" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/NavigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?attr/myTabBackgroundColor"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/hamburger_header"
+        app:itemTextColor="?attr/myPrimaryTextColor"
+        app:itemIconTint="?attr/my_icon_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/hamburger_menu_items"
+        app:subheaderColor="?attr/myTabIndicatorColor"
+
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

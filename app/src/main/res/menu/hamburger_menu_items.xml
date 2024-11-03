@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/import_export">
+
+        <menu>
+            <group>
+
+                <item
+                    android:id="@+id/save_database"
+                    android:title="@string/save_database"
+                    android:icon="@drawable/export_database"
+                    />
+
+                <item
+                    android:id="@+id/restore_database"
+                    android:title="@string/restore_database"
+                    android:icon="@drawable/restore_database"/>
+
+
+                <item
+                    android:id="@+id/export_csv"
+                    android:title="@string/export_csv"
+                    android:icon="@drawable/export_svgrepo_com"/>
+                <item
+                    android:id="@+id/print_pdf"
+                    android:title="@string/print_pdf"
+                    android:icon="@drawable/print_svgrepo_com"/>
+
+            </group>
+        </menu>
+
+
+
+    </item>
+
+
+    <item android:title="@string/general">
+        <menu>
+            <item
+                android:id="@+id/language"
+                android:title="@string/language"
+                android:icon="@drawable/language_svgrepo_com"
+                />
+            <item
+                android:id="@+id/theme"
+                android:title="@string/theme"
+                android:icon="@drawable/theme_main"
+                />
+            <item
+                android:id="@+id/passkey"
+                android:title="@string/passkey"
+                android:icon="@drawable/password_lock_solid_svgrepo_com"
+                />
+            <item
+                android:id="@+id/pin"
+                android:title="pin"
+                android:icon="@drawable/baseline_lock_24"
+                />
+            <item
+                android:id="@+id/fingerprint"
+                android:title="Fingerprint"
+                android:icon="@drawable/baseline_lock_24"
+                />
+        </menu>
+    </item>
+
+
+    <item android:title="@string/about_devloper">
+        <menu>
+
+            <item
+                android:id="@+id/contact_me"
+                android:title="@string/contact_me"
+                android:icon="@drawable/profile_round_1342_svgrepo_com"
+                />
+            <item
+                android:id="@+id/rate_us"
+                android:title="@string/rate_us_in_play_store"
+                android:icon="@drawable/star_sharp_svgrepo_com"
+                />
+            <item
+                android:id="@+id/my_apps"
+                android:title="@string/my_apps"
+                android:icon="@drawable/playstore_svgrepo_com"
+                />
+        </menu>
+    </item>
+
+</menu>

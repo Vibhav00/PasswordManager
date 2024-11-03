@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/popup_background_all_corner">
+
+    <TextView
+        android:id="@+id/select_theme_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Username Please  "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3"
+            android:textColorHint="#595550"
+            app:boxStrokeColor="#F47F6B"
+            app:cursorColor="#F47F6B"
+            app:hintEnabled="false"
+            app:hintTextColor="@color/white"
+            app:startIconTint="@color/white"
+
+
+            >
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Username "
+                android:imeOptions="actionSearch"
+                android:lines="1"
+                android:text=""
+                android:textColor="#403B36"
+                android:textSize="15sp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+       >
+
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:background="@drawable/background_btn_green"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="8dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/skip_username_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"/>
+
+</LinearLayout>

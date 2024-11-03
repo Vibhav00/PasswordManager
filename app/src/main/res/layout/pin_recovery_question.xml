@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_margin="5dp"
+    android:padding="5dp">
+
+    <ImageView
+
+
+        android:id="@+id/iv_Pin_recovery_qn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:src="@drawable/baseline_lock_24"
+        app:layout_constraintEnd_toStartOf="@id/tv_pin_recovery_qn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pin_recovery_qn"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="please enter recovery question "
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_Pin_recovery_qn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_Pin_recovery_qn" />
+
+    <ImageView
+        android:id="@+id/iv_pin_recovery_qn_lock"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:src="@drawable/main_logo"
+        app:layout_constraintEnd_toStartOf="@id/et_pin_recovery_qn_lock_o"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_Pin_recovery_qn" />
+
+    <ImageView
+        android:id="@+id/iv_pin_recovery_qn_key"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:padding="20dp"
+        android:src="@drawable/baseline_lock_24"
+        app:layout_constraintEnd_toStartOf="@id/et_pin_recovery_qn_key_o"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pin_recovery_qn_lock" />
+    <!-- <EditText
+
+         android:id="@+id/et_pin_recovery_qn_lock"
+         android:layout_margin="10dp"
+         android:layout_width="250dp"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+        android:hint="enter your question "
+         android:textSize="15dp"
+         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_pin_recovery_qn_lock"
+         app:layout_constraintBottom_toBottomOf="@id/iv_pin_recovery_qn_lock"/>
+         -->
+
+    >
+
+    <EditText
+        android:id="@+id/et_pin_recovery_qn_lock_o"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="enter question "
+        android:inputType="textCapWords"
+        app:layout_constraintBottom_toBottomOf="@id/iv_pin_recovery_qn_lock"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_pin_recovery_qn_lock" />
+
+
+    <!-- <EditText
+         android:hint="enter your answer"
+         android:id="@+id/et_pin_recovery_qn_key"
+         android:layout_margin="10dp"
+         android:layout_width="250dp"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textSize="15dp"
+         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_pin_recovery_qn_key"
+         app:layout_constraintBottom_toBottomOf="@id/iv_pin_recovery_qn_key"/>-->
+
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_pin_recovery_qn_key_o"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="enter answer "
+        android:inputType="textCapWords"
+        app:layout_constraintBottom_toBottomOf="@id/iv_pin_recovery_qn_key"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_pin_recovery_qn_key" />
+
+    <TextView
+        android:id="@+id/tv_pin_recovery_alert"
+        android:layout_width="match_parent"
+        android:textColor="@color/greenTabBackgroundColor"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="Recovery Question or Recovery Answer is empty"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_pin_recovery_qn_key_o" />
+
+
+    <Button
+        android:id="@+id/btn_submit_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="submit"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@id/btn_cancel_dialog"
+        app:layout_constraintTop_toBottomOf="@id/tv_pin_recovery_alert" />
+    <Button
+        android:id="@+id/btn_cancel_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="cancel"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/btn_submit_dialog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pin_recovery_alert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

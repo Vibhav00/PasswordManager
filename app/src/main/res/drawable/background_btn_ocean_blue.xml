@@ -1,0 +1,19 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Default state -->
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oceanBluePrimary"/>
+            <corners android:radius="8dp"/>
+            <stroke android:width="2dp" android:color="@color/oceanBluePrimary"/>
+        </shape>
+    </item>
+
+    <!-- Disabled state -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/oceanBlueSecondary"/>
+            <corners android:radius="8dp"/>
+            <stroke android:width="2dp" android:color="@color/oceanBlueSecondary"/>
+        </shape>
+    </item>
+</selector>

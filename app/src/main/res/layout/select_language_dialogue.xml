@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="@drawable/pop_up_background">
+
+    <TextView
+        android:id="@+id/select_language_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Language"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"
+        android:textColor="@color/black"/>
+
+    <RadioGroup
+        android:id="@+id/language_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/english_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/greenBackgroundColor"/>
+
+        <RadioButton
+            android:id="@+id/hindi_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hindi"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/oriya_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Odia"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+
+        <RadioButton
+            android:id="@+id/bengali_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bengali"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/telugu_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Telugu"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/greenBackgroundColor"/>
+        <RadioButton
+            android:id="@+id/gujurati_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gujurati"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/greenBackgroundColor"/>
+        <RadioButton
+            android:id="@+id/tamil_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tamil"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/greenBackgroundColor"/>
+        <RadioButton
+            android:id="@+id/marathi_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Marathi"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/greenBackgroundColor"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="24dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect_btn_red"
+            android:text="cancle"
+            android:textColor="#D9614C" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_lang"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/positive_btn"
+            android:text="save"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

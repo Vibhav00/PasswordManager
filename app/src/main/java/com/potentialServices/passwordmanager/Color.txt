@@ -1,0 +1,23 @@
+Here I will describe all about the different colors i am using in this app
+
+
+1. myTabBackgroundColor -> this is basically the main tab background color ,
+                           like for anything which is not like a card  or
+                           tab , header or anything like this is having this
+                           background color
+
+2. myWidowBackgroundColor -> this is the main background color
+
+3. tabTextSelectedColor   -> this is the color of the items on the tab
+                             like all , liked and recent hava this color
+                             in their selected situation
+4. tabTextColor           -> same like above but not selected
+
+5. tabSelectedColor       -> if particular tab is selected this color will be shown
+6. primaryTextColor       -> text for heading , icon desc , and basically dark
+7. SecondaryTextColor     -> less dark but used for describe
+8. hintTextColor          -> use to show hint
+
+
+-----------------------------------similar colors----------------------
+tabSelectedColor === tabSelectedColor ===  icon main color

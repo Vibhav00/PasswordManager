@@ -1,0 +1,17 @@
+<!-- res/drawable/dialog_background.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Semi-transparent overlay -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00000000"/> <!-- Semi-transparent black -->
+        </shape>
+    </item>
+
+    <!-- White/light-colored background for the dialog -->
+    <item android:left="16dp" android:right="16dp">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/myTabBackgroundColor"/> <!-- White color -->
+            <corners android:radius="10dp"/> <!-- Rounded corners -->
+        </shape>
+    </item>
+</layer-list>

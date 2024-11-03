@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PasswordManager" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+
+        <item name="colorPrimaryDark">#0A2320</item>
+        <item name="colorAccent">@color/greenColorAccent</item>
+
+
+        <item name="myWindowBackground">@color/greenBackgroundColor</item>
+        <item name="myTabBackgroundColor">@color/greenTabBackgroundColor</item>
+        <item name="myTabTextColor">@color/greenTabTextColor</item>
+        <item name="myTabTextSelectedColor">@color/greenTabTextSelectedColor</item>
+        <item name="myTabIndicatorColor">@color/greenTabIndicatorColor</item>
+        <item name="myPrimaryTextColor">@color/greenPrimaryText</item>
+        <item name="drawable_btn">@drawable/background_btn_green</item>
+
+        <item name="my_icon_back_color">@color/defaultIconBackColor</item>
+        <item name="my_icon_front_color">@color/defaultIconFrontColor</item>
+        <item name="my_ripple_color">@color/defaultRipppleColor</item>
+        <item name="my_icon_color">@color/black</item>
+    </style>
+</resources>

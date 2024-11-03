@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style xmlns:android="http://schemas.android.com/apk/res/android" name="default_theme" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/greenTabBackgroundColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/greenBackgroundColor</item>
+        <item name="android:navigationBarColor">@color/greenTabBackgroundColor</item>
+        <!-- Customize your theme here. -->
+
+
+        <item name="colorPrimaryDark">#0A2320</item>
+        <item name="colorAccent">@color/greenColorAccent</item>
+
+
+        <item name="myWindowBackground">@color/defaultBackgroundColor</item>
+        <item name="myTabBackgroundColor">@color/defaultTabBackgroundColor</item>
+        <item name="myTabTextColor">@color/defaultTabTextColor</item>
+        <item name="myTabTextSelectedColor">@color/defaultTabTextSelectedColor</item>
+        <item name="myTabIndicatorColor">@color/defaultTabIndicatorColor</item>
+        <item name="myPrimaryTextColor">@color/defaultPrimaryText</item>
+        <item name="mySecondaryTextColor">@color/defaultSecondaryText</item>
+        <item name="my_icon_back_color">@color/defaultTabBackgroundColor</item>
+        <item name="my_icon_front_color">@color/defaultIconFrontColor</item>
+        <item name="my_ripple_color">@color/defaultRipppleColor</item>
+        <item name="drawable_btn">@drawable/background_btn_green</item>
+        <item name="my_icon_color">@color/black</item>
+
+    </style>
+    <style xmlns:android="http://schemas.android.com/apk/res/android" name="check1" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#E60C38</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/greenTabBackgroundColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/greenBackgroundColor</item>
+        <item name="android:navigationBarColor">@color/greenTabBackgroundColor</item>
+        <!-- Customize your theme here. -->
+
+
+        <item name="colorPrimaryDark">@color/teal_200</item>
+        <item name="colorAccent">@color/greenColorAccent</item>
+
+
+        <item name="myWindowBackground">@color/lightOnPrimary</item>
+        <item name="myTabBackgroundColor">@color/teal_200</item>
+        <item name="myTabTextColor">@color/greenTabTextColor</item>
+        <item name="myTabTextSelectedColor">@color/black</item>
+        <item name="myTabIndicatorColor">@color/biometric_error_color</item>
+        <item name="myPrimaryTextColor">@color/greenPrimaryText</item>
+        <item name="mySecondaryTextColor">@color/greenSecondaryText</item>
+        <item name="drawable_btn">@drawable/ripple_effect_btn_green</item>
+
+    </style>
+    <style xmlns:android="http://schemas.android.com/apk/res/android" name="RedTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorPrimaryVariant">@color/red_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_gray</item>
+        <item name="colorSecondaryVariant">@color/redTabBackgroundColor</item>
+        <item name="colorOnSecondary">@color/red_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/redBackgroundColor</item>
+        <item name="android:navigationBarColor">@color/redTabBackgroundColor</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="myWindowBackground">@color/white</item>
+        <item name="myTabBackgroundColor">@color/redBackgroundColor</item>
+        <item name="myTabTextColor">@color/white</item>
+        <item name="myTabTextSelectedColor">@color/black</item>
+        <item name="myTabIndicatorColor">@color/white</item>
+        <item name="myPrimaryTextColor">@color/white</item>
+        <item name="mySecondaryTextColor">@color/redSecondaryText</item>
+        <item name="drawable_btn">@drawable/background_btn_green_clicked</item>
+
+        <item name="my_icon_back_color">@color/red_500</item>
+        <item name="my_icon_front_color">@color/red_700</item>
+        <item name="my_ripple_color">@color/defaultRipppleColor</item>
+        <item name="my_icon_color">@color/white</item>
+    </style>
+    <style xmlns:android="http://schemas.android.com/apk/res/android" name="OceanBlueTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/oceanBluePrimary</item>
+        <item name="colorPrimaryVariant">@color/oceanBluePrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/oceanBlueSecondary</item>
+        <item name="colorSecondaryVariant">@color/oceanBlueSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/oceanBlueBackground</item>
+        <item name="android:navigationBarColor">@color/oceanBlueSecondaryVariant</item>
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">#004D40</item> <!-- Dark Teal -->
+        <item name="colorAccent">@color/oceanBlueSecondary</item>
+        <item name="myWindowBackground">@color/oceanBlueBackground</item>
+        <item name="myTabBackgroundColor">@color/oceanBlueSecondaryVariant</item>
+        <item name="myTabTextColor">@color/white</item>
+        <item name="myTabTextSelectedColor">@color/oceanBluePrimary</item>
+        <item name="myTabIndicatorColor">@color/oceanBluePrimary</item>
+        <item name="myPrimaryTextColor">@color/white</item>
+        <item name="mySecondaryTextColor">@color/oceanBlueSecondary</item>
+        <item name="drawable_btn">@drawable/background_btn_ocean_blue</item>
+    </style>
+    <style xmlns:android="http://schemas.android.com/apk/res/android" name="PurpleFantasyTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/red_500</item>
+        <item name="colorPrimaryVariant">@color/red_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/red_gray</item>
+        <item name="colorSecondaryVariant">@color/redTabBackgroundColor</item>
+        <item name="colorOnSecondary">@color/red_gray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/redBackgroundColor</item>
+        <item name="android:navigationBarColor">@color/redTabBackgroundColor</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/teal_200</item>
+        <item name="colorAccent">@color/redColorAccent</item>
+        <item name="myWindowBackground">@color/redBackgroundColor</item>
+        <item name="myTabBackgroundColor">@color/redTabBackgroundColor</item>
+        <item name="myTabTextColor">@color/redTabTextColor</item>
+        <item name="myTabTextSelectedColor">@color/redTabTextSelectedColor</item>
+        <item name="myTabIndicatorColor">@color/redTabIndicatorColor</item>
+        <item name="myPrimaryTextColor">@color/redPrimaryText</item>
+        <item name="mySecondaryTextColor">@color/redSecondaryText</item>
+        <item name="drawable_btn">@drawable/background_btn_green_clicked</item>
+    </style>
+
+
+    <style xmlns:android="http://schemas.android.com/apk/res/android" name="GreenTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/defaultColorPrimary</item>
+        <item name="colorPrimaryVariant">@color/defaultColorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/defaultPrimaryText</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/defaultColorAccent</item>
+        <item name="colorSecondaryVariant">@color/defaultTabBackgroundColor</item>
+        <item name="colorOnSecondary">@color/defaultSecondaryText</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/defaultColorPrimaryDark</item>
+        <item name="android:navigationBarColor">@color/defaultTabBackgroundColor</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/defaultColorPrimaryDark</item>
+        <item name="colorAccent">@color/defaultColorAccent</item>
+        <item name="myWindowBackground">@color/greenbackgroundColor</item>
+        <item name="myTabBackgroundColor">@color/greentabBackgroundColor</item>
+        <item name="myTabTextColor">@color/defaultTabTextColor</item>
+        <item name="myTabTextSelectedColor">@color/defaultgreenTabTextSelectedColor</item>
+        <item name="myTabIndicatorColor">@color/defaultgreenTabIndicatorColor</item>
+        <item name="myPrimaryTextColor">@color/defaultPrimaryText</item>
+        <item name="mySecondaryTextColor">@color/defaultSecondaryText</item>
+        <item name="drawable_btn">@drawable/background_btn_green_clicked</item>
+
+        <item name="my_icon_back_color">@color/green_500</item>
+        <item name="my_icon_front_color">@color/green_700</item>
+        <item name="my_ripple_color">@color/defaultRipppleColor</item>
+        <item name="my_icon_color">@color/defaultPrimaryText</item>
+    </style>
+
+
+
+    <style xmlns:android="http://schemas.android.com/apk/res/android" name="PinkTheme1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pink_500</item>
+        <item name="colorPrimaryVariant">@color/pink_700</item>
+        <item name="colorOnPrimary">@color/pinkPrimaryText</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/pinkColorAccent</item>
+        <item name="colorSecondaryVariant">@color/pinkTabBackgroundColor</item>
+        <item name="colorOnSecondary">@color/pinkGray</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/pink_700</item>
+        <item name="android:navigationBarColor">@color/pinkTabBackgroundColor</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/pink_700</item>
+        <item name="colorAccent">@color/pinkColorAccent</item>
+        <item name="myWindowBackground">@color/pinkBackgroundColor</item>
+        <item name="myTabBackgroundColor">@color/pinkTabBackgroundColor</item>
+        <item name="myTabTextColor">@color/pinkTabTextColor</item>
+        <item name="myTabTextSelectedColor">@color/pinkTabTextSelectedColor</item>
+        <item name="myTabIndicatorColor">@color/pinkTabIndicatorColor</item>
+        <item name="myPrimaryTextColor">@color/pinkPrimaryText</item>
+        <item name="mySecondaryTextColor">@color/pinkSecondaryText</item>
+        <item name="drawable_btn">@drawable/background_btn_pink</item>
+
+        <item name="my_icon_back_color">@color/pink_500</item>
+        <item name="my_icon_front_color">@color/pink_700</item>
+        <item name="my_ripple_color">@color/pinkColorAccent</item>
+        <item name="my_icon_color">@color/pinkPrimaryText</item>
+    </style>
+
+
+
+
+
+</resources>

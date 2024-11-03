@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FingerprintFragment">
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar_backgroud"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/new_logo" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Password Manager "
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_pin_circles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/ll_top">
+
+        <ImageView
+            android:id="@+id/dot1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/pin_dot_not_selected"
+
+            />
+
+        <ImageView
+            android:id="@+id/dot2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/pin_dot_not_selected"
+
+            />
+
+        <ImageView
+            android:id="@+id/dot3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/pin_dot_not_selected"
+
+            />
+
+        <ImageView
+            android:id="@+id/dot4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/pin_dot_not_selected"
+
+            />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/lock_view"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_pin_circles" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/lock_view">
+
+        <LinearLayout
+            android:id="@+id/ll_btn_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn1lock"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="1"
+                android:text="@string/_1"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn2lock"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="2"
+                android:text="@string/_2"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="3"
+                android:text="@string/_3"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="4"
+                android:text="@string/_4"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="5"
+                android:text="@string/_5"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="6"
+                android:text="@string/_6"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_third"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="7"
+                android:text="@string/_7"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="8"
+                android:text="@string/_8"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="9"
+                android:text="@string/_9"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn_fourth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:text="1"
+                android:textSize="30dp"
+                android:visibility="invisible" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:tag="0"
+                android:text="@string/_0"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/baseline_lock_24"
+                android:tag="-"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

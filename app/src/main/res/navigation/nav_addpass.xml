@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_addpass"
+    app:startDestination="@id/addPasswordFragment">
+
+    <fragment
+        android:id="@+id/addPasswordFragment"
+        android:name="com.potentialServices.passwordmanager.fragments.AddPasswordFragment"
+        android:label="fragment_add_password"
+        tools:layout="@layout/fragment_add_password" >
+        <action
+            android:id="@+id/action_addPasswordFragment_to_iconSelectionFragment"
+            app:destination="@id/iconSelectionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iconSelectionFragment"
+        android:name="com.potentialServices.passwordmanager.fragments.IconSelectionFragment"
+        android:label="fragment_icon_selection"
+        tools:layout="@layout/fragment_icon_selection" />
+</navigation>

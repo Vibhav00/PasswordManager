@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="like_color">#B10037</color>
+    <!--    default theme -->
+    <color name="defaultColorPrimary">#8BC34A</color>
+    <color name="defaultColorPrimaryDark">#689F38</color>
+    <color name="defaultColorPrimaryLight">#DCEDC8</color>
+    <color name="defaultColorAccent">#4CAF50</color>
+    <color name="defaultPrimaryText">#212121</color>
+    <color name="defaultSecondaryText">#CACACA</color>
+    <color name="defaultBackgroundColor">#FFFFFF</color>
+
+    <color name="defaultTabBackgroundColor">#F8EEE2</color>
+    <color name="defaultTabTextColor">#403B36</color>
+    <color name="defaultTabTextSelectedColor">#DA614C</color>
+    <color name="defaultTabIndicatorColor">#DA614C</color>
+    <color name="defaultgreenTabTextSelectedColor">#388E3C</color>
+    <color name="defaultgreenTabIndicatorColor">#66BB6A</color>
+
+
+    <color name="defaultIconFrontColor">#DA614C</color>
+    <color name="defaultIconBackColor">#EEE0D3</color>
+    <color name="defaultRipppleColor">#CFEAD2</color>
+
+
+
+    <!-- green theme -->
+    <color name="greenColorPrimary">#8BC34A</color>
+    <color name="greenColorPrimaryDark">#689F38</color>
+    <color name="greenColorPrimaryLight">#DCEDC8</color>
+    <color name="greenColorAccent">#4CAF50</color>
+    <color name="greenPrimaryText">#212121</color>
+    <color name="greenSecondaryText">#CACACA</color>
+    <color name="greenBackgroundColor">#D3BEA6</color>
+
+    <color name="greenTabBackgroundColor">#6295A2</color>
+    <color name="greenTabTextColor">#FFFFFF</color>
+    <color name="greenTabTextSelectedColor">#B3EAA7</color>
+    <color name="greenTabIndicatorColor">#C5047C</color>
+
+    <!-- green theme -->
+
+    <color name="purpleColorPrimary">#673AB7</color>
+    <color name="purpleColorPrimaryDark">#512DA8</color>
+    <color name="purpleColorPrimaryLight">#D1C4E9</color>
+    <color name="purpleColorAccent">#4CAF50</color>
+    <color name="purplePrimaryText">#212121</color>
+    <color name="purpleSecondaryText">#757575</color>
+    <color name="purpleBackgroundColor">#969696</color>
+
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+
+    <color name="purpleTabBackgroundColor">#673AB7</color>
+    <color name="purpleTabTextColor">#757575</color>
+    <color name="purpleTabTextSelectedColor">#D1C4E9</color>
+    <color name="purpleTabIndicatorColor">#D1C4E9</color>
+
+
+    <color name="mainColor">#F8EEE2</color>
+    <color name="secondaryColor">#D9614C</color>
+    <color name="thirdColor">#EEE0D3</color>
+
+
+    <!-- Light Theme Colors -->
+    <color name="lightPrimary">#FFFFFF</color> <!-- Light primary color -->
+    <color name="lightPrimaryVariant">#F0F0F0</color> <!-- Light primary variant color -->
+    <color name="lightOnPrimary">#000000</color> <!-- Color used on top of light primary color -->
+    <color name="lightSecondary">#E0E0E0</color> <!-- Light secondary color -->
+
+    <!-- Dark Theme Colors -->
+    <color name="darkPrimary">#121212</color> <!-- Dark primary color -->
+    <color name="darkPrimaryVariant">#1E1E1E</color> <!-- Dark primary variant color -->
+    <color name="darkOnPrimary">#FFFFFF</color> <!-- Color used on top of dark primary color -->
+    <color name="darkSecondary">#424242</color> <!-- Dark secondary color -->
+
+    <!-- Custom Theme Colors -->
+    <color name="customPrimary">#FF5722</color> <!-- Custom primary color -->
+    <color name="customPrimaryVariant">#E64A19</color> <!-- Custom primary variant color -->
+    <color name="customOnPrimary">#FFFFFF</color> <!-- Color used on top of custom primary color -->
+    <color name="customSecondary">#FFAB91</color> <!-- Custom secondary color -->
+
+    <!-- Default Theme Colors -->
+    <color name="defaultPrimary">#009688</color> <!-- Default primary color -->
+    <color name="defaultPrimaryVariant">#00796B</color> <!-- Default primary variant color -->
+    <color name="defaultOnPrimary">#FFFFFF
+    </color> <!-- Color used on top of default primary color -->
+    <color name="defaultSecondary">#004D40</color> <!-- Default secondary color -->
+
+
+
+
+    <!-- Primary colors -->
+    <color name="red_500">#F44336</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_gray">#757575</color>
+
+    <color name="green_500">#4CAF50</color>
+    <color name="green_700">#388E3C</color>
+    <color name="green_gray">#8C8C8C</color>
+
+    <!-- Accent colors -->
+    <color name="redColorAccent">#FF5252</color>
+    <color name="greenColorAccentt">#66BB6A</color>
+
+    <!-- Background colors -->
+    <color name="redBackgroundColor">#B71C1C</color>
+    <color name="redTabBackgroundColor">#E57373</color>
+
+
+    <color name="greenbackgroundColor">#33691E</color>
+    <color name="greentabBackgroundColor">#A5D6A7</color>
+
+
+    <!-- Text colors -->
+    <color name="redTabTextColor">#B84854</color>
+    <color name="redTabTextSelectedColor">#1067E9</color>
+    <color name="redPrimaryText">#28640E</color>
+    <color name="redSecondaryText">#E08728</color>
+
+    <!-- Indicator color -->
+    <color name="redTabIndicatorColor">#FF1744</color>
+
+
+
+
+
+
+    <color name="sunsetOrangePrimary1">#FF7043</color> <!-- Primary Sunset Orange -->
+    <color name="sunsetOrangePressed">#E64A19</color> <!-- Darker shade for pressed state -->
+    <color name="sunsetOrangeDisabled">#FFAB91</color> <!-- Lighter shade for disabled state -->
+
+
+    <color name="oceanBluePrimary">#00796B</color> <!-- Deep Teal -->
+    <color name="oceanBluePrimaryVariant">#004D40</color> <!-- Dark Teal -->
+    <color name="oceanBlueSecondary">#80CBC4</color> <!-- Light Teal -->
+    <color name="oceanBlueSecondaryVariant">#26A69A</color> <!-- Medium Teal -->
+    <color name="oceanBlueBackground">#B2DFDB</color> <!-- Light Aqua -->
+
+
+    <color name="sunsetOrangePrimary">#FF5722</color> <!-- Vibrant Orange -->
+    <color name="sunsetOrangePrimaryVariant">#E64A19</color> <!-- Darker Orange -->
+    <color name="sunsetOrangeSecondary">#FFAB91</color> <!-- Light Orange -->
+    <color name="sunsetOrangeSecondaryVariant">#FF7043</color> <!-- Medium Orange -->
+    <color name="sunsetOrangeBackground">#FFCCBC</color> <!-- Soft Peach -->
+
+
+    <color name="greenPrimary">#4CAF50</color>
+    <color name="greenPrimaryVariant">#388E3C</color>
+    <color name="greenSecondary">#8BC34A</color>
+    <color name="greenSecondaryVariant">#7CB342</color>
+    <color name="greenBackground">#C8E6C9</color>
+
+
+
+    <color name="pink_secondary">#F06292</color>
+    <color name="pink_secondary_dark">#D81B60</color>
+    <color name="pink_background">#FCE4EC</color>
+    <color name="pink_accent">#FF4081</color>
+    <color name="pink_text_primary">#880E4F</color>
+    <color name="pink_text_secondary">#AD1457</color>
+
+
+
+
+    <!-- Primary colors -->
+    <color name="pink_500">#E91E63</color> <!-- Primary pink color -->
+    <color name="pink_700">#C2185B</color> <!-- Darker pink color -->
+    <color name="pink_gray">#757575</color> <!-- Gray color for pink theme -->
+
+    <!-- Accent colors -->
+    <color name="pinkColorAccent">#F06292</color> <!-- Lighter pink accent color -->
+
+    <!-- Background colors -->
+    <color name="pinkBackgroundColor">#C2185B</color> <!-- Darker pink for background -->
+    <color name="pinkTabBackgroundColor">#FA5B91</color> <!-- Lighter pink for tab background -->
+
+    <!-- Text colors -->
+    <color name="pinkTabTextColor">#880E4F</color> <!-- Dark pink color for tab text -->
+    <color name="pinkTabTextSelectedColor">#F48FB1</color> <!-- Lighter pink color for selected tab text -->
+    <color name="pinkPrimaryText">#FCE4EC</color> <!-- Light pink color for primary text -->
+    <color name="pinkSecondaryText">#D81B60</color> <!-- Pink color for secondary text -->
+
+    <!-- Indicator color -->
+    <color name="pinkTabIndicatorColor">#F48FB1</color> <!-- Lighter pink color for tab indicator -->
+    <color name="pinkGray">#757575</color>
+
+</resources>

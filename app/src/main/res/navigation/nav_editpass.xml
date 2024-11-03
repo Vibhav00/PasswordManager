@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_editpass"
+    app:startDestination="@id/editPasswordFragment">
+
+    <fragment
+        android:id="@+id/editPasswordFragment"
+        android:name="com.potentialServices.passwordmanager.fragments.EditPasswordFragment"
+        android:label="fragment_edit_password"
+        tools:layout="@layout/fragment_edit_password" >
+        <action
+            android:id="@+id/action_editPasswordFragment_to_iconSelectionFragment2"
+            app:destination="@id/iconSelectionFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/iconSelectionFragment2"
+        android:name="com.potentialServices.passwordmanager.fragments.IconSelectionFragment"
+        android:label="fragment_icon_selection"
+        tools:layout="@layout/fragment_icon_selection" />
+</navigation>

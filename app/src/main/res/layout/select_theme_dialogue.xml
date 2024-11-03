@@ -1,0 +1,115 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:background="@drawable/pop_up_background">
+
+    <TextView
+        android:id="@+id/select_theme_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Theme"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"
+        android:textColor="@color/black"/>
+
+    <RadioGroup
+        android:id="@+id/theme_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/Orange_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:padding="8dp"
+            android:text="Orange"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/green_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/red_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Red"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/pink_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pink"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/purple_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PurpleFantasy"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/ocean_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OceanBlue"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+        <RadioButton
+            android:id="@+id/default_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:buttonTint="@color/white"/>
+    </RadioGroup>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancel_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_effect_btn_red"
+            android:text="cancle"
+            android:textColor="#D9614C" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/positive_btn"
+            android:text="save"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

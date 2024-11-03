@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:background="#00FFFFFF"
+           android:textColor="@color/black"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="1"
+            android:id="@+id/btn1lock"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_1"
+            android:textSize="30dp" />
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="2"
+            android:id="@+id/btn2lock"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_2"
+            android:textSize="30dp" />
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="3"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_3"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="4"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_4"
+            android:textSize="30dp" />
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="5"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_5"
+            android:textSize="30dp" />
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="6"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_6"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="7"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_7"
+            android:textSize="30dp" />
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="8"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_8"
+            android:textSize="30dp" />
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="9"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_9"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="1"
+            android:textSize="30dp" />
+
+        <Button
+            android:textColor="@color/black"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="0"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:text="@string/_0"
+            android:textSize="30dp" />
+
+        <ImageButton
+            android:textColor="@color/black"
+            android:src="@drawable/baseline_lock_24"
+            android:background="#00FFFFFF"
+            android:onClick="buttonLockPinKeyboardClicked"
+            android:tag="-"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:textSize="30dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/greenTabBackgroundColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/greenBackgroundColor</item>
+        <item name="android:navigationBarColor">@color/greenTabBackgroundColor</item>
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">#0A2320</item>
+        <item name="colorAccent">@color/greenColorAccent</item>
+        <item name="myWindowBackground">@color/greenBackgroundColor</item>
+        <item name="myTabBackgroundColor">@color/greenTabBackgroundColor</item>
+        <item name="myTabTextColor">@color/greenTabTextColor</item>
+        <item name="myTabTextSelectedColor">@color/greenTabTextSelectedColor</item>
+        <item name="myTabIndicatorColor">@color/greenTabIndicatorColor</item>
+        <item name="myPrimaryTextColor">@color/greenPrimaryText</item>
+        <item name="mySecondaryTextColor">@color/greenSecondaryText</item>
+        <item name="drawable_btn">@drawable/background_btn_green</item>
+    </style>
+
+    <!-- Light Theme -->
+    <style name="AppTheme_Light" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Light theme specific colors -->
+        <item name="colorPrimary">@color/lightPrimary</item>
+        <item name="colorPrimaryVariant">@color/lightPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/lightOnPrimary</item>
+        <item name="colorSecondary">@color/lightSecondary</item>
+        <!-- Add more color customizations as needed -->
+    </style>
+
+    <!-- Dark Theme -->
+    <style name="AppTheme_Dark" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Dark theme specific colors -->
+        <item name="colorPrimary">@color/darkPrimary</item>
+        <item name="colorPrimaryVariant">@color/darkPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/darkOnPrimary</item>
+        <item name="colorSecondary">@color/darkSecondary</item>
+        <!-- Add more color customizations as needed -->
+    </style>
+
+    <!-- Custom Theme -->
+    <style name="AppTheme_Custom" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Custom theme specific colors -->
+        <item name="colorPrimary">@color/customPrimary</item>
+        <item name="colorPrimaryVariant">@color/customPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/customOnPrimary</item>
+        <item name="colorSecondary">@color/customSecondary</item>
+        <!-- Add more color customizations as needed -->
+    </style>
+
+    <!-- Default Theme -->
+    <style name="AppTheme_Default" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Default theme specific colors -->
+        <item name="colorPrimary">@color/defaultPrimary</item>
+        <item name="colorPrimaryVariant">@color/defaultPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/defaultOnPrimary</item>
+        <item name="colorSecondary">@color/defaultSecondary</item>
+        <!-- Add more color customizations as needed -->
+    </style>
+
+</resources>

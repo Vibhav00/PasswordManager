@@ -1,0 +1,47 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Ignore JVM crash logs
+hs_err_pid*.log
+
+# Ignore compiled class files
+*.class
+
+# Ignore JAR files
+*.jar
+
+# Ignore WAR files
+*.war
+
+# Ignore EAR files
+*.ear
+
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore Eclipse project files
+.project
+.classpath
+
+# Ignore OS-specific files
+Thumbs.db
+
+# Ignore build output directories
+/build/
+/out/
+
+# Ignore Maven target directory
+/targ
