@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/myWindowBackground"
     tools:context=".fragments.CreatePinFragment">
 
 
@@ -34,19 +35,34 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/roboto_bold"
             android:text="Password Manager "
+            android:textColor="?attr/myPrimaryTextColor"
             android:textSize="30sp"
             android:textStyle="bold" />
 
 
     </LinearLayout>
 
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter New Pin "
+        android:textSize="18sp"
+        android:textColor="?attr/mySecondaryTextColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_top"
+        app:layout_constraintBottom_toTopOf="@id/ll_pin_circles"/>
+
+
     <LinearLayout
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/ll_pin_circles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/ll_top"
+        app:layout_constraintTop_toBottomOf="@id/tvHint"
         android:orientation="horizontal">
 
         <ImageView
@@ -108,7 +124,7 @@
 
             <Button
                 android:background="#00FFFFFF"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:tag="1"
                 android:id="@+id/btn1lock"
                 android:layout_width="0dp"
@@ -118,7 +134,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="2"
                 android:id="@+id/btn2lock"
@@ -129,7 +145,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="3"
                 android:layout_width="0dp"
@@ -146,7 +162,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="4"
                 android:layout_width="0dp"
@@ -156,7 +172,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="5"
                 android:layout_width="0dp"
@@ -166,7 +182,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="6"
                 android:layout_width="0dp"
@@ -183,7 +199,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="7"
                 android:layout_width="0dp"
@@ -193,7 +209,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="8"
                 android:layout_width="0dp"
@@ -203,7 +219,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="9"
                 android:layout_width="0dp"
@@ -229,7 +245,7 @@
                 android:textSize="30dp" />
 
             <Button
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:background="#00FFFFFF"
                 android:tag="0"
                 android:layout_width="0dp"
@@ -259,11 +275,18 @@
         android:layout_marginBottom="20dp"
         android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rbPinActive"
-            android:layout_width="100dp"
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLocked"
+            android:paddingHorizontal="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            />
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/positive_btn"
+            android:text="Activate"
+            android:textColor="?attr/my_icon_color" />
+
 
 
     </LinearLayout>

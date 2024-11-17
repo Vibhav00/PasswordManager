@@ -15,15 +15,15 @@
 
 
         <item name="colorPrimaryDark">#0A2320</item>
-        <item name="colorAccent">@color/greenColorAccent</item>
+        <item name="colorAccent">@color/black</item>
 
 
-        <item name="myWindowBackground">@color/greenBackgroundColor</item>
-        <item name="myTabBackgroundColor">@color/greenTabBackgroundColor</item>
-        <item name="myTabTextColor">@color/greenTabTextColor</item>
-        <item name="myTabTextSelectedColor">@color/greenTabTextSelectedColor</item>
-        <item name="myTabIndicatorColor">@color/greenTabIndicatorColor</item>
-        <item name="myPrimaryTextColor">@color/greenPrimaryText</item>
+        <item name="myWindowBackground">@color/black</item>
+        <item name="myTabBackgroundColor">@color/black</item>
+        <item name="myTabTextColor">@color/black</item>
+        <item name="myTabTextSelectedColor">@color/black</item>
+        <item name="myTabIndicatorColor">@color/black</item>
+        <item name="myPrimaryTextColor">@color/black</item>
         <item name="drawable_btn">@drawable/background_btn_green</item>
 
         <item name="my_icon_back_color">@color/defaultIconBackColor</item>

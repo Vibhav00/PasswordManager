@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Color when checked -->
+    <item android:color="?attr/my_icon_front_color" android:state_checked="true" />
+    <!-- Color when focused -->
+    <item android:color="?attr/my_icon_front_color" android:state_focused="true" />
+    <!-- Default color when unchecked -->
+    <item android:color="?attr/myPrimaryTextColor" />
+</selector>

@@ -24,8 +24,9 @@ class CreatePinFragment : Fragment() {
 
     private lateinit var binding:FragmentCreatePinBinding
     private var createPinItem = CreatePinItem()
-    var pos =0;
+    private var pos =0;
     var tempPin:String = ""
+    var lockedByFourPin=false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,8 +39,12 @@ class CreatePinFragment : Fragment() {
     }
 
 
+
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        lockedByFourPin = PreferenceUtils.getSharedPreferences(this.requireContext()).getLockedByFourPin()
+        setButtonUi()
         handleClickListner()
     }
 
@@ -61,6 +66,13 @@ class CreatePinFragment : Fragment() {
 
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        if(lockedByFourPin)
+        Toast.makeText(this.requireContext(),"Your Pin Lock is Still Active ",Toast.LENGTH_SHORT).show()
+
+    }
+
     private fun checkPin() {
 
       if(createPinItem.firstRoundCompleted){
@@ -69,15 +81,22 @@ class CreatePinFragment : Fragment() {
               PreferenceUtilsEncrypted.getSharedPreferences(this.requireContext()).setPin(createPinItem.firstPin)
               PreferenceUtils.getSharedPreferences(this.requireContext())
               Toast.makeText(this.requireContext(),"Pin added Successfully ",Toast.LENGTH_SHORT).show()
-              Log.e("the result ",createPinItem.toString())
-              createPinItem = CreatePinItem()
               this.requireActivity().finish()
+          }else{
+              Toast.makeText(this.requireContext(),"Confirm Pin was wrong  ",Toast.LENGTH_SHORT).show()
+              binding.tvHint.text = "Enter New Pin "
+              createPinItem = CreatePinItem()
+              tempPin = ""
           }
       }else{
           createPinItem.firstRoundCompleted = true
           createPinItem.firstPin = String(tempPin.toCharArray());
           Log.e("the result ",createPinItem.toString())
           tempPin = ""
+          lifecycleScope.launch (Dispatchers.Main){
+              delay(500)
+              binding.tvHint.text = "Enter New Pin Again "
+          }
 
       }
     }
@@ -85,53 +104,87 @@ class CreatePinFragment : Fragment() {
     private fun handleClickListner() {
         binding.llBtnFirst.children.forEach {
             it.setOnClickListener {
-                val value = it.tag;
-                Toast.makeText(this.requireContext(),value.toString(), Toast.LENGTH_SHORT).show()
-                tempPin += value
-                handlePosAndDot()
+                if(lockedByFourPin){
+                    val value = it.tag;
+                    tempPin += value
+                    handlePosAndDot()
+                }else{
+                    Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                }
+
 
             }
         }
         binding.llBtnSecond.children.forEach {
             it.setOnClickListener {
-                val value = it.tag;
-                Toast.makeText(this.requireContext(),value.toString(), Toast.LENGTH_SHORT).show()
-                tempPin += value
-                handlePosAndDot()
+                if(lockedByFourPin){
+                    val value = it.tag;
+                    tempPin += value
+                    handlePosAndDot()
+                }else{
+                    Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                }
+
             }
         }
         binding . llBtnThird . children . forEach {
             it.setOnClickListener {
-                val value = it.tag;
-                Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
-                tempPin += value
-                handlePosAndDot()
+                if(lockedByFourPin){
+                    val value = it.tag;
+                    tempPin += value
+                    handlePosAndDot()
+                }else{
+                    Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                }
+
             }
         }
         binding . llBtnFourth . children . forEachIndexed { index,it->
             if(index==1){
                 it.setOnClickListener {
-                    val value = it.tag;
-                    Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
-                    tempPin += value
-                    handlePosAndDot()
+                    if(lockedByFourPin){
+                        val value = it.tag;
+                        tempPin += value
+                        handlePosAndDot()
+                    }else{
+                        Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                    }
+
                 }
             }
 
         }
-        val rb = binding.rbPinActive as RadioButton
-        rb.setOnCheckedChangeListener { compoundButton, b ->
-            run {
-                if (rb.isChecked) {
-                        PreferenceUtils.getSharedPreferences(this.requireContext()).setLockedByFourPin(true)
-                    PreferenceUtils.getSharedPreferences(this.requireContext()).setLockedByFingereprint(false)
-                } else {
+
+        binding.btnLocked.setOnClickListener {
+                if (lockedByFourPin) {
+                    lockedByFourPin = false
+                    setButtonUi()
+
                     PreferenceUtils.getSharedPreferences(this.requireContext()).setLockedByFourPin(false)
-                }
+                    PreferenceUtilsEncrypted.getSharedPreferences(this.requireContext()).setPin("")
 
-            }
+                } else {
+                    lockedByFourPin = true
+                    setButtonUi()
+                    PreferenceUtils.getSharedPreferences(this.requireContext()).setLockedByFourPin(true)
+                    PreferenceUtils.getSharedPreferences(this.requireContext()).setLockedByFingereprint(false)
+                }
+            tempPin = ""
+            createPinItem= CreatePinItem()
+            pos =0
+            setDotstoSee()
         }
 
+    }
+
+    private fun setButtonUi(){
+        if(lockedByFourPin){
+            binding.tvHint.text="Enter New Pin "
+            binding.btnLocked.text = "Deactivate"
+        }else{
+            binding.tvHint.text="Please Activate Pin Lock to Use "
+            binding.btnLocked.text = "Activate"
+        }
     }
 
     private fun setDotstoSee() {

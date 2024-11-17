@@ -15,7 +15,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:paddingBottom="16dp"
-        android:textColor="@color/black"/>
+        android:textColor="?attr/myPrimaryTextColor"/>
 
     <RadioGroup
         android:id="@+id/language_radio_group"
@@ -28,43 +28,48 @@
             android:layout_height="wrap_content"
             android:text="English"
             android:textSize="16sp"
+            android:textColor="?attr/myPrimaryTextColor"
             android:padding="8dp"
-            android:buttonTint="@color/greenBackgroundColor"/>
+            style="@style/CustomRadioButton"/>
 
         <RadioButton
             android:id="@+id/hindi_lang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hindi"
+            android:textColor="?attr/myPrimaryTextColor"
             android:textSize="16sp"
             android:padding="8dp"
-            android:buttonTint="@color/white"/>
+            style="@style/CustomRadioButton"/>
 
         <RadioButton
             android:id="@+id/oriya_lang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Odia"
+            android:textColor="?attr/myPrimaryTextColor"
             android:textSize="16sp"
             android:padding="8dp"
-            android:buttonTint="@color/white"/>
+            style="@style/CustomRadioButton"/>
 
         <RadioButton
             android:id="@+id/bengali_lang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Bengali"
+            android:textColor="?attr/myPrimaryTextColor"
             android:textSize="16sp"
             android:padding="8dp"
-            android:buttonTint="@color/white"/>
+            style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/telugu_lang"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Telugu"
             android:textSize="16sp"
+            android:textColor="?attr/myPrimaryTextColor"
             android:padding="8dp"
-            android:buttonTint="@color/greenBackgroundColor"/>
+            style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/gujurati_lang"
             android:layout_width="match_parent"
@@ -72,7 +77,8 @@
             android:text="Gujurati"
             android:textSize="16sp"
             android:padding="8dp"
-            android:buttonTint="@color/greenBackgroundColor"/>
+            android:textColor="?attr/myPrimaryTextColor"
+            style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/tamil_lang"
             android:layout_width="match_parent"
@@ -80,7 +86,8 @@
             android:text="Tamil"
             android:textSize="16sp"
             android:padding="8dp"
-            android:buttonTint="@color/greenBackgroundColor"/>
+            android:textColor="?attr/myPrimaryTextColor"
+            style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/marathi_lang"
             android:layout_width="match_parent"
@@ -88,7 +95,8 @@
             android:text="Marathi"
             android:textSize="16sp"
             android:padding="8dp"
-            android:buttonTint="@color/greenBackgroundColor"/>
+            android:textColor="?attr/myPrimaryTextColor"
+            style="@style/CustomRadioButton"/>
 
     </RadioGroup>
 
@@ -107,7 +115,7 @@
             android:layout_weight="1"
             android:background="@drawable/ripple_effect_btn_red"
             android:text="cancle"
-            android:textColor="#D9614C" />
+            android:textColor="?attr/my_icon_front_color" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/save_lang"
@@ -117,7 +125,7 @@
             android:layout_weight="1"
             android:background="@drawable/positive_btn"
             android:text="save"
-            android:textColor="@color/white" />
+            android:textColor="?attr/my_icon_color" />
     </LinearLayout>
 
 </LinearLayout>

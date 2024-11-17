@@ -39,7 +39,13 @@ class CreateAppPasswordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setUsernameDialog()
         setonClickListners()
-        setTitleAndDes("Enter Previous  Password", "Please Enter Your Previous Password ")
+        val passwordLock = PreferenceUtils.getSharedPreferences(this.requireContext()).getLockedByPassoword()
+        if(passwordLock){
+            setTitleAndDes("Enter Previous  Password", "Please Enter Your Previous Password ")
+        }else{
+             createPasswordItem.previousPasswordVerified = true
+            setTitleAndDes("New Password","Enter your new Password ")
+        }
     }
 
     private fun setTitleAndDes(s: String, s1: String) {
@@ -174,7 +180,9 @@ class CreateAppPasswordFragment : Fragment() {
             this.requireActivity().finish()
         }else{
             Toast.makeText(this.requireContext(),"Confirm Password is not same",Toast.LENGTH_SHORT).show()
-            createPasswordItem= CreatePasswordItem();
+            createPasswordItem= CreatePasswordItem(previousPasswordVerified = true);
+            setTitleAndDes("New Password","Enter your new Password ")
+
         }
     }
 }

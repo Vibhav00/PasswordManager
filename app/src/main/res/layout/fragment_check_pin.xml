@@ -221,13 +221,31 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
-                android:layout_height="80dp"
-                android:layout_weight="1"
-                android:text="1"
+                android:layout_height="match_parent"
                 android:textSize="30dp"
-                android:visibility="invisible" />
+                android:layout_weight="1"
+
+                android:text="save"
+                android:textColor="@color/white">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/passkey"
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/positive_btn"
+                    android:layout_height="wrap_content"
+                    android:text="Pass Key "
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
                 android:layout_width="0dp"
@@ -250,6 +268,7 @@
                 android:textSize="30dp" />
         </LinearLayout>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
