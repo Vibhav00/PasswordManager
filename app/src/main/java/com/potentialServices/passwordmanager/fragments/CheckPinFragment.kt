@@ -12,7 +12,9 @@ import androidx.core.view.children
 import androidx.lifecycle.lifecycleScope
 import com.potentialServices.passwordmanager.MainActivity
 import com.potentialServices.passwordmanager.R
+import com.potentialServices.passwordmanager.activities.AppPasswordAcvitivity
 import com.potentialServices.passwordmanager.databinding.FragmentCheckPinBinding
+import com.potentialServices.passwordmanager.utils.AppPasswordEvents
 import com.potentialServices.passwordmanager.utils.securepreferenceutils.PreferenceUtilsEncrypted
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -37,6 +39,13 @@ class CheckPinFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
               handleClickListner()
 
+    }
+
+    fun startPasswordFragment(){
+        val iHome = Intent(this@CheckPinFragment.requireActivity(), AppPasswordAcvitivity::class.java)
+        iHome.putExtra("task", AppPasswordEvents.CHECK_PASSWORD)
+        startActivity(iHome)
+        this@CheckPinFragment.requireActivity().finish()
     }
 
 
@@ -111,6 +120,9 @@ class CheckPinFragment : Fragment() {
                 }
             }
 
+        }
+        binding.passkey.setOnClickListener {
+            startPasswordFragment()
         }
 
     }

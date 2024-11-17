@@ -5,5 +5,6 @@ sealed class MainActivityEvents {
     class  SortByTitle(val sortingOder: SortingOder):MainActivityEvents()
     class  SortByUsername(val sortingOder: SortingOder):MainActivityEvents()
     class  SortByWebsite(val sortingOder: SortingOder):MainActivityEvents()
+    class NoEvent():MainActivityEvents()
 
 }

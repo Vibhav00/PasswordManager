@@ -13,6 +13,21 @@
     </style>
 
 
+    <style name="CustomChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+        <!-- Background color for the unselected state -->
+        <item name="chipBackgroundColor">?attr/myTabBackgroundColor</item>
+
+        <!-- Background color for the selected state -->
+        <item name="chipSurfaceColor">?attr/myWindowBackground</item>
+
+        <!-- Optional: Change text color or stroke for better visibility -->
+        <item name="chipStrokeColor">?attr/myWindowBackground</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="CustomRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="buttonTint">@color/radio_button</item>
+    </style>
 
 
 

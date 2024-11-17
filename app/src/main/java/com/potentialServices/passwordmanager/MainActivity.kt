@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         /**
          * setting theme before super.onCreate
          * **/
-
+        System.loadLibrary("keys")
 
         //setTheme(R.style.RedTheme)
         // Retrieve the saved theme and apply it before calling super.onCreate()
@@ -112,6 +112,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.string.open_drawer,
             R.string.close_drawer
         )
+        if(supportActionBar !=null){
+
+            // Resolve the color from the theme using the attribute ?attr/myPrimaryTextColor
+            val typedValue = TypedValue()
+            this.theme.resolveAttribute(R.attr.myTabIndicatorColor, typedValue, true)
+            val color = typedValue.data
+            val togler = toggle.drawerArrowDrawable
+            if(togler!=null){
+                togler.color  = color
+            }
+        }
 
 
         mainBinding.drawer.addDrawerListener(toggle)
@@ -152,10 +163,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mainBinding.searchText.addTextChangedListener {
             if (it.toString().isNotEmpty()) {
                 mainViewModel.handleMainEvents(MainActivityEvents.SearchEvent(it.toString()))
+            }else{
+
+                mainViewModel.handleMainEvents(MainActivityEvents.NoEvent())
             }
             Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
         }
         mainBinding.sortIcon.setOnClickListener {
+            mainBinding.searchTextContainer.visibility = View.GONE
             var event: MainActivityEvents = MainActivityEvents.SortByTitle(SortingOder.ASCENDING)
             var sortingOder: SortingOder = SortingOder.NONE
             var num = 0;
@@ -188,6 +203,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                         sortingOder = SortingOder.DESCENDING
                     }
                 }
+            }
+            bottomSheetView.btnCancel.setOnClickListener {
+                bottomSheet.dismiss()
             }
             bottomSheetView.btnApply.setOnClickListener {
                 when (sortingOder) {
@@ -225,6 +243,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     }
                 }
                 mainViewModel.handleMainEvents(event)
+                bottomSheet.dismiss()
             }
         }
 

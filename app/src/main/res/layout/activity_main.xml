@@ -97,15 +97,16 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
-                android:textColorHint="?attr/myPrimaryTextColor"
-                app:boxStrokeColor="?attr/myTabTextColor"
-                app:cursorColor="?attr/myTabIndicatorColor"
+                android:textColorHint="?attr/mySecondaryTextColor"
+                app:boxStrokeColor="@color/edit_text_backgoud"
+                app:cursorColor="?attr/my_icon_front_color"
                 app:endIconMode="clear_text"
                 app:hintTextColor="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:startIconTint="@color/white"
+                app:endIconTint="?attr/my_icon_front_color"
 
                 >
 
@@ -114,10 +115,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Search"
+                    android:textColorHint="?attr/mySecondaryTextColor"
+                    android:textColor="?attr/myPrimaryTextColor"
                     android:imeOptions="actionSearch"
                     android:lines="1"
                     android:text=""
-                    android:textColor="?attr/myPrimaryTextColor"
                     android:textSize="15sp" />
 
 
@@ -196,7 +198,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/hamburger_header"
         app:itemTextColor="?attr/myPrimaryTextColor"
-        app:itemIconTint="?attr/my_icon_color"
+        app:itemIconTint="?attr/myPrimaryTextColor"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/hamburger_menu_items"
         app:subheaderColor="?attr/myTabIndicatorColor"

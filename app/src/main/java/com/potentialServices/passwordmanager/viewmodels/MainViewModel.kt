@@ -4,6 +4,7 @@ import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.potentialServices.passwordmanager.models.PasswordItem
 import com.potentialServices.passwordmanager.repositories.PasswordRepository
@@ -135,6 +136,10 @@ class MainViewModel(private val passwordRepository: PasswordRepository, applicat
                         passwordList.postValue(list!!);
                     }
                 }
+            }
+
+            is MainActivityEvents.NoEvent -> {
+                passwordList.postValue(mainList);
             }
         }
     }

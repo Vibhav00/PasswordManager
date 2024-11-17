@@ -37,7 +37,7 @@ class PreferenceUtilsEncrypted {
 
         /** function to set password and get password **/
         fun getPassword(): String {
-            return mSharedPreferences.getString("vibhav", "one").toString()
+            return EncryptionDecryption.decrypt(mSharedPreferences.getString("vibhav", "one").toString())
         }
 
         fun setPassword(name: String): Boolean {
