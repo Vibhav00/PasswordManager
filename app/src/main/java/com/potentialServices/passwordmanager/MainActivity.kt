@@ -764,13 +764,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         selectThemeDialogueBinding.saveTheme.setOnClickListener {
             val selectedTheme =
                 when (selectThemeDialogueBinding.themeRadioGroup.checkedRadioButtonId) {
-                   R.id.purple_theme-> R.style.PurpleFantasyTheme
+                    R.id.purple_theme-> R.style.PurpleFantasyTheme
                     R.id.pink_theme -> R.style.PinkTheme1
                     R.id.Orange_theme-> R.style.default_theme
                     R.id.green_theme -> R.style.GreenTheme
                     R.id.red_theme -> R.style.RedTheme
-                    R.id.ocean_theme->R.style.check1
-                    R.id.default_theme ->R.style.default_theme
+                    R.id.ocean_theme->R.style.OceanBlueTheme
+                    R.id.dark_theme ->R.style.darkTheme
                     else -> {R.style.default_theme}
                 }
 

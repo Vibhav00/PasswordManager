@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8EEE2"
+    android:background="?attr/myTabBackgroundColor"
     tools:context=".activities.SplaceActivity">
 
 
@@ -29,6 +29,7 @@
         app:layout_constraintTop_toTopOf="@+id/logo_main"
         app:lottie_rawRes="@raw/start_animation"
         app:lottie_autoPlay="true"
+        app:lottie_colorFilter="?attr/my_icon_front_color"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

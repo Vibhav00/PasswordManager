@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/myWindowBackground"
     tools:context=".fragments.CheckPinFragment">
 
 
@@ -33,6 +34,7 @@
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/roboto_bold"
             android:text="Password Manager "
+            android:textColor="?attr/myPrimaryTextColor"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -116,7 +118,7 @@
                 android:background="#00FFFFFF"
                 android:tag="1"
                 android:text="@string/_1"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
 
             <Button
@@ -127,7 +129,7 @@
                 android:background="#00FFFFFF"
                 android:tag="2"
                 android:text="@string/_2"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
 
             <Button
@@ -137,7 +139,7 @@
                 android:background="#00FFFFFF"
                 android:tag="3"
                 android:text="@string/_3"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
         </LinearLayout>
 
@@ -154,7 +156,7 @@
                 android:background="#00FFFFFF"
                 android:tag="4"
                 android:text="@string/_4"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
 
             <Button
@@ -164,7 +166,7 @@
                 android:background="#00FFFFFF"
                 android:tag="5"
                 android:text="@string/_5"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
 
             <Button
@@ -174,7 +176,7 @@
                 android:background="#00FFFFFF"
                 android:tag="6"
                 android:text="@string/_6"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
         </LinearLayout>
 
@@ -190,8 +192,7 @@
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
                 android:tag="7"
-                android:text="@string/_7"
-                android:textColor="@color/black"
+                android:text="@string/_7"     android:textColor="?attr/myPrimaryTextColor"   
                 android:textSize="30dp" />
 
             <Button
@@ -201,7 +202,7 @@
                 android:background="#00FFFFFF"
                 android:tag="8"
                 android:text="@string/_8"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
 
             <Button
@@ -211,7 +212,7 @@
                 android:background="#00FFFFFF"
                 android:tag="9"
                 android:text="@string/_9"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
         </LinearLayout>
 
@@ -230,18 +231,6 @@
                 android:text="save"
                 android:textColor="@color/white">
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/passkey"
-                    android:layout_width="wrap_content"
-                    android:background="@drawable/positive_btn"
-                    android:layout_height="wrap_content"
-                    android:text="Pass Key "
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
 
 
 
@@ -254,7 +243,7 @@
                 android:background="#00FFFFFF"
                 android:tag="0"
                 android:text="@string/_0"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
 
             <ImageButton
@@ -264,10 +253,24 @@
                 android:background="#00FFFFFF"
                 android:src="@drawable/baseline_lock_24"
                 android:tag="-"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="30dp" />
         </LinearLayout>
+
+
     </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/passkey"
+        android:layout_width="wrap_content"
+        android:background="@drawable/positive_btn"
+        android:layout_height="wrap_content"
+        android:text="Pass Key "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

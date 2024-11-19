@@ -18,7 +18,8 @@ class SplaceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         System.loadLibrary("keys")
         /** initializing the theme before super.onCreate()  **/
-        setTheme(R.style.default_theme)
+        val savedTheme = PreferenceUtils.getSharedPreferences(this).getTheme()
+        setTheme(savedTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splace)
 

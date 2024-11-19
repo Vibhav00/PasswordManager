@@ -2,9 +2,9 @@
     <!-- Default state -->
     <item android:state_enabled="true">
         <shape android:shape="rectangle">
-            <solid android:color="@color/sunsetOrangePrimary"/>
+            <solid android:color="@color/oceanBluePrimaryText"/>
             <corners android:radius="8dp"/>
-            <stroke android:width="2dp" android:color="@color/sunsetOrangePrimary"/>
+            <stroke android:width="2dp" android:color="@color/oceanBluePrimaryText"/>
         </shape>
     </item>
 

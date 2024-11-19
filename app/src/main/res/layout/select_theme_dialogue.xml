@@ -78,10 +78,10 @@
             android:textColor="?attr/myPrimaryTextColor"
             style="@style/CustomRadioButton"/>
         <RadioButton
-            android:id="@+id/default_theme"
+            android:id="@+id/dark_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Default"
+            android:text="Dark"
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
