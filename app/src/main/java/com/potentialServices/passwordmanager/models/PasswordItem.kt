@@ -2,8 +2,9 @@ package com.potentialServices.passwordmanager.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.potentialServices.passwordmanager.db.PasswordDatabase.Companion.PASSWORD_TABLE
 
-@Entity(tableName = "passwordTable")
+@Entity(tableName = PASSWORD_TABLE)
 data class PasswordItem(
     @PrimaryKey(autoGenerate = true)
     val id: Int,

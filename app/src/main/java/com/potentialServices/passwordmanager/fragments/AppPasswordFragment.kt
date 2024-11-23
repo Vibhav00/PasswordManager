@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.potentialServices.passwordmanager.MainActivity
+import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.databinding.FragmentAppPasswordBinding
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents.*
 import com.potentialServices.passwordmanager.utils.securepreferenceutils.PreferenceUtilsEncrypted
 
@@ -39,8 +41,7 @@ class AppPasswordFragment : Fragment() {
     private fun checkPass() {
         val password = fragmentAppPasswordBinding.etPassword.text.toString()
         if (password.isEmpty()) {
-            Toast.makeText(this.requireContext(), "Password must not be empty ", Toast.LENGTH_SHORT)
-                .show()
+            PasswordManagerToast.showToast(this.requireActivity(),getString(R.string.password_can_not_be_empty),Toast.LENGTH_SHORT)
             return;
         }
         val realPaas =
@@ -53,8 +54,8 @@ class AppPasswordFragment : Fragment() {
             return
         }
 
-        Toast.makeText(this.requireContext(), "Password must not correct", Toast.LENGTH_SHORT)
-            .show()
+        PasswordManagerToast.showToast(this.requireContext(),
+            getString(R.string.password_is_not_correct),Toast.LENGTH_SHORT)
         return
 
 

@@ -9,11 +9,14 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.potentialServices.passwordmanager.MainActivity
+import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.activities.EditPassActivity
 import com.potentialServices.passwordmanager.adapters.PasswordAdapter
 import com.potentialServices.passwordmanager.databinding.FragmentRecentlyUsedPasswordBinding
 import com.potentialServices.passwordmanager.models.PasswordItem
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions
+import com.potentialServices.passwordmanager.utils.constants.Constants.EDIT_PASS_EXTRA
 import com.potentialServices.passwordmanager.viewmodels.MainViewModel
 
 
@@ -60,7 +63,7 @@ class RecentlyUsedPasswordFragment : Fragment() ,PasswordAdapter.OnClickItem{
 
     override fun onClick(index: Int) {
         val iHome = Intent(this.requireContext(), EditPassActivity::class.java)
-        iHome.putExtra("index", index)
+        iHome.putExtra(EDIT_PASS_EXTRA, index)
         startActivity(iHome)
     }
 
@@ -80,15 +83,17 @@ class RecentlyUsedPasswordFragment : Fragment() ,PasswordAdapter.OnClickItem{
         temp.liked=flag
         mainViewModel.setPassword(temp).apply {
             this.invokeOnCompletion {
-                Toast.makeText(this@RecentlyUsedPasswordFragment.requireContext(),"password updated ", Toast.LENGTH_SHORT).show()
-                mainViewModel.getAllPass()
+                PasswordManagerToast.showToast(this@RecentlyUsedPasswordFragment.requireContext(),
+                    getString(
+                        R.string.password_updated
+                    ),Toast.LENGTH_SHORT)
             }
         }
     }
 
     override fun deleteItem(passwordItem: PasswordItem) {
-        LargelyUsedFunctions.deleteMessageDialog(this@RecentlyUsedPasswordFragment.requireContext(),"Delete Password",
-            "Are you sure you want to delete this Password "
+        LargelyUsedFunctions.deleteMessageDialog(this@RecentlyUsedPasswordFragment.requireContext(),getString(R.string.delete_password),
+            getString(R.string.are_you_sure_you_want_to_delete_this_password)
         ) {
             mainViewModel.deletePass(passwordItem).apply {
 

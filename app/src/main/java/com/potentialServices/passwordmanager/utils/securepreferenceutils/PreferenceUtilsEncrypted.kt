@@ -9,7 +9,11 @@ class PreferenceUtilsEncrypted {
 
     companion object {
         private lateinit var mSharedPreferences: SharedPreferences
-        const val NME= "vibhav"
+
+
+        private const val PASSWORD= "pASSwORD"
+        private const val PIN = "PiN"
+        private const val DEFAULT_PASS_VALUE = ""
         /**
          *  implementing secure shared preferences which can't be easily reverse engineered .
          **/
@@ -22,61 +26,14 @@ class PreferenceUtilsEncrypted {
         }
 
 
-        /** function to set string and get string **/
-        fun getName(): String {
-            return mSharedPreferences.getString("vibhav", "initial value").toString()
-        }
-
-        fun setName(name: String): Boolean {
-            mSharedPreferences.edit().putString("vibhav", name).apply()
-            return true
-        }
-
-
-
 
         /** function to set password and get password **/
         fun getPassword(): String {
-            return EncryptionDecryption.decrypt(mSharedPreferences.getString("vibhav", "one").toString())
+            return EncryptionDecryption.decrypt(mSharedPreferences.getString(PASSWORD, DEFAULT_PASS_VALUE).toString())
         }
 
         fun setPassword(name: String): Boolean {
-            mSharedPreferences.edit().putString("vibhav", EncryptionDecryption.encrypt(name)).apply()
-            return true
-        }
-
-
-
-        /** function to set password and get password **/
-        fun getEncryptionKey(): String {
-            return mSharedPreferences.getString("vibhav", "initial value").toString()
-        }
-
-        fun setEncryptionKey(name: String): Boolean {
-            mSharedPreferences.edit().putString("vibhav", name).apply()
-            return true
-        }
-
-
-
-        /** function to set password and get password **/
-        fun getRecoveryQuestion(): String {
-            return mSharedPreferences.getString("sqn", "").toString()
-        }
-
-        fun setRecoveryQuestion(name: String): Boolean {
-            mSharedPreferences.edit().putString("sqn", name).apply()
-            return true
-        }
-
-
-        /** function to set password and get password **/
-        fun getRecoveryAns(): String {
-            return mSharedPreferences.getString("sans", "").toString()
-        }
-
-        fun setRecoveryAns(name: String): Boolean {
-            mSharedPreferences.edit().putString("sans", name).apply()
+            mSharedPreferences.edit().putString(PASSWORD, EncryptionDecryption.encrypt(name)).apply()
             return true
         }
 
@@ -85,11 +42,11 @@ class PreferenceUtilsEncrypted {
 
         /** function to set pin and get pin **/
         fun getPin(): String {
-            return EncryptionDecryption.decrypt(mSharedPreferences.getString("pin", "NopinIsProvided").toString())
+            return EncryptionDecryption.decrypt(mSharedPreferences.getString(PIN, DEFAULT_PASS_VALUE).toString())
         }
 
         fun setPin(name: String): Boolean {
-            mSharedPreferences.edit().putString("pin",EncryptionDecryption.encrypt( name)).apply()
+            mSharedPreferences.edit().putString(PIN,EncryptionDecryption.encrypt( name)).apply()
             return true
         }
 

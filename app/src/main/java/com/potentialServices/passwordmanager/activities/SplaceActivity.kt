@@ -9,6 +9,8 @@ import android.view.WindowManager
 import androidx.lifecycle.lifecycleScope
 import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
+import com.potentialServices.passwordmanager.utils.constants.Constants.SECURE_KEY_LOC
+import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -16,7 +18,7 @@ import kotlinx.coroutines.launch
 
 class SplaceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        System.loadLibrary("keys")
+        System.loadLibrary(SECURE_KEY_LOC)
         /** initializing the theme before super.onCreate()  **/
         val savedTheme = PreferenceUtils.getSharedPreferences(this).getTheme()
         setTheme(savedTheme)
@@ -31,14 +33,14 @@ class SplaceActivity : AppCompatActivity() {
         val lockedByPin = PreferenceUtils.getSharedPreferences(this).getLockedByFourPin()
         val passwordLock = PreferenceUtils.getSharedPreferences(this).getLockedByPassoword()
         if(fingerprintLock){
-            iHome.putExtra("task",AppPasswordEvents.CHECK_FINGERPRINT)
+            iHome.putExtra(SERIALIZABLE_EXTRA_KEY,AppPasswordEvents.CHECK_FINGERPRINT)
         }else if(lockedByPin)
         {
-            iHome.putExtra("task",AppPasswordEvents.CHECK_PIN)
+            iHome.putExtra(SERIALIZABLE_EXTRA_KEY,AppPasswordEvents.CHECK_PIN)
         }else if(passwordLock){
-            iHome.putExtra("task",AppPasswordEvents.CHECK_PASSWORD)
+            iHome.putExtra(SERIALIZABLE_EXTRA_KEY,AppPasswordEvents.CHECK_PASSWORD)
         }else{
-            iHome.putExtra("task",AppPasswordEvents.CREATE_PASSWORD)
+            iHome.putExtra(SERIALIZABLE_EXTRA_KEY,AppPasswordEvents.CREATE_PASSWORD)
         }
         /** starting the looper for 1.5 second delay  **/
 

@@ -24,11 +24,11 @@ class LargelyUsedFunctions {
             builder.setTitle(title)
             builder.setMessage(message)
 
-            builder.setPositiveButton("OK") { dialog, which ->
+            builder.setPositiveButton(context.getString(R.string.ok)) { dialog, which ->
                 deleteFun()
             }
 
-            builder.setNegativeButton("Cancel") { dialog: DialogInterface, which: Int ->
+            builder.setNegativeButton(context.getString(R.string.cancel)) { dialog: DialogInterface, which: Int ->
                 dialog.dismiss()
             }
 

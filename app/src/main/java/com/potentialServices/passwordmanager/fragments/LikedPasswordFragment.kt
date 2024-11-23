@@ -10,13 +10,16 @@ import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.potentialServices.passwordmanager.MainActivity
+import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.activities.EditPassActivity
 import com.potentialServices.passwordmanager.adapters.PasswordAdapter
 import com.potentialServices.passwordmanager.databinding.FragmentLikedPasswordBinding
 import com.potentialServices.passwordmanager.db.PasswordDatabase
 import com.potentialServices.passwordmanager.models.PasswordItem
 import com.potentialServices.passwordmanager.repositories.PasswordRepository
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions
+import com.potentialServices.passwordmanager.utils.constants.Constants.EDIT_PASS_EXTRA
 import com.potentialServices.passwordmanager.viewmodelprovider.MainViewModelProviderFactory
 import com.potentialServices.passwordmanager.viewmodels.MainViewModel
 
@@ -43,7 +46,7 @@ class LikedPasswordFragment : Fragment() ,PasswordAdapter.OnClickItem{
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        mainViewModel.getAllPass()
+//        mainViewModel.getAllPass()
 
         mainViewModel.passwordList.observe(this.requireActivity()) {
             passwordAdapter = PasswordAdapter(getList(it), this)
@@ -64,7 +67,7 @@ class LikedPasswordFragment : Fragment() ,PasswordAdapter.OnClickItem{
 
     override fun onClick(index: Int) {
         val iHome = Intent(this.requireContext(), EditPassActivity::class.java)
-        iHome.putExtra("index", index)
+        iHome.putExtra(EDIT_PASS_EXTRA, index)
         startActivity(iHome)
     }
 
@@ -73,7 +76,11 @@ class LikedPasswordFragment : Fragment() ,PasswordAdapter.OnClickItem{
         temp.liked=flag
         mainViewModel.setPassword(temp).apply {
             this.invokeOnCompletion {
-                Toast.makeText(this@LikedPasswordFragment.requireContext(),"password updated ", Toast.LENGTH_SHORT).show()
+                PasswordManagerToast.showToast(this@LikedPasswordFragment.requireContext(),
+                    getString(
+                        R.string.password_updated
+                    ),Toast.LENGTH_SHORT)
+//                Toast.makeText(this@LikedPasswordFragment.requireContext(),"password updated ", Toast.LENGTH_SHORT).show()
 //                mainViewModel.getAllPass()
             }
         }
@@ -94,8 +101,8 @@ class LikedPasswordFragment : Fragment() ,PasswordAdapter.OnClickItem{
     }
 
     override fun deleteItem(passwordItem: PasswordItem) {
-        LargelyUsedFunctions.deleteMessageDialog(this@LikedPasswordFragment.requireContext(),"Delete Password",
-            "Are you sure you want to delete this Password "
+        LargelyUsedFunctions.deleteMessageDialog(this@LikedPasswordFragment.requireContext(),getString(R.string.delete_password),
+            getString(R.string.are_you_sure_you_want_to_delete_this_password)
         ) {
             mainViewModel.deletePass(passwordItem).apply {
 

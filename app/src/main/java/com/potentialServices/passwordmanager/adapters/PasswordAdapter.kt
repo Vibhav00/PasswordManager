@@ -41,7 +41,6 @@ class PasswordAdapter(private val passwordList:List<PasswordItem>, private val o
     }
 
     override fun getItemCount(): Int {
-        Log.e("vibhav","list = ${passwordList}")
        return  passwordList.size
     }
 
@@ -105,11 +104,9 @@ class PasswordAdapter(private val passwordList:List<PasswordItem>, private val o
     /** function to set the like  **/
     private fun setLike(view: ImageView, passwordItem:PasswordItem){
         if(passwordItem.liked){
-            Log.e("vibhav","true -> false")
 //            view.imageTintList = ColorStateList.valueOf(ContextCompat.getColor(context!!, R.color.black) )
             onClickItem.onUpdate(passwordItem,false)
         }else{
-            Log.e("vibhav","false -> true")
 //            view.imageTintList = ColorStateList.valueOf(ContextCompat.getColor(context!!, R.color.white) )
            onClickItem.onUpdate(passwordItem,true)
         }
@@ -120,7 +117,6 @@ class PasswordAdapter(private val passwordList:List<PasswordItem>, private val o
 
     /** function to set the color of the like image  **/
      private fun setBack(view: ImageView, passwordItem:PasswordItem){
-        Log.e("vibhav","set back is called , liked = ${passwordItem.liked}")
 
         if(passwordItem.liked){
             view.imageTintList = ColorStateList.valueOf(ContextCompat.getColor(context!!, R.color.like_color) )

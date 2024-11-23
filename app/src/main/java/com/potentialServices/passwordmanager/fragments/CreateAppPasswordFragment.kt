@@ -13,8 +13,11 @@ import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
 import com.potentialServices.passwordmanager.MainActivity
+import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.databinding.EntereUsernameDialogBinding
 import com.potentialServices.passwordmanager.databinding.FragmentCreateAppPasswordBinding
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
+import com.potentialServices.passwordmanager.utils.constants.Constants.A_Z
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 import com.potentialServices.passwordmanager.utils.securepreferenceutils.PreferenceUtilsEncrypted
 import kotlin.random.Random
@@ -41,10 +44,10 @@ class CreateAppPasswordFragment : Fragment() {
         setonClickListners()
         val passwordLock = PreferenceUtils.getSharedPreferences(this.requireContext()).getLockedByPassoword()
         if(passwordLock){
-            setTitleAndDes("Enter Previous  Password", "Please Enter Your Previous Password ")
+            setTitleAndDes(getString(R.string.enter_previous_password), getString(R.string.please_enter_your_previous_password))
         }else{
              createPasswordItem.previousPasswordVerified = true
-            setTitleAndDes("New Password","Enter your new Password ")
+            setTitleAndDes(getString(R.string.new_password),getString(R.string.enter_your_new_password))
         }
     }
 
@@ -83,11 +86,10 @@ class CreateAppPasswordFragment : Fragment() {
                         .setHaveUsername(true)
                     PreferenceUtils.getSharedPreferences(this@CreateAppPasswordFragment.requireContext())
                         .setUsername(usename)
-                    Toast.makeText(
-                        this@CreateAppPasswordFragment.requireContext(),
-                        "username is saved successfully ",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    PasswordManagerToast.showToast(this@CreateAppPasswordFragment.requireContext(),
+                        getString(
+                            R.string.username_is_saved_successfully
+                        ),Toast.LENGTH_SHORT)
                     dialog.dismiss()
                 }
 
@@ -97,11 +99,11 @@ class CreateAppPasswordFragment : Fragment() {
                         .setHaveUsername(true)
                     PreferenceUtils.getSharedPreferences(this@CreateAppPasswordFragment.requireContext())
                         .setUsername(usename)
-                    Toast.makeText(
-                        this@CreateAppPasswordFragment.requireContext(),
-                        "Random username is assigned  ",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    PasswordManagerToast.showToast(this@CreateAppPasswordFragment.requireContext(),
+                        getString(
+                            R.string.random_username_is_assigned
+                        ),Toast.LENGTH_SHORT)
+
                     dialog.dismiss()
                 }
 
@@ -112,7 +114,7 @@ class CreateAppPasswordFragment : Fragment() {
         }
     }
     private fun generateRandomUsername(length: Int = 8): String {
-        val characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+        val characters = A_Z
         return (1..length)
             .map { characters[Random.nextInt(characters.length)] }
             .joinToString("")
@@ -122,7 +124,6 @@ class CreateAppPasswordFragment : Fragment() {
         binding.apply {
             saveBtn.setOnClickListener {
                 if(createPasswordItem.previousPasswordVerified){
-                    Log.e("thisdfs ","lskdjfsjlkdjflsjlfjsdjdfl")
                     if(createPasswordItem.firstPasswordAdded){
                         val text = this.etPassword.text.toString()
                         createPasswordItem.confirmPassword = text;
@@ -132,23 +133,29 @@ class CreateAppPasswordFragment : Fragment() {
                         createPasswordItem.firstPassword = text;
                         createPasswordItem.firstPasswordAdded = true//tyu
                         etPassword.setText("")
-                        setTitleAndDes("New Password","Enter you new password again")
+                        setTitleAndDes(getString(R.string.new_password),
+                            getString(R.string.enter_you_new_password_again))
                     }
                 }else{
                     val text = this.etPassword.text.toString()
                     if(text.isBlank() || text.isEmpty()){
-                        Toast.makeText(this@CreateAppPasswordFragment.requireContext(),"emptly ",Toast.LENGTH_SHORT).show()
+//                        Toast.makeText(this@CreateAppPasswordFragment.requireContext(),"emptly ",Toast.LENGTH_SHORT).show()
 
                     }else{
                         val pass  = PreferenceUtilsEncrypted.getSharedPreferences(this@CreateAppPasswordFragment.requireContext())
                             .getPassword()
                         if(pass.equals(text)){
                             createPasswordItem.previousPasswordVerified = true;
-                            setTitleAndDes("New Password","Enter your new Password ")
+                            setTitleAndDes(getString(R.string.new_password),
+                                getString(R.string.enter_your_new_password))
 
                         }else{
-                            setTitleAndDes("Enter Previous  Password", "Please Enter Your Previous Password ")
-                            Toast.makeText(this@CreateAppPasswordFragment.requireContext(),"Previous Password is not correct ",Toast.LENGTH_SHORT).show()
+                            setTitleAndDes(getString(R.string.enter_previous_password),
+                                getString(R.string.please_enter_your_previous_password))
+                            Toast.makeText(this@CreateAppPasswordFragment.requireContext(),
+                                getString(
+                                    R.string.previous_password_is_not_correct
+                                ),Toast.LENGTH_SHORT).show()
                         }
 
                     }
@@ -159,9 +166,9 @@ class CreateAppPasswordFragment : Fragment() {
             }
             cancelButton.setOnClickListener {
                 if(createPasswordItem.previousPasswordVerified){
-                    setTitleAndDes("New Password","Enter your new Password ")
+                    setTitleAndDes(getString(R.string.new_password),getString(R.string.enter_your_new_password))
                 }else{
-                    setTitleAndDes("Enter Previous  Password", "Please Enter Your Previous Password ")
+                    setTitleAndDes(getString(R.string.enter_previous_password), getString(R.string.please_enter_your_previous_password))
                 }
                 etPassword.setText("")
 
@@ -176,12 +183,14 @@ class CreateAppPasswordFragment : Fragment() {
             PreferenceUtils.getSharedPreferences(this.requireContext()).setLockedByPassword(true)
             val iHome = Intent(this.requireActivity(), MainActivity::class.java)
             startActivity(iHome)
-            Toast.makeText(this.requireContext(),"Password Updated Successfully ",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this.requireContext(),
+                getString(R.string.password_updated_successfully),Toast.LENGTH_SHORT).show()
             this.requireActivity().finish()
         }else{
-            Toast.makeText(this.requireContext(),"Confirm Password is not same",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this.requireContext(),
+                getString(R.string.confirm_password_is_not_same),Toast.LENGTH_SHORT).show()
             createPasswordItem= CreatePasswordItem(previousPasswordVerified = true);
-            setTitleAndDes("New Password","Enter your new Password ")
+            setTitleAndDes(getString(R.string.new_password),getString(R.string.enter_your_new_password))
 
         }
     }

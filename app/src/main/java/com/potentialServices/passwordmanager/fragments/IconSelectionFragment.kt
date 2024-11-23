@@ -36,7 +36,6 @@ class IconSelectionFragment : Fragment() {
     }
 
     private fun  handleClick() {
-        Toast.makeText(this.requireActivity(),"icon selected for add",Toast.LENGTH_SHORT).show()
         fragmentIconSelectionBinding.document.setOnClickListener { (activity as AddPasswordActivity).icon = R.drawable.icon_document ; activity?.onBackPressed() }
         fragmentIconSelectionBinding.call.setOnClickListener { (activity as AddPasswordActivity).icon = R.drawable.icon_phone ; activity?.onBackPressed() }
         fragmentIconSelectionBinding.analytics.setOnClickListener { (activity as AddPasswordActivity).icon = R.drawable.icon_analytics ; activity?.onBackPressed() }
@@ -67,7 +66,6 @@ class IconSelectionFragment : Fragment() {
 
 
     private fun handleClick2() {
-        Toast.makeText(this.requireActivity(),"icon selected for edit ",Toast.LENGTH_SHORT).show()
         fragmentIconSelectionBinding.document.setOnClickListener { (activity as EditPassActivity).icon = R.drawable.icon_document ; activity?.onBackPressed() }
         fragmentIconSelectionBinding.call.setOnClickListener { (activity as EditPassActivity).icon = R.drawable.icon_phone ; activity?.onBackPressed() }
         fragmentIconSelectionBinding.analytics.setOnClickListener { (activity as EditPassActivity).icon = R.drawable.icon_analytics ; activity?.onBackPressed() }

@@ -17,6 +17,7 @@ import com.potentialServices.passwordmanager.db.PasswordDatabase
 import com.potentialServices.passwordmanager.models.PasswordItem
 import com.potentialServices.passwordmanager.repositories.PasswordRepository
 import com.potentialServices.passwordmanager.security.EncryptionDecryption
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.viewmodelprovider.MainViewModelProviderFactory
 import com.potentialServices.passwordmanager.viewmodels.MainViewModel
 import kotlinx.coroutines.Dispatchers
@@ -60,13 +61,13 @@ class AddPasswordFragment : Fragment() {
         addPasswordBinding.cancelButton.setOnClickListener {
             // Show a confirmation dialog
             AlertDialog.Builder(requireContext())
-                .setTitle("Cancel")
-                .setMessage("Are you sure you want to cancel?")
-                .setPositiveButton("Yes") { dialog, which ->
+                .setTitle(getString(R.string.cancel))
+                .setMessage(getString(R.string.are_you_sure_you_want_to_cancel))
+                .setPositiveButton(getString(R.string.yes)) { dialog, which ->
                     // Go back to the previous screen
                     requireActivity().onBackPressed()
                 }
-                .setNegativeButton("No", null)
+                .setNegativeButton(getString(R.string.no), null)
                 .show()
         }
 
@@ -83,10 +84,12 @@ class AddPasswordFragment : Fragment() {
         val website = addPasswordBinding.etWebsite.text.toString()
 
         if(title.isEmpty()){
-            Toast.makeText(this.requireActivity(),"title Can not be empty ",Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this.requireActivity(),
+                getString(R.string.title_can_not_be_empty),Toast.LENGTH_SHORT)
         }
         if(password.isEmpty()){
-            Toast.makeText(this.requireActivity(),"password Can not be empty ",Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this.requireActivity(),
+                getString(R.string.password_can_not_be_empty),Toast.LENGTH_SHORT)
         }
 
 

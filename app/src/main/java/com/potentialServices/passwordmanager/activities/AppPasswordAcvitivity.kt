@@ -10,6 +10,7 @@ import com.potentialServices.passwordmanager.fragments.CreateAppPasswordFragment
 import com.potentialServices.passwordmanager.fragments.CreatePinFragment
 import com.potentialServices.passwordmanager.fragments.FingerprintFragment
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
+import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 
 class AppPasswordAcvitivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class AppPasswordAcvitivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         activityAppPasswordAcvitivityBinding = ActivityAppPasswordAcvitivityBinding.inflate(layoutInflater)
         setContentView(activityAppPasswordAcvitivityBinding.root)
-        myTask= intent.getSerializableExtra("task")  as AppPasswordEvents
+        myTask= intent.getSerializableExtra(SERIALIZABLE_EXTRA_KEY)  as AppPasswordEvents
         handleTask()
 
     }

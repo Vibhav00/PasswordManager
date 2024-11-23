@@ -11,9 +11,11 @@ import javax.crypto.spec.SecretKeySpec
 class EncryptionDecryption {
     companion object{
 
+        const val A_E_S = "AES"
+        const val AES_CBC_PKCS= "AES/CBC/PKCS7PADDING"
         private fun generateSecretKey(): SecretKeySpec {
             /*** The customSecretKey can be 16, 24 or 32 depending on algorithm you are using* i.e AES-128, AES-192 or AES-256 ***/
-            val secretKey = SecretKeySpec(getKey().toByteArray(), "AES")
+            val secretKey = SecretKeySpec(getKey().toByteArray(), A_E_S)
             return secretKey
         }
         fun generateIV(): IvParameterSpec {
@@ -27,7 +29,7 @@ class EncryptionDecryption {
             val iv = generateIV()
             val plainText = textToEncrypt.toByteArray()
 
-            val cipher = Cipher.getInstance("AES/CBC/PKCS7PADDING")
+            val cipher = Cipher.getInstance(AES_CBC_PKCS)
             cipher.init(Cipher.ENCRYPT_MODE, secretKey, iv)
 
             val encrypt = cipher.doFinal(plainText)
@@ -41,7 +43,7 @@ class EncryptionDecryption {
             val iv = generateIV()
             val textToDecrypt = Base64.decode(encryptedText, Base64.DEFAULT)
 
-            val cipher = Cipher.getInstance("AES/CBC/PKCS7PADDING")
+            val cipher = Cipher.getInstance(AES_CBC_PKCS)
 
             cipher.init(Cipher.DECRYPT_MODE, secretKey, iv)
 

@@ -14,7 +14,9 @@ import com.potentialServices.passwordmanager.MainActivity
 import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.activities.AppPasswordAcvitivity
 import com.potentialServices.passwordmanager.databinding.FragmentCheckPinBinding
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
+import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import com.potentialServices.passwordmanager.utils.securepreferenceutils.PreferenceUtilsEncrypted
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -43,7 +45,7 @@ class CheckPinFragment : Fragment() {
 
     fun startPasswordFragment(){
         val iHome = Intent(this@CheckPinFragment.requireActivity(), AppPasswordAcvitivity::class.java)
-        iHome.putExtra("task", AppPasswordEvents.CHECK_PASSWORD)
+        iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CHECK_PASSWORD)
         startActivity(iHome)
         this@CheckPinFragment.requireActivity().finish()
     }
@@ -75,7 +77,8 @@ class CheckPinFragment : Fragment() {
                 startActivity(intent)
                 this.requireActivity().finish();
             }else{
-                Toast.makeText(this.requireContext(),"Wrong pin ",Toast.LENGTH_SHORT).show()
+                PasswordManagerToast.showToast(this.requireContext(),
+                    getString(R.string.wrong_pin),Toast.LENGTH_SHORT)
                 tempPin =""
             }
         }catch (e : Exception){
@@ -88,7 +91,6 @@ class CheckPinFragment : Fragment() {
         binding.llBtnFirst.children.forEach {
             it.setOnClickListener {
                 val value = it.tag;
-                Toast.makeText(this.requireContext(),value.toString(), Toast.LENGTH_SHORT).show()
                 tempPin += value
                 handlePosAndDot()
 
@@ -97,7 +99,6 @@ class CheckPinFragment : Fragment() {
         binding.llBtnSecond.children.forEach {
             it.setOnClickListener {
                 val value = it.tag;
-                Toast.makeText(this.requireContext(),value.toString(), Toast.LENGTH_SHORT).show()
                 tempPin += value
                 handlePosAndDot()
             }
@@ -105,7 +106,6 @@ class CheckPinFragment : Fragment() {
         binding . llBtnThird . children . forEach {
             it.setOnClickListener {
                 val value = it.tag;
-                Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
                 tempPin += value
                 handlePosAndDot()
             }
@@ -114,7 +114,6 @@ class CheckPinFragment : Fragment() {
             if(index==1){
                 it.setOnClickListener {
                     val value = it.tag;
-                    Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
                     tempPin += value
                     handlePosAndDot()
                 }

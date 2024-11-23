@@ -18,6 +18,8 @@ abstract  class PasswordDatabase: RoomDatabase() {
     companion object {
         @Volatile
         private var instance: PasswordDatabase? = null
+        const val DATABASE_NAME = "database_main.db"
+        const val PASSWORD_TABLE  = "passwordTable"
 
         private var LOCK = Any()
         operator fun invoke(context: Context) = instance ?: synchronized(LOCK) {
@@ -37,7 +39,7 @@ abstract  class PasswordDatabase: RoomDatabase() {
         private fun createDatabase(context: Context) = Room.databaseBuilder(
             context.applicationContext,
             PasswordDatabase::class.java,
-            "database_main.db"
+            DATABASE_NAME
         )
             .build()
     }

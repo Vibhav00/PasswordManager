@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.potentialServices.passwordmanager.repositories.PasswordRepository
 import com.potentialServices.passwordmanager.viewmodels.MainViewModel
 
-class MainViewModelProviderFactory(val app:Application,val passwordRepository: PasswordRepository) :ViewModelProvider.Factory
+class MainViewModelProviderFactory(val app:Application, private val passwordRepository: PasswordRepository) :ViewModelProvider.Factory
 {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

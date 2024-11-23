@@ -10,9 +10,12 @@ import android.widget.Toast
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.potentialServices.passwordmanager.MainActivity
+import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.activities.AppPasswordAcvitivity
 import com.potentialServices.passwordmanager.databinding.FragmentFingerprintBinding
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
+import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import java.util.concurrent.Executor
 
 
@@ -40,24 +43,23 @@ class FingerprintFragment : Fragment() {
 
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                     super.onAuthenticationError(errorCode, errString)
-                    Toast.makeText(
-                        this@FingerprintFragment.requireContext(),
-                        "Open Via Password ",
-                        Toast.LENGTH_SHORT
-                    )
-                        .show()
+                    PasswordManagerToast.showToast(this@FingerprintFragment.requireContext(),
+                        getString(
+                            R.string.open_via_password
+                        ),Toast.LENGTH_SHORT)
 
                     val iHome = Intent(this@FingerprintFragment.requireActivity(), AppPasswordAcvitivity::class.java)
-                    iHome.putExtra("task", AppPasswordEvents.CHECK_PASSWORD)
+                    iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CHECK_PASSWORD)
                     startActivity(iHome)
                     this@FingerprintFragment.requireActivity().finish()
                 }
 
                 override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
                     super.onAuthenticationSucceeded(result)
-                    Toast.makeText(this@FingerprintFragment.requireContext(), "Authentication Succeed", Toast.LENGTH_SHORT)
-                        .show()
-
+                    PasswordManagerToast.showToast(this@FingerprintFragment.requireContext(),
+                        getString(
+                            R.string.authentication_succeed
+                        ),Toast.LENGTH_SHORT)
                     // Navigate to MainActivity after successful authentication
                     val intent = Intent(this@FingerprintFragment.requireActivity(), MainActivity::class.java)
                     startActivity(intent)
@@ -67,15 +69,17 @@ class FingerprintFragment : Fragment() {
 
                 override fun onAuthenticationFailed() {
                     super.onAuthenticationFailed()
-                    Toast.makeText(this@FingerprintFragment.requireContext(), "Authentication Failed", Toast.LENGTH_SHORT)
-                        .show()
+                    PasswordManagerToast.showToast(this@FingerprintFragment.requireContext(),
+                        getString(
+                            R.string.authentication_failed
+                        ),Toast.LENGTH_SHORT)
                 }
             })
 
         promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Biometric login")
-            .setSubtitle("Login with biometric")
-            .setNegativeButtonText("Use App Password ")
+            .setTitle(getString(R.string.biometric_login))
+            .setSubtitle(getString(R.string.login_with_biometric))
+            .setNegativeButtonText(getString(R.string.use_app_password))
             .setConfirmationRequired(false)
             .build()
 

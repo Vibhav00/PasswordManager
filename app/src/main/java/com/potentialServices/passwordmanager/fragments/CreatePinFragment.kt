@@ -13,6 +13,7 @@ import androidx.core.view.children
 import androidx.lifecycle.lifecycleScope
 import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.databinding.FragmentCreatePinBinding
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 import com.potentialServices.passwordmanager.utils.securepreferenceutils.PreferenceUtilsEncrypted
 import kotlinx.coroutines.Dispatchers
@@ -69,7 +70,8 @@ class CreatePinFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         if(lockedByFourPin)
-        Toast.makeText(this.requireContext(),"Your Pin Lock is Still Active ",Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this.requireContext(),
+                getString(R.string.your_pin_is_still_active),Toast.LENGTH_SHORT)
 
     }
 
@@ -80,22 +82,23 @@ class CreatePinFragment : Fragment() {
           if(createPinItem.firstPin == createPinItem.confirmPin){
               PreferenceUtilsEncrypted.getSharedPreferences(this.requireContext()).setPin(createPinItem.firstPin)
               PreferenceUtils.getSharedPreferences(this.requireContext())
-              Toast.makeText(this.requireContext(),"Pin added Successfully ",Toast.LENGTH_SHORT).show()
+              PasswordManagerToast.showToast(this.requireContext(),
+                  getString(R.string.pin_added_successfully),Toast.LENGTH_SHORT)
               this.requireActivity().finish()
           }else{
-              Toast.makeText(this.requireContext(),"Confirm Pin was wrong  ",Toast.LENGTH_SHORT).show()
-              binding.tvHint.text = "Enter New Pin "
+              PasswordManagerToast.showToast(this.requireContext(),
+                  getString(R.string.confirm_pin_was_wrong),Toast.LENGTH_SHORT)
+              binding.tvHint.text = getString(R.string.enternewpin)
               createPinItem = CreatePinItem()
               tempPin = ""
           }
       }else{
           createPinItem.firstRoundCompleted = true
           createPinItem.firstPin = String(tempPin.toCharArray());
-          Log.e("the result ",createPinItem.toString())
           tempPin = ""
           lifecycleScope.launch (Dispatchers.Main){
               delay(500)
-              binding.tvHint.text = "Enter New Pin Again "
+              binding.tvHint.text = getString(R.string.enternewpinagain)
           }
 
       }
@@ -109,7 +112,8 @@ class CreatePinFragment : Fragment() {
                     tempPin += value
                     handlePosAndDot()
                 }else{
-                    Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                    PasswordManagerToast.showToast(this.requireContext(),
+                        getString(R.string.please_activate_pin_lock),Toast.LENGTH_SHORT)
                 }
 
 
@@ -122,7 +126,8 @@ class CreatePinFragment : Fragment() {
                     tempPin += value
                     handlePosAndDot()
                 }else{
-                    Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                    PasswordManagerToast.showToast(this.requireContext(),
+                        getString(R.string.please_activate_pin_lock),Toast.LENGTH_SHORT)
                 }
 
             }
@@ -134,7 +139,8 @@ class CreatePinFragment : Fragment() {
                     tempPin += value
                     handlePosAndDot()
                 }else{
-                    Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                    PasswordManagerToast.showToast(this.requireContext(),
+                        getString(R.string.please_activate_pin_lock),Toast.LENGTH_SHORT)
                 }
 
             }
@@ -147,7 +153,8 @@ class CreatePinFragment : Fragment() {
                         tempPin += value
                         handlePosAndDot()
                     }else{
-                        Toast.makeText(this.requireContext(),"Please Activate Pin Lock", Toast.LENGTH_SHORT).show()
+                        PasswordManagerToast.showToast(this.requireContext(),
+                            getString(R.string.please_activate_pin_lock),Toast.LENGTH_SHORT)
                     }
 
                 }
@@ -179,11 +186,12 @@ class CreatePinFragment : Fragment() {
 
     private fun setButtonUi(){
         if(lockedByFourPin){
-            binding.tvHint.text="Enter New Pin "
-            binding.btnLocked.text = "Deactivate"
+            binding.tvHint.text=getString(R.string.enternewpin)
+            binding.btnLocked.text = getString(R.string.deactivate)
+
         }else{
-            binding.tvHint.text="Please Activate Pin Lock to Use "
-            binding.btnLocked.text = "Activate"
+            binding.tvHint.text= getString(R.string.please_activate_pin_lock_to_use)
+            binding.btnLocked.text = getString(R.string.activate)
         }
     }
 

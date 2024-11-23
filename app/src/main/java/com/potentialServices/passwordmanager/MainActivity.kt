@@ -51,6 +51,18 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.potentialServices.passwordmanager.db.PasswordDatabase.Companion.DATABASE_NAME
+import com.potentialServices.passwordmanager.toast.PasswordManagerToast
+import com.potentialServices.passwordmanager.utils.constants.Constants.BANGOLI
+import com.potentialServices.passwordmanager.utils.constants.Constants.ENG
+import com.potentialServices.passwordmanager.utils.constants.Constants.GUJRATI
+import com.potentialServices.passwordmanager.utils.constants.Constants.HINDI
+import com.potentialServices.passwordmanager.utils.constants.Constants.MARATHI
+import com.potentialServices.passwordmanager.utils.constants.Constants.ORIYA
+import com.potentialServices.passwordmanager.utils.constants.Constants.SECURE_KEY_LOC
+import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
+import com.potentialServices.passwordmanager.utils.constants.Constants.TAMIL
+import com.potentialServices.passwordmanager.utils.constants.Constants.TELGU
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -63,7 +75,7 @@ import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-   // private val themeTitleList = arrayOf("Light", "Dark", "Auto(System Default)")
+    // private val themeTitleList = arrayOf("Light", "Dark", "Auto(System Default)")
     private lateinit var mainBinding: ActivityMainBinding
     lateinit var mainViewModel: MainViewModel
     private lateinit var selectLanguageDialogueBinding: SelectLanguageDialogueBinding
@@ -74,10 +86,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         /**
          * setting theme before super.onCreate
          * **/
-        System.loadLibrary("keys")
+        System.loadLibrary(SECURE_KEY_LOC)
 
-        //setTheme(R.style.RedTheme)
-        // Retrieve the saved theme and apply it before calling super.onCreate()
         val savedTheme = getSavedThemePreference()
         setTheme(savedTheme)
 
@@ -112,15 +122,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.string.open_drawer,
             R.string.close_drawer
         )
-        if(supportActionBar !=null){
+        if (supportActionBar != null) {
 
             // Resolve the color from the theme using the attribute ?attr/myPrimaryTextColor
             val typedValue = TypedValue()
             this.theme.resolveAttribute(R.attr.myTabIndicatorColor, typedValue, true)
             val color = typedValue.data
             val togler = toggle.drawerArrowDrawable
-            if(togler!=null){
-                togler.color  = color
+            if (togler != null) {
+                togler.color = color
             }
         }
 
@@ -130,28 +140,29 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
         mainBinding.pager.adapter = ViewPagerAdapterMain(this)
-        val hamburgerHeaderBinding = HamburgerHeaderBinding.bind( mainBinding.NavigationView.getHeaderView(0))
-        hamburgerHeaderBinding.username.setText(PreferenceUtils.getSharedPreferences(this).getUsername())
+        val hamburgerHeaderBinding =
+            HamburgerHeaderBinding.bind(mainBinding.NavigationView.getHeaderView(0))
+        hamburgerHeaderBinding.username.setText(
+            PreferenceUtils.getSharedPreferences(this).getUsername()
+        )
         mainBinding.NavigationView.setNavigationItemSelectedListener(this)
 
 
 
         mainBinding.searchIcon.setOnClickListener {
             if (mainBinding.searchTextContainer.visibility == View.GONE) {
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
                 mainBinding.searchTextContainer.visibility = View.VISIBLE
 
             } else {
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
                 mainBinding.searchTextContainer.visibility = View.GONE
 
             }
 
 
-
         }
         mainBinding.lockIcon.setOnClickListener {
-            Toast.makeText(this, "Shutting down the app...", Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this,
+                getString(R.string.shutting_down_the_app), Toast.LENGTH_SHORT)
 
             // Add a small delay before shutting down to allow the toast to show
             mainBinding.lockIcon.postDelayed({
@@ -163,7 +174,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mainBinding.searchText.addTextChangedListener {
             if (it.toString().isNotEmpty()) {
                 mainViewModel.handleMainEvents(MainActivityEvents.SearchEvent(it.toString()))
-            }else{
+            } else {
 
                 mainViewModel.handleMainEvents(MainActivityEvents.NoEvent())
             }
@@ -266,31 +277,34 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
         mainViewModel.passwordList.observe(this) {
-            val all  = it.size
+            val all = it.size
             val liked = it.filter {
                 it.liked
             }.size
             val recent = it.filter {
-                it.lastTime > (System.currentTimeMillis()-1000*60*60*5)
+                it.lastTime > (System.currentTimeMillis() - 1000 * 60 * 60 * 5)
             }.size
-            setHamburgurData(hamburgerHeaderBinding,all,liked,recent)
+            setHamburgurData(hamburgerHeaderBinding, all, liked, recent)
         }
 
 
-
-
     }
 
-    private fun setHamburgurData(hamburgerHeaderBinding:HamburgerHeaderBinding,all:Int,liked:Int,recent:Int) {
-       hamburgerHeaderBinding.apply {
-           allPasswordCount.text = all.toString()
-           recentPasswordCount.text = recent.toString()
-           likedPasswordCount.text = liked.toString()
-       }
+    private fun setHamburgurData(
+        hamburgerHeaderBinding: HamburgerHeaderBinding,
+        all: Int,
+        liked: Int,
+        recent: Int
+    ) {
+        hamburgerHeaderBinding.apply {
+            allPasswordCount.text = all.toString()
+            recentPasswordCount.text = recent.toString()
+            likedPasswordCount.text = liked.toString()
+        }
     }
 
     private fun getSavedThemePreference(): Int {
-        return  PreferenceUtils.getSharedPreferences(this).getTheme()
+        return PreferenceUtils.getSharedPreferences(this).getTheme()
 //        val preferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
 //        return preferences.getInt("theme", R.style.default_theme) // Replace R.style.DefaultTheme with your default theme
     }
@@ -320,15 +334,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 setLanguage()
 
             }
-            R.id.theme->{
+
+            R.id.theme -> {
                 setThemes()
 
             }
 
             R.id.save_database -> {
-                Toast.makeText(
-                    this, backupDatabase(this, "database_main.db").toString(), Toast.LENGTH_SHORT
-                ).show()
+                PasswordManagerToast.showToast(
+                    this,
+                    backupDatabase(this, DATABASE_NAME).toString(),
+                    Toast.LENGTH_SHORT
+                )
             }
 
             R.id.restore_database -> {
@@ -347,13 +364,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.passkey -> {
                 val iHome = Intent(this, AppPasswordAcvitivity::class.java)
-                iHome.putExtra("task", AppPasswordEvents.CREATE_PASSWORD)
+                iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CREATE_PASSWORD)
                 startActivity(iHome)
             }
 
             R.id.pin -> {
                 val iHome = Intent(this, AppPasswordAcvitivity::class.java)
-                iHome.putExtra("task", AppPasswordEvents.CREATE_PIN)
+                iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CREATE_PIN)
                 startActivity(iHome)
             }
 
@@ -369,10 +386,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun showFingerprintLockDialog(context: Context) {
         val builder = AlertDialog.Builder(context)
-        builder.setMessage("Do you want to turn on fingerprint lock?")
+        builder.setMessage(getString(R.string.do_you_want_to_turn_on_fingerprint_lock))
 
         // "On" button
-        builder.setPositiveButton("On") { dialog, _ ->
+        builder.setPositiveButton(getString(R.string.on)) { dialog, _ ->
             // Handle the "On" action here
             PreferenceUtils.getSharedPreferences(this).setLockedByFingereprint(true)
             PreferenceUtils.getSharedPreferences(this).setLockedByFourPin(false)
@@ -380,7 +397,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         // "Off" button
-        builder.setNegativeButton("Off") { dialog, _ ->
+        builder.setNegativeButton(getString(R.string.off)) { dialog, _ ->
             // Handle the "Off" action here
             PreferenceUtils.getSharedPreferences(this).setLockedByFingereprint(false)
             dialog.dismiss() // Close the dialog
@@ -390,7 +407,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val dialog: AlertDialog = builder.create()
 
         // Set background and animations
-        dialog.window?.setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.popup_background_all_corner))
+        dialog.window?.setBackgroundDrawable(
+            ContextCompat.getDrawable(
+                context,
+                R.drawable.popup_background_all_corner
+            )
+        )
         dialog.window?.setWindowAnimations(R.style.ZoomDialogAnimation)
 
         // Show the dialog first
@@ -524,7 +546,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     private fun convertToCsv() {
-        Toast.makeText(this, "start", Toast.LENGTH_SHORT).show()
         val backUpCsvPath =
             Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath + "/pm_csv_${System.currentTimeMillis()}.csv"
         val file = File(backUpCsvPath)
@@ -538,9 +559,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             writer.flush()
             writer.close()
-            Toast.makeText(this, "succcessfull created csv ", Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this, "Successfully Exported CSV", Toast.LENGTH_SHORT)
         } catch (e: IOException) {
-            Toast.makeText(this, "33333", Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this, "Got Some Exception ", Toast.LENGTH_SHORT)
             e.printStackTrace()
         } finally {
             writer?.close()
@@ -562,15 +583,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             val backupDB = File(backupDBPath)
 
 
-            Log.e("vibhav", currentDB.length().toString())
             if (currentDB.exists()) {
                 val src = FileInputStream(currentDB).channel
                 val dst = FileOutputStream(backupDB).channel
                 dst.transferFrom(src, 0, src.size())
                 src.close()
                 dst.close()
-
-                Log.e("vibhav", backupDB.length().toString())
                 true
             } else {
                 false
@@ -653,9 +671,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (requestCode) {
             10 -> {
                 if (grantResults.all { it === PackageManager.PERMISSION_GRANTED }) {
-                    Toast.makeText(this, "permission granted ", Toast.LENGTH_SHORT).show()
+                    PasswordManagerToast.showToast(this,
+                        getString(R.string.permission_granted), Toast.LENGTH_SHORT)
                 } else {
-                    Toast.makeText(this, "permission not granted ", Toast.LENGTH_SHORT).show()
+                    PasswordManagerToast.showToast(this,
+                        getString(R.string.permission_required), Toast.LENGTH_SHORT)
                 }
             }
         }
@@ -676,8 +696,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         lp.gravity = Gravity.CENTER
 
         dialog.window!!.setBackgroundDrawable(
-            ContextCompat.getDrawable(this,
-                R.drawable.pop_up_background))
+            ContextCompat.getDrawable(
+                this,
+                R.drawable.pop_up_background
+            )
+        )
 
         dialog.window!!.attributes = lp
 
@@ -687,48 +710,38 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
         selectLanguageDialogueBinding.saveLang.setOnClickListener {
-
-//            if (selectLanguageDialogueBinding.hindiLang.isChecked) {
-//                setLanguage(this, "hi")
-////            ApplicationLanguageHelper.setLocale(this@MainActivity,"or")
-//                recreate()
-//            }
-//             if (selectLanguageDialogueBinding.oriyaLang.isChecked) {
-//                setLanguage(this, "or")
-////            ApplicationLanguageHelper.setLocale(this@MainActivity,"or")
-//                recreate()
-//            }
-
             // Get the ID of the selected RadioButton from the RadioGroup
             val selectedLanguageCode =
                 when (selectLanguageDialogueBinding.languageRadioGroup.checkedRadioButtonId) {
-                    R.id.hindi_lang -> "hi"     // Hindi language code
-                    R.id.oriya_lang -> "or"     // Oriya language code
-                    R.id.bengali_lang -> "bn"   // Bengali language code
-                    R.id.telugu_lang->"te"
-                    R.id.gujurati_lang->"gu"
-                    R.id.tamil_lang->"ta"
-                    R.id.marathi_lang->"mr"
-                    else -> "en"                // Default to English if no selection
+                    R.id.hindi_lang -> HINDI     // Hindi language code
+                    R.id.oriya_lang -> ORIYA   // Oriya language code
+                    R.id.bengali_lang -> BANGOLI   // Bengali language code
+                    R.id.telugu_lang -> TELGU
+                    R.id.gujurati_lang -> GUJRATI
+                    R.id.tamil_lang ->TAMIL
+                    R.id.marathi_lang -> MARATHI
+                    else ->ENG             // Default to English if no selection
                 }
 
-// Determine the language name for the Toast message
+            // Determine the language name for the Toast message
             val languageName = when (selectedLanguageCode) {
-                "hi" -> "Hindi"
-                "or" -> "Odia"
-                "bn" -> "Bengali"
-                "te" ->"Telugu"
-                "gu"->"Gujarati"
-                "ta"->"Tamil"
-                "mr"->"Marathi"
+                HINDI -> "Hindi"
+                ORIYA   -> "Odia"
+                BANGOLI -> "Bengali"
+                TELGU -> "Telugu"
+                GUJRATI-> "Gujarati"
+                TAMIL -> "Tamil"
+                MARATHI-> "Marathi"
                 else -> "English"
             }
 
-// If a language is selected, apply the language and recreate the activity
+             // If a language is selected, apply the language and recreate the activity
             // if (selectedLanguageCode != "en") { // Only recreate if a different language is selected
             setLanguage(this, selectedLanguageCode) // Apply the selected language
-            Toast.makeText(this, "$languageName language has been updated", Toast.LENGTH_SHORT)
-                .show() // Show a Toast message with the language name
+            PasswordManagerToast.showToast(this,
+                languageName+getString(R.string.language_has_been_updated), Toast.LENGTH_SHORT)
+//            Toast.makeText(this, "$languageName language has been updated", Toast.LENGTH_SHORT)
+//                .show() // Show a Toast message with the language name
             recreate() // Recreate the activity to apply the language change
             dialog.dismiss()
         }
@@ -739,6 +752,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
     }
+
     private fun setThemes() {
         // Inflate the theme selection dialog layout
         selectThemeDialogueBinding = SelectThemeDialogueBinding.inflate(layoutInflater)
@@ -753,8 +767,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         lp.height = WindowManager.LayoutParams.WRAP_CONTENT
         lp.gravity = Gravity.CENTER
         dialog.window!!.setBackgroundDrawable(
-            ContextCompat.getDrawable(this,
-                R.drawable.pop_up_background))
+            ContextCompat.getDrawable(
+                this,
+                R.drawable.pop_up_background
+            )
+        )
 
         dialog.window!!.attributes = lp
 
@@ -764,14 +781,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         selectThemeDialogueBinding.saveTheme.setOnClickListener {
             val selectedTheme =
                 when (selectThemeDialogueBinding.themeRadioGroup.checkedRadioButtonId) {
-                    R.id.purple_theme-> R.style.PurpleFantasyTheme
+                    R.id.purple_theme -> R.style.PurpleFantasyTheme
                     R.id.pink_theme -> R.style.PinkTheme1
-                    R.id.Orange_theme-> R.style.default_theme
+                    R.id.Orange_theme -> R.style.default_theme
                     R.id.green_theme -> R.style.GreenTheme
                     R.id.red_theme -> R.style.RedTheme
-                    R.id.ocean_theme->R.style.OceanBlueTheme
-                    R.id.dark_theme ->R.style.darkTheme
-                    else -> {R.style.default_theme}
+                    R.id.ocean_theme -> R.style.OceanBlueTheme
+                    R.id.dark_theme -> R.style.darkTheme
+                    else -> {
+                        R.style.default_theme
+                    }
                 }
 
             // Save the selected theme
@@ -782,8 +801,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             // Clear back stack and restart the activity with the new theme
 
 
-
-            Toast.makeText(this, "Theme has been updated", Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this,
+                getString(R.string.theme_has_been_updated),Toast.LENGTH_SHORT)
             recreate() // Recreate the activity to apply the new theme
             dialog.dismiss()
         }
@@ -795,10 +814,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun saveThemePreference(themeId: Int) {
-        if(PreferenceUtils.getSharedPreferences(this).setTheme(themeId)){
-            Toast.makeText(this,"Theme is changed ", Toast.LENGTH_SHORT).show()
-        }else{
-            Toast.makeText(this,"Got Some issue ",Toast.LENGTH_SHORT).show()
+        if (PreferenceUtils.getSharedPreferences(this).setTheme(themeId)) {
+            PasswordManagerToast.showToast(this,
+                getString(R.string.theme_is_changed),Toast.LENGTH_SHORT)
+        } else {
+            PasswordManagerToast.showToast(this,
+                getString(R.string.got_some_issue),Toast.LENGTH_SHORT)
         }
 
 //        val preferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)

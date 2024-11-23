@@ -43,7 +43,6 @@ class EditPasswordFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         updateDataInEditor()
-        Toast.makeText(this.requireActivity(),"createdr",Toast.LENGTH_SHORT).show()
         onclicklisterners()
     }
 
@@ -98,14 +97,14 @@ class EditPasswordFragment : Fragment() {
         val website = editPasswordBinding.etWebsite.text.toString()
 
         if (title.isEmpty()) {
-            Toast.makeText(this.requireActivity(), "title must not be empty ", Toast.LENGTH_SHORT)
+            Toast.makeText(this.requireActivity(), getString(R.string.title_can_not_be_empty), Toast.LENGTH_SHORT)
                 .show()
             return
         }
         if (password.isEmpty()) {
             Toast.makeText(
                 this.requireActivity(),
-                "password must not be empty ",
+                getString(R.string.password_can_not_be_empty),
                 Toast.LENGTH_SHORT
             ).show()
             return

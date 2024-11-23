@@ -17,6 +17,9 @@ class EditPassActivity : AppCompatActivity() {
     lateinit var binding:ActivityEditPassBinding
     var index:Int=0
     var icon:Int? = null
+    companion object{
+        const val EXTRA  = "index"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         val savedTheme = PreferenceUtils.getSharedPreferences(this).getTheme()
         setTheme(savedTheme)
@@ -41,7 +44,7 @@ class EditPassActivity : AppCompatActivity() {
 //    }
 
     private fun getIntentExtra(){
-        index = intent.getIntExtra("index",0)!!
+        index = intent.getIntExtra(EXTRA,0)!!
     }
 
     private fun settingRepoAndViewModel(){

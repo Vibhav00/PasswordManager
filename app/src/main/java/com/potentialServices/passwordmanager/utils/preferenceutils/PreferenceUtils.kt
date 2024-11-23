@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.utils.constants.Constants
+import com.potentialServices.passwordmanager.utils.constants.Constants.ENG
 
 class PreferenceUtils {
 
@@ -11,6 +12,14 @@ class PreferenceUtils {
     companion object {
         private lateinit var mSharedPreferences: SharedPreferences
 
+        private const val THEME = "Theme"
+        private const val LANG = "Lang"
+        private const val PIN = "pin"
+        private const val FINGER_PRINT = "fingerPrint"
+        private const val DEFAULT_VALUE = ""
+        private const val HAVE_USERNAME = "HaveUsername"
+        private const val USERNAME = "UserName"
+        private const val HAVE_PASSWORD = "passWoRd"
         /**
          *  implementing shared preferences
          **/
@@ -25,38 +34,26 @@ class PreferenceUtils {
 
 
 
-        /** funtion to get string **/
-        fun getName(): String {
-            return mSharedPreferences.getString("vibhav", "initial value").toString()
-        }
-
-        fun setName(name: String): Boolean {
-            mSharedPreferences.edit().putString("vibhav", name).apply()
-            return true
-        }
-
-
-
 
 
         /** funtion to set theme **/
         fun getTheme(): Int {
-            return mSharedPreferences.getInt("theme", R.style.default_theme)
+            return mSharedPreferences.getInt(THEME, R.style.default_theme)
         }
 
         fun setTheme(theme: Int): Boolean {
-            mSharedPreferences.edit().putInt("theme", theme).apply()
+            mSharedPreferences.edit().putInt(THEME, theme).apply()
             return true
         }
 
 
         /** funtion to set language **/
         fun getLang(): String {
-            return mSharedPreferences.getString("theme", "check").toString()
+            return mSharedPreferences.getString(LANG, ENG).toString()
         }
 
         fun setLang(name: String): Boolean {
-            mSharedPreferences.edit().putString("theme", name).apply()
+            mSharedPreferences.edit().putString(LANG, name).apply()
             return true
         }
 
@@ -64,22 +61,22 @@ class PreferenceUtils {
 
         /** funtion to check if app is locked by 4 pin **/
         fun getLockedByFourPin(): Boolean {
-            return mSharedPreferences.getBoolean("pin4", false)
+            return mSharedPreferences.getBoolean(PIN, false)
         }
 
         fun setLockedByFourPin(pin: Boolean): Boolean {
-            mSharedPreferences.edit().putBoolean("pin4", pin).apply()
+            mSharedPreferences.edit().putBoolean(PIN, pin).apply()
             return true
         }
 
 
         /** funtion to check if app is locked by fingerprint **/
         fun getLockedByFingerprint(): Boolean {
-            return mSharedPreferences.getBoolean("fingerprint", false)
+            return mSharedPreferences.getBoolean(FINGER_PRINT, false)
         }
 
         fun setLockedByFingereprint(pin: Boolean): Boolean {
-            mSharedPreferences.edit().putBoolean("fingerprint", pin).apply()
+            mSharedPreferences.edit().putBoolean(FINGER_PRINT, pin).apply()
             return true
         }
 
@@ -88,46 +85,34 @@ class PreferenceUtils {
 
         /** funtion to check if app is locked by fingerprint **/
         fun getLockedByPassoword(): Boolean {
-            return mSharedPreferences.getBoolean("password", false)
+            return mSharedPreferences.getBoolean(HAVE_PASSWORD, false)
         }
 
         fun setLockedByPassword(pin: Boolean): Boolean {
-            mSharedPreferences.edit().putBoolean("password", pin).apply()
+            mSharedPreferences.edit().putBoolean(HAVE_PASSWORD, pin).apply()
             return true
         }
 
-
-
-
-        /** funtion to check if app is having recovery qn  **/
-        fun haveRecoveryQn(): Boolean {
-            return mSharedPreferences.getBoolean("rq", false)
-        }
-
-        fun setHaveRecoveryQn(pin: Boolean): Boolean {
-            mSharedPreferences.edit().putBoolean("rq", pin).apply()
-            return true
-        }
 
 
 
         /** funtion to check if app is having username  **/
         fun getHaveUsername(): Boolean {
-            return mSharedPreferences.getBoolean("username_entered", false)
+            return mSharedPreferences.getBoolean(HAVE_USERNAME, false)
         }
 
-        fun setHaveUsername(pin: Boolean): Boolean {
-            mSharedPreferences.edit().putBoolean("username_entered", pin).apply()
+        fun setHaveUsername(usernameEntered: Boolean): Boolean {
+            mSharedPreferences.edit().putBoolean(HAVE_USERNAME, usernameEntered).apply()
             return true
         }
 
         /** funtion to save the username  **/
         fun getUsername(): String?{
-            return mSharedPreferences.getString("username", "")
+            return mSharedPreferences.getString(USERNAME, DEFAULT_VALUE)
         }
 
         fun setUsername(username :String): Boolean {
-            mSharedPreferences.edit().putString("username", username).apply()
+            mSharedPreferences.edit().putString(USERNAME, username).apply()
             return true
         }
 

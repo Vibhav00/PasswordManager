@@ -58,7 +58,7 @@ class PinFragment : Fragment() {
         fragmentPinBinding.llBtnFirst.children.forEach {
             it.setOnClickListener {
                 val value = it.tag;
-                Toast.makeText(this.requireContext(),value.toString(),Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this.requireContext(),value.toString(),Toast.LENGTH_SHORT).show()
                 handlePosAndDot()
 
             }
@@ -66,14 +66,14 @@ class PinFragment : Fragment() {
         fragmentPinBinding.llBtnSecond.children.forEach {
             it.setOnClickListener {
                 val value = it.tag;
-                Toast.makeText(this.requireContext(),value.toString(),Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this.requireContext(),value.toString(),Toast.LENGTH_SHORT).show()
                 handlePosAndDot()
             }
         }
         fragmentPinBinding . llBtnThird . children . forEach {
             it.setOnClickListener {
                 val value = it.tag;
-                Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
                 handlePosAndDot()
             }
         }
@@ -81,7 +81,7 @@ class PinFragment : Fragment() {
             if(index==1){
                 it.setOnClickListener {
                     val value = it.tag;
-                    Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
+//                    Toast.makeText(this.requireContext(), value.toString(), Toast.LENGTH_SHORT).show()
                     handlePosAndDot()
                 }
             }
