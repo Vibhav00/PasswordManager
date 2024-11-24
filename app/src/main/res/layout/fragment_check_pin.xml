@@ -33,7 +33,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/roboto_bold"
-            android:text="Password Manager "
+            android:text="@string/app_name"
             android:textColor="?attr/myPrimaryTextColor"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -247,6 +247,7 @@
                 android:textSize="30dp" />
 
             <ImageButton
+                android:visibility="invisible"
                 android:layout_width="0dp"
                 android:layout_height="80dp"
                 android:layout_weight="1"
@@ -264,7 +265,7 @@
         android:layout_width="wrap_content"
         android:background="@drawable/positive_btn"
         android:layout_height="wrap_content"
-        android:text="Pass Key "
+        android:text="@string/pass_key"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textColor="@color/white"

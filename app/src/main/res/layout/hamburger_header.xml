@@ -37,7 +37,7 @@
                     android:id="@+id/userId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hi , "
+                    android:text="@string/hi"
                     android:textStyle="bold"
                     android:textColor="?attr/my_icon_front_color"
                     android:textSize="15sp" />

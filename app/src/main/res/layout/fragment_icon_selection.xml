@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="select Icon"
+        android:text="@string/select_icon"
         android:textAllCaps="true"
 
         android:textSize="25sp"
@@ -69,7 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:baselineAligned="false"
-                        android:text="Analytics"
+                        android:text="@string/analytics"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -97,7 +97,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Phone"
+                        android:text="@string/phone"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -125,7 +125,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Apple"
+                        android:text="@string/apple"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -163,7 +163,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Child"
+                        android:text="@string/child"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -190,7 +190,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Code"
+                        android:text="@string/code"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -217,7 +217,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Document"
+                        android:text="@string/document"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -253,7 +253,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Discord"
+                        android:text="@string/discord"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -280,7 +280,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Github"
+                        android:text="@string/github"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -307,7 +307,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Gmail"
+                        android:text="@string/gmail"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -341,7 +341,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Gaming"
+                        android:text="@string/gaming"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -368,7 +368,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Instagram"
+                        android:text="@string/instagram"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -395,7 +395,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="LinkedIn"
+                        android:text="@string/linkedin"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -429,7 +429,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Health"
+                        android:text="@string/health"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -456,7 +456,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Home"
+                        android:text="@string/home"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -483,7 +483,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Love"
+                        android:text="@string/love"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -517,7 +517,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Network"
+                        android:text="@string/network"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -544,7 +544,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Netflix"
+                        android:text="@string/netflix"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -571,7 +571,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Facebook"
+                        android:text="@string/facebook"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -605,7 +605,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Shopping"
+                        android:text="@string/shopping"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -632,7 +632,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Snapchat"
+                        android:text="@string/snapchat"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -659,7 +659,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Telegram"
+                        android:text="@string/telegram"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -693,7 +693,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="WhatsApp"
+                        android:text="@string/whatsapp"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -720,7 +720,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Work"
+                        android:text="@string/work"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -748,7 +748,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="X"
+                        android:text="@string/x"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -782,7 +782,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Music"
+                        android:text="@string/music"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
@@ -809,7 +809,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Photos"
+                        android:text="@string/photos"
                         android:textAlignment="center"
                         android:textSize="15sp"
                         android:textStyle="bold" />
