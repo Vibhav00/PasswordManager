@@ -11,17 +11,17 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_marginLeft="16dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:src="@drawable/new_logo"
-            android:layout_weight="1"/>
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:src="@drawable/new_logo" />
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="3"
             android:layout_marginLeft="10dp"
+            android:layout_weight="3"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -29,26 +29,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginBottom="5dp"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/userId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hi , "
-                    android:textStyle="bold"
+                    android:text="@string/hi"
                     android:textColor="?attr/my_icon_front_color"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Vibhav kumar"
-                    android:textSize="15sp"
                     android:textColor="?attr/myPrimaryTextColor"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
 
@@ -63,8 +63,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="?attr/myPrimaryTextColor"
                     android:text="@string/encryption_key_strength"
+                    android:textColor="?attr/myPrimaryTextColor"
                     android:textSize="15sp" />
 
                 <ProgressBar
@@ -164,8 +164,6 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 
     <View

@@ -31,7 +31,7 @@ import androidx.core.view.GravityCompat
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.ViewModelProvider
 import com.potentialServices.passwordmanager.activities.AddPasswordActivity
-import com.potentialServices.passwordmanager.activities.AppPasswordAcvitivity
+import com.potentialServices.passwordmanager.activities.AppPasswordActivity
 import com.potentialServices.passwordmanager.adapters.ViewPagerAdapterMain
 import com.potentialServices.passwordmanager.databinding.ActivityMainBinding
 import com.potentialServices.passwordmanager.databinding.BottomFilterViewBinding
@@ -363,13 +363,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.passkey -> {
-                val iHome = Intent(this, AppPasswordAcvitivity::class.java)
+                val iHome = Intent(this, AppPasswordActivity::class.java)
                 iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CREATE_PASSWORD)
                 startActivity(iHome)
             }
 
             R.id.pin -> {
-                val iHome = Intent(this, AppPasswordAcvitivity::class.java)
+                val iHome = Intent(this, AppPasswordActivity::class.java)
                 iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CREATE_PIN)
                 startActivity(iHome)
             }
@@ -717,7 +717,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.id.oriya_lang -> ORIYA   // Oriya language code
                     R.id.bengali_lang -> BANGOLI   // Bengali language code
                     R.id.telugu_lang -> TELGU
-                    R.id.gujurati_lang -> GUJRATI
+                    R.id.gujarati_lang -> GUJRATI
                     R.id.tamil_lang ->TAMIL
                     R.id.marathi_lang -> MARATHI
                     else ->ENG             // Default to English if no selection

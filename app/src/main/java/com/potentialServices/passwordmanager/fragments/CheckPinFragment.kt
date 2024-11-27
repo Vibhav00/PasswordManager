@@ -12,7 +12,7 @@ import androidx.core.view.children
 import androidx.lifecycle.lifecycleScope
 import com.potentialServices.passwordmanager.MainActivity
 import com.potentialServices.passwordmanager.R
-import com.potentialServices.passwordmanager.activities.AppPasswordAcvitivity
+import com.potentialServices.passwordmanager.activities.AppPasswordActivity
 import com.potentialServices.passwordmanager.databinding.FragmentCheckPinBinding
 import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
@@ -44,7 +44,7 @@ class CheckPinFragment : Fragment() {
     }
 
     fun startPasswordFragment(){
-        val iHome = Intent(this@CheckPinFragment.requireActivity(), AppPasswordAcvitivity::class.java)
+        val iHome = Intent(this@CheckPinFragment.requireActivity(), AppPasswordActivity::class.java)
         iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CHECK_PASSWORD)
         startActivity(iHome)
         this@CheckPinFragment.requireActivity().finish()

@@ -26,7 +26,7 @@ class SplaceActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splace)
 
         /** creating the intent for the Pin Activity **/
-        val iHome = Intent(this@SplaceActivity, AppPasswordAcvitivity::class.java)
+        val iHome = Intent(this@SplaceActivity, AppPasswordActivity::class.java)
 
 
         val fingerprintLock = PreferenceUtils.getSharedPreferences(this).getLockedByFingerprint()

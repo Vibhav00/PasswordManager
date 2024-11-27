@@ -10,7 +10,7 @@
         android:id="@+id/select_theme_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Username Please  "
+        android:text="@string/enter_your_username"
         android:textSize="18sp"
         android:textStyle="bold"
         android:paddingBottom="16dp"
@@ -32,16 +32,13 @@
             app:cursorColor="#F47F6B"
             app:hintEnabled="false"
             app:hintTextColor="@color/white"
-            app:startIconTint="@color/white"
-
-
-            >
+            app:startIconTint="@color/white">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter Username "
+                android:hint="@string/enter_username"
                 android:imeOptions="actionSearch"
                 android:lines="1"
                 android:text=""
@@ -68,7 +65,7 @@
             android:id="@+id/save_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:text="@string/save"
             android:textColor="@color/white"
             android:background="@drawable/background_btn_green"
             android:paddingHorizontal="24dp"
@@ -79,7 +76,7 @@
         android:id="@+id/skip_username_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Skip"
+        android:text="@string/skip"
         android:textAlignment="center"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"

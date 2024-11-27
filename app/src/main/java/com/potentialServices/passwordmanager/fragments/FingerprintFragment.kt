@@ -11,7 +11,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.potentialServices.passwordmanager.MainActivity
 import com.potentialServices.passwordmanager.R
-import com.potentialServices.passwordmanager.activities.AppPasswordAcvitivity
+import com.potentialServices.passwordmanager.activities.AppPasswordActivity
 import com.potentialServices.passwordmanager.databinding.FragmentFingerprintBinding
 import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
@@ -48,7 +48,7 @@ class FingerprintFragment : Fragment() {
                             R.string.open_via_password
                         ),Toast.LENGTH_SHORT)
 
-                    val iHome = Intent(this@FingerprintFragment.requireActivity(), AppPasswordAcvitivity::class.java)
+                    val iHome = Intent(this@FingerprintFragment.requireActivity(), AppPasswordActivity::class.java)
                     iHome.putExtra(SERIALIZABLE_EXTRA_KEY, AppPasswordEvents.CHECK_PASSWORD)
                     startActivity(iHome)
                     this@FingerprintFragment.requireActivity().finish()

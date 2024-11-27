@@ -10,7 +10,7 @@
         android:id="@+id/select_theme_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Select Theme"
+        android:text="@string/select_theme"
         android:textSize="18sp"
         android:textStyle="bold"
         android:paddingBottom="16dp"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             style="@style/CustomRadioButton"
             android:padding="8dp"
-            android:text="Orange"
+            android:text="@string/orange"
             android:textColor="?attr/myPrimaryTextColor"
             android:textSize="16sp" />
 
@@ -36,7 +36,7 @@
             android:id="@+id/green_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Green"
+            android:text="@string/green"
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
@@ -45,7 +45,7 @@
             android:id="@+id/red_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Red"
+            android:text="@string/red"
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
@@ -54,7 +54,7 @@
             android:id="@+id/pink_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pink"
+            android:text="@string/pink"
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
@@ -63,7 +63,7 @@
             android:id="@+id/purple_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PurpleFantasy"
+            android:text="@string/purplefantasy"
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
@@ -72,7 +72,7 @@
             android:id="@+id/ocean_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="OceanBlue"
+            android:text="@string/oceanblue"
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
@@ -81,7 +81,7 @@
             android:id="@+id/dark_theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dark"
+            android:text="@string/dark"
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
@@ -103,7 +103,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/ripple_effect_btn_red"
-            android:text="cancle"
+            android:text="@string/cancel"
             android:textColor="?attr/my_icon_front_color" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -113,7 +113,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/positive_btn"
-            android:text="save"
+            android:text="@string/save"
             android:textColor="?attr/my_icon_color" />
 
 

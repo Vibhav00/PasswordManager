@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingBottom="40dp"
-    android:background="@drawable/bottom_bar_backgroud"
+    android:background="@drawable/bottom_bar_background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:textSize="18sp"
             android:layout_marginHorizontal="18dp"
             android:textColor="?attr/myPrimaryTextColor"
-            android:text="Select Type"
+            android:text="@string/select_type"
             />
         <HorizontalScrollView
             android:id="@+id/layout_type"
@@ -46,7 +46,7 @@
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="website" />
+                    android:text="@string/website" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/by_username"
@@ -55,7 +55,7 @@
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="username" />
+                    android:text="@string/username" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/by_title"
@@ -64,7 +64,7 @@
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="title" />
+                    android:text="@string/title" />
 
 
 
@@ -103,7 +103,7 @@
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="acending" />
+                    android:text="@string/ascending" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/descending"
@@ -112,7 +112,7 @@
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="descending" />
+                    android:text="@string/descending" />
 
 
 
@@ -143,7 +143,7 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/ripple_effect_btn_red"
-                android:text="cancel"
+                android:text="@string/cancel"
                 android:textColor="?attr/my_icon_front_color" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -153,18 +153,12 @@
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/positive_btn"
-                android:text="apply"
+                android:text="@string/apply"
                 android:textColor="@color/white" />
-
 
         </LinearLayout>
 
-
-
-
-
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

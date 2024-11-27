@@ -28,7 +28,7 @@ class PrintFeature(val context: Context) {
     }
 
 
-    private fun createSinlePage(pdfDocument: PdfDocument, pageNo:Int, list: List<PasswordItem>){
+    private fun createSinglePage(pdfDocument: PdfDocument, pageNo:Int, list: List<PasswordItem>){
         // first page finished ..............
         // Define the page size (A4 size in points)
         var pageWidth = 595 // A4 size in points (8.27 inches)
@@ -210,14 +210,14 @@ class PrintFeature(val context: Context) {
 
         createInitialPage(pdfDocument,1)
 
-        val noOfpages = if (list.size%3==0) list.size/3 else list.size/3 +1
+        val noOfPages = if (list.size%3==0) list.size/3 else list.size/3 +1
         var i=1;
-        while (i<=noOfpages){
-            createSinlePage(pdfDocument,i+1,list)
+        while (i<=noOfPages){
+            createSinglePage(pdfDocument,i+1,list)
             i++;
         }
 
-        createInitialPage(pdfDocument,noOfpages+1)
+        createInitialPage(pdfDocument,noOfPages+1)
 
 
 //        createSinlePage(pdfDocument,3)
