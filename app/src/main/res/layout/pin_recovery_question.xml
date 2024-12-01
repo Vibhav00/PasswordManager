@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     android:layout_margin="5dp"
     android:padding="5dp">
 
@@ -26,7 +25,7 @@
         android:layout_height="80dp"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:text="please enter recovery question "
+        android:text="@string/Please_enter_recovery_question"
         android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="@id/iv_Pin_recovery_qn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,7 +72,7 @@
         android:id="@+id/et_pin_recovery_qn_lock_o"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="enter question "
+        android:hint="@string/enter_question"
         android:inputType="textCapWords"
         app:layout_constraintBottom_toBottomOf="@id/iv_pin_recovery_qn_lock"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,22 +96,23 @@
         android:id="@+id/et_pin_recovery_qn_key_o"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:hint="enter answer "
+        android:hint="@string/enter_answer"
         android:inputType="textCapWords"
         app:layout_constraintBottom_toBottomOf="@id/iv_pin_recovery_qn_key"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/iv_pin_recovery_qn_key" />
+        app:layout_constraintTop_toTopOf="@id/iv_pin_recovery_qn_key"
+        app:layout_constraintVertical_bias="0.6" />
 
     <TextView
         android:id="@+id/tv_pin_recovery_alert"
         android:layout_width="match_parent"
-        android:textColor="@color/greenTabBackgroundColor"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:layout_margin="10dp"
         android:gravity="center"
-        android:text="Recovery Question or Recovery Answer is empty"
+        android:text="@string/recovery_question_or_recovery_answer_is_empty"
+        android:textColor="@color/greenTabBackgroundColor"
         android:textSize="15dp"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_pin_recovery_qn_key_o" />
@@ -123,19 +123,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="submit"
+        android:text="@string/submit"
         android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toEndOf="@id/btn_cancel_dialog"
         app:layout_constraintTop_toBottomOf="@id/tv_pin_recovery_alert" />
+
     <Button
         android:id="@+id/btn_cancel_dialog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:text="cancel"
+        android:text="@string/cancel"
         android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/btn_submit_dialog"

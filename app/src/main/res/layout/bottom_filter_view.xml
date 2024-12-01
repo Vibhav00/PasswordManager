@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingBottom="40dp"
-    android:background="@drawable/bottom_bar_backgroud"
+    android:background="@drawable/bottom_bar_background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -23,7 +23,8 @@
             android:textSize="18sp"
             android:layout_marginHorizontal="18dp"
             android:textColor="?attr/myPrimaryTextColor"
-            android:text="@string/select_type" />
+            android:text="@string/select_type"
+            />
         <HorizontalScrollView
             android:id="@+id/layout_type"
             android:layout_width="match_parent"
@@ -102,7 +103,7 @@
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/acending" />
+                    android:text="@string/ascending" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/descending"
@@ -155,15 +156,9 @@
                 android:text="@string/apply"
                 android:textColor="@color/white" />
 
-
         </LinearLayout>
 
-
-
-
-
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

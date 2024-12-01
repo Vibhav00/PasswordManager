@@ -69,8 +69,8 @@
 
                 <ImageButton
                     android:id="@+id/sort_icon"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/icon_background"
@@ -98,7 +98,7 @@
                 android:paddingRight="20dp"
                 android:paddingBottom="10dp"
                 android:textColorHint="?attr/mySecondaryTextColor"
-                app:boxStrokeColor="@color/edit_text_backgoud"
+                app:boxStrokeColor="@color/edit_text_background"
                 app:cursorColor="?attr/my_icon_front_color"
                 app:endIconMode="clear_text"
                 app:hintTextColor="@color/white"
@@ -116,7 +116,7 @@
                     android:layout_height="wrap_content"
                     android:hint="Search"
                     android:textColorHint="?attr/mySecondaryTextColor"
-                    android:textColor="?attr/myPrimaryTextColor"
+                    android:textColor="@color/black"
                     android:imeOptions="actionSearch"
                     android:lines="1"
                     android:text=""

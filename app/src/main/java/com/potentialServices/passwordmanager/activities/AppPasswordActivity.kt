@@ -3,7 +3,7 @@ package com.potentialServices.passwordmanager.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.potentialServices.passwordmanager.R
-import com.potentialServices.passwordmanager.databinding.ActivityAppPasswordAcvitivityBinding
+import com.potentialServices.passwordmanager.databinding.ActivityAppPasswordActivityBinding
 import com.potentialServices.passwordmanager.fragments.AppPasswordFragment
 import com.potentialServices.passwordmanager.fragments.CheckPinFragment
 import com.potentialServices.passwordmanager.fragments.CreateAppPasswordFragment
@@ -13,15 +13,15 @@ import com.potentialServices.passwordmanager.utils.AppPasswordEvents
 import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 
-class AppPasswordAcvitivity : AppCompatActivity() {
-    private lateinit var activityAppPasswordAcvitivityBinding: ActivityAppPasswordAcvitivityBinding
+class AppPasswordActivity : AppCompatActivity() {
+    private lateinit var activityAppPasswordActivityBinding: ActivityAppPasswordActivityBinding
     private var myTask = AppPasswordEvents.DEFAULT
     override fun onCreate(savedInstanceState: Bundle?) {
         val savedTheme = PreferenceUtils.getSharedPreferences(this).getTheme()
         setTheme(savedTheme)
         super.onCreate(savedInstanceState)
-        activityAppPasswordAcvitivityBinding = ActivityAppPasswordAcvitivityBinding.inflate(layoutInflater)
-        setContentView(activityAppPasswordAcvitivityBinding.root)
+        activityAppPasswordActivityBinding = ActivityAppPasswordActivityBinding.inflate(layoutInflater)
+        setContentView(activityAppPasswordActivityBinding.root)
         myTask= intent.getSerializableExtra(SERIALIZABLE_EXTRA_KEY)  as AppPasswordEvents
         handleTask()
 

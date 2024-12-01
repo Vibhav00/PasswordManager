@@ -10,7 +10,7 @@
         android:id="@+id/select_theme_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/enter_username_please"
+        android:text="@string/enter_your_username"
         android:textSize="18sp"
         android:textStyle="bold"
         android:paddingBottom="16dp"
