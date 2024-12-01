@@ -144,4 +144,39 @@
     <string name="icon_lock">आइकन लॉक</string>
     <string name="hi">नमस्ते,</string>
     <string name="password_manager">पासवर्ड प्रबंधक</string>
+
+    <string name="enter_password">पासवर्ड दर्ज करें</string>
+    <string name="pass_key">पास की</string>
+    <string name="enter_password_again">फिर से पासवर्ड दर्ज करें</string>
+    <string name="select_icon">आइकन चुनें</string>
+    <string name="analytics">विश्लेषिकी</string>
+    <string name="phone">फोन</string>
+    <string name="apple">एप्पल</string>
+    <string name="child">बच्चा</string>
+    <string name="code">कोड</string>
+    <string name="document">दस्तावेज़</string>
+    <string name="discord">डिस्कॉर्ड</string>
+    <string name="github">गिटहब</string>
+    <string name="gmail">जीमेल</string>
+    <string name="gaming">गेमिंग</string>
+    <string name="instagram">इंस्टाग्राम</string>
+    <string name="linkedin">लिंक्डइन</string>
+    <string name="health">स्वास्थ्य</string>
+    <string name="home">घर</string>
+    <string name="love">प्यार</string>
+    <string name="network">नेटवर्क</string>
+    <string name="netflix">नेटफ्लिक्स</string>
+    <string name="facebook">फेसबुक</string>
+    <string name="shopping">खरीदारी</string>
+    <string name="snapchat">स्नैपचैट</string>
+    <string name="telegram">टेलीग्राम</string>
+    <string name="whatsapp">व्हाट्सएप</string>
+    <string name="work">काम</string>
+    <string name="x">एक्स</string>
+    <string name="music">संगीत</string>
+    <string name="photos">तस्वीरें</string>
+    <string name="enter_username_please">कृपया उपयोगकर्ता नाम दर्ज करें</string>
+    <string name="select_order">आदेश चुनें</string>
+    <string name="acending">आरोही</string>
+
 </resources>

@@ -69,8 +69,8 @@
 
                 <ImageButton
                     android:id="@+id/sort_icon"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_gravity="center"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/icon_background"

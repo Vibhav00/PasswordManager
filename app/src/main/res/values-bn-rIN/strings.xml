@@ -146,5 +146,41 @@
     <string name="icon_lock">আইকন লক</string>
     <string name="hi">হাই ,</string>
     <string name="password_manager">পাসওয়ার্ড ম্যানেজার</string>
+
+
+    <string name="enter_password">পাসওয়ার্ড লিখুন</string>
+    <string name="pass_key">পাস কী</string>
+    <string name="enter_password_again">পুনরায় পাসওয়ার্ড লিখুন</string>
+    <string name="select_icon">আইকন নির্বাচন করুন</string>
+    <string name="analytics">বিশ্লেষণ</string>
+    <string name="phone">ফোন</string>
+    <string name="apple">আপেল</string>
+    <string name="child">শিশু</string>
+    <string name="code">কোড</string>
+    <string name="document">ডকুমেন্ট</string>
+    <string name="discord">ডিসকর্ড</string>
+    <string name="github">গিটহাব</string>
+    <string name="gmail">জিমেইল</string>
+    <string name="gaming">গেমিং</string>
+    <string name="instagram">ইনস্টাগ্রাম</string>
+    <string name="linkedin">লিঙ্কডইন</string>
+    <string name="health">স্বাস্থ্য</string>
+    <string name="home">বাড়ি</string>
+    <string name="love">ভালবাসা</string>
+    <string name="network">নেটওয়ার্ক</string>
+    <string name="netflix">নেটফ্লিক্স</string>
+    <string name="facebook">ফেসবুক</string>
+    <string name="shopping">কেনাকাটা</string>
+    <string name="snapchat">স্ন্যাপচ্যাট</string>
+    <string name="telegram">টেলিগ্রাম</string>
+    <string name="whatsapp">হোয়াটসঅ্যাপ</string>
+    <string name="work">কাজ</string>
+    <string name="x">এক্স</string>
+    <string name="music">সঙ্গীত</string>
+    <string name="photos">ছবি</string>
+    <string name="enter_username_please">অনুগ্রহ করে ব্যবহারকারীর নাম লিখুন</string>
+    <string name="select_order">ক্রম নির্বাচন করুন</string>
+    <string name="acending">উর্ধ্বক্রম</string>
+
 </resources>
 

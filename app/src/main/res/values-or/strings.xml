@@ -145,6 +145,41 @@
     <string name="icon_lock">ଆଇକନ୍ ଲକ୍</string>
     <string name="hi">ହାଇ,</string>
     <string name="password_manager">ପାସୱାର୍ଡ ମ୍ୟାନେଜର୍</string>
+
+    <string name="enter_password">ପାସୱାର୍ଡ ଦାଖଲ କରନ୍ତୁ</string>
+    <string name="pass_key">ପାସ କୀ</string>
+    <string name="enter_password_again">ପୁନଃ ପାସୱାର୍ଡ ଦାଖଲ କରନ୍ତୁ</string>
+    <string name="select_icon">ଆଇକନ୍ ବାଛନ୍ତୁ</string>
+    <string name="analytics">ବିଶ୍ଳେଷଣ</string>
+    <string name="phone">ଫୋନ୍</string>
+    <string name="apple">ଆପଲ୍</string>
+    <string name="child">ଶିଶୁ</string>
+    <string name="code">କୋଡ୍</string>
+    <string name="document">ଡକ୍ୟୁମେଣ୍ଟ</string>
+    <string name="discord">ଡିସକର୍ଡ</string>
+    <string name="github">ଗିଟହବ୍</string>
+    <string name="gmail">ଜିମେଲ୍</string>
+    <string name="gaming">ଗେମିଂ</string>
+    <string name="instagram">ଇନ୍‌ଷ୍ଟାଗ୍ରାମ୍</string>
+    <string name="linkedin">ଲିଙ୍କଡଇନ୍</string>
+    <string name="health">ସ୍ୱାସ୍ଥ୍ୟ</string>
+    <string name="home">ଘର</string>
+    <string name="love">ପ୍ରେମ</string>
+    <string name="network">ନେଟୱାର୍କ</string>
+    <string name="netflix">ନେଟଫ୍ଲିକ୍ସ</string>
+    <string name="facebook">ଫେସବୁକ୍</string>
+    <string name="shopping">କିଣାକାଟା</string>
+    <string name="snapchat">ସ୍ନାପଚାଟ୍</string>
+    <string name="telegram">ଟେଲିଗ୍ରାମ୍</string>
+    <string name="whatsapp">ହ୍ୱାଟସଅପ୍</string>
+    <string name="work">କାମ</string>
+    <string name="x">ଏକ୍ସ</string>
+    <string name="music">ସଙ୍ଗୀତ</string>
+    <string name="photos">ଫଟୋଗୁଡ଼ିକ</string>
+    <string name="enter_username_please">ଦୟାକରି ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ନାମ ଦାଖଲ କରନ୍ତୁ</string>
+    <string name="select_order">ଅନୁକ୍ରମ ବାଛନ୍ତୁ</string>
+    <string name="acending">ଅରୋହୀ</string>
+
 </resources>
 
 

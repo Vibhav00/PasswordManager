@@ -144,4 +144,40 @@
     <string name="icon_lock">ఐకాన్ లాక్</string>
     <string name="hi">హాయ్ ,</string>
     <string name="password_manager">పాస్వర్డ్ మేనేజర్</string>
+
+
+    <string name="enter_password">పాస్‌వర్డ్‌ని నమోదు చేయండి</string>
+    <string name="pass_key">పాస్ కీ</string>
+    <string name="enter_password_again">మళ్లీ పాస్‌వర్డ్‌ని నమోదు చేయండి</string>
+    <string name="select_icon">ఐకాన్‌ని ఎంచుకోండి</string>
+    <string name="analytics">విశ్లేషణ</string>
+    <string name="phone">ఫోన్</string>
+    <string name="apple">ఆపిల్</string>
+    <string name="child">పిల్ల</string>
+    <string name="code">కోడ్</string>
+    <string name="document">డాక్యుమెంట్</string>
+    <string name="discord">డిస్కార్డ్</string>
+    <string name="github">గిట్‌హబ్</string>
+    <string name="gmail">జిమేల్</string>
+    <string name="gaming">గేమింగ్</string>
+    <string name="instagram">ఇన్‌స్టాగ్రామ్</string>
+    <string name="linkedin">లింక్డ్‌ఇన్</string>
+    <string name="health">ఆరోగ్యం</string>
+    <string name="home">ఇల్లు</string>
+    <string name="love">ప్రేమ</string>
+    <string name="network">నెట్‌వర్క్</string>
+    <string name="netflix">నెట్‌ఫ్లిక్స్</string>
+    <string name="facebook">ఫేస్‌బుక్</string>
+    <string name="shopping">కొనుగోలు</string>
+    <string name="snapchat">స్నాప్‌చాట్</string>
+    <string name="telegram">టెలిగ్రామ్</string>
+    <string name="whatsapp">వాట్సాప్</string>
+    <string name="work">పని</string>
+    <string name="x">ఎక్స్</string>
+    <string name="music">సంగీతం</string>
+    <string name="photos">ఫోటోలు</string>
+    <string name="enter_username_please">దయచేసి వాడుకరిపేరు నమోదు చేయండి</string>
+    <string name="select_order">క్రమాన్ని ఎంచుకోండి</string>
+    <string name="acending">ఆరోహణ</string>
+
 </resources>

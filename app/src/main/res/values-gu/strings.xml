@@ -144,4 +144,39 @@
     <string name="icon_lock">આઇકોન લોક</string>
     <string name="hi">હાય,</string>
     <string name="password_manager">પાસવર્ડ મેનેજર</string>
+
+    <string name="enter_password">પાસવર્ડ દાખલ કરો</string>
+    <string name="pass_key">પાસ કી</string>
+    <string name="enter_password_again">ફરીથી પાસવર્ડ દાખલ કરો</string>
+    <string name="select_icon">આઇકન પસંદ કરો</string>
+    <string name="analytics">વિશ્લેષણ</string>
+    <string name="phone">ફોન</string>
+    <string name="apple">સફરજન</string>
+    <string name="child">બાળક</string>
+    <string name="code">કોડ</string>
+    <string name="document">દસ્તાવેજ</string>
+    <string name="discord">ડિસ્કોર્ડ</string>
+    <string name="github">ગિથબ</string>
+    <string name="gmail">જીમેલ</string>
+    <string name="gaming">ગેમિંગ</string>
+    <string name="instagram">ઇન્સ્ટાગ્રામ</string>
+    <string name="linkedin">લિન્ક્ડઇન</string>
+    <string name="health">આરોગ્ય</string>
+    <string name="home">ઘર</string>
+    <string name="love">પ્રેમ</string>
+    <string name="network">નેટવર્ક</string>
+    <string name="netflix">નેટફ્લિક્સ</string>
+    <string name="facebook">ફેસબુક</string>
+    <string name="shopping">ખરીદી</string>
+    <string name="snapchat">સ્નેપચેટ</string>
+    <string name="telegram">ટેલીગ્રામ</string>
+    <string name="whatsapp">વોટ્સએપ</string>
+    <string name="work">કામ</string>
+    <string name="x">એક્સ</string>
+    <string name="music">સંગીત</string>
+    <string name="photos">ફોટોઝ</string>
+    <string name="enter_username_please">કૃપા કરીને વપરાશકર્તા નામ દાખલ કરો</string>
+    <string name="select_order">ક્રમ પસંદ કરો</string>
+    <string name="acending">આરોહી</string>
+
 </resources>

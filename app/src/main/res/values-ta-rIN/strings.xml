@@ -145,4 +145,39 @@
     <string name="hi">வணக்கம்,</string>
     <string name="password_manager">கடவுச்சொல் மேலாளர்</string>
 
+    <string name="enter_password">கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="pass_key">கடவுச்சொல் விசை</string>
+    <string name="enter_password_again">மீண்டும் கடவுச்சொல்லை உள்ளிடவும்</string>
+    <string name="select_icon">ஐகானை தேர்ந்தெடுக்கவும்</string>
+    <string name="analytics">பகுப்பாய்வு</string>
+    <string name="phone">தொலைபேசி</string>
+    <string name="apple">ஆப்பிள்</string>
+    <string name="child">குழந்தை</string>
+    <string name="code">குறியீடு</string>
+    <string name="document">ஆவணம்</string>
+    <string name="discord">டிஸ்கார்டு</string>
+    <string name="github">கிட்ஹப்</string>
+    <string name="gmail">ஜிமெயில்</string>
+    <string name="gaming">விளையாட்டு</string>
+    <string name="instagram">இன்ஸ்டாகிராம்</string>
+    <string name="linkedin">லின்க்ட்இன்</string>
+    <string name="health">ஆரோக்கியம்</string>
+    <string name="home">வீடு</string>
+    <string name="love">காதல்</string>
+    <string name="network">நெட்வொர்க்</string>
+    <string name="netflix">நெட்பிளிக்ஸ்</string>
+    <string name="facebook">பேஸ்புக்</string>
+    <string name="shopping">ஷாப்பிங்</string>
+    <string name="snapchat">ஸ்னாப்சாட்</string>
+    <string name="telegram">டெலிகிராம்</string>
+    <string name="whatsapp">வாட்ஸ்அப்</string>
+    <string name="work">வேலை</string>
+    <string name="x">எக்ஸ்</string>
+    <string name="music">இசை</string>
+    <string name="photos">புகைப்படங்கள்</string>
+    <string name="enter_username_please">உங்கள் பயனர்பெயரை உள்ளிடவும்</string>
+    <string name="select_order">ஒழுங்கை தேர்வுசெய்க</string>
+    <string name="acending">ஏறுவரிசை</string>
+
+
 </resources>
