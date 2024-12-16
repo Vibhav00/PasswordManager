@@ -4,16 +4,24 @@ import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
 import android.util.TypedValue
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.potentialServices.passwordmanager.R
+import java.util.Locale
 
 class LargelyUsedFunctions {
     companion object{
         fun setTheme(){
 
         }
-        fun setLanguage(){
-
+         fun setLanguageToUi(activity: AppCompatActivity, language: String) {
+            var local: Locale = Locale(language)
+            Locale.setDefault(local)
+            var configuration = activity.resources.configuration
+            configuration.locale = local
+            activity.baseContext.resources.updateConfiguration(
+                configuration, activity.baseContext.resources.displayMetrics
+            )
         }
         fun checkInternetConnection(){
 

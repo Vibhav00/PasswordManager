@@ -10,6 +10,7 @@ import com.potentialServices.passwordmanager.fragments.CreateAppPasswordFragment
 import com.potentialServices.passwordmanager.fragments.CreatePinFragment
 import com.potentialServices.passwordmanager.fragments.FingerprintFragment
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
+import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.setLanguageToUi
 import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 
@@ -19,6 +20,7 @@ class AppPasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val savedTheme = PreferenceUtils.getSharedPreferences(this).getTheme()
         setTheme(savedTheme)
+        setLanguageToUi(this,PreferenceUtils.getSharedPreferences(this).getLang())
         super.onCreate(savedInstanceState)
         activityAppPasswordActivityBinding = ActivityAppPasswordActivityBinding.inflate(layoutInflater)
         setContentView(activityAppPasswordActivityBinding.root)

@@ -24,5 +24,6 @@ object Constants {
    const val TAMIL ="ta"
    const val MARATHI =  "mr"
    const val ENG = "en"
+   const val RUSSIAN = "ru"
 
 }

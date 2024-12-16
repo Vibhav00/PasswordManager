@@ -6,6 +6,7 @@ import android.app.AlertDialog
 import android.app.Dialog
 import android.app.PendingIntent
 import android.content.ContentResolver
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -14,6 +15,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
+import android.provider.MediaStore
 import android.provider.OpenableColumns
 import android.util.Log
 import android.util.TypedValue
@@ -53,12 +55,14 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.potentialServices.passwordmanager.db.PasswordDatabase.Companion.DATABASE_NAME
 import com.potentialServices.passwordmanager.toast.PasswordManagerToast
+import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.setLanguageToUi
 import com.potentialServices.passwordmanager.utils.constants.Constants.BANGOLI
 import com.potentialServices.passwordmanager.utils.constants.Constants.ENG
 import com.potentialServices.passwordmanager.utils.constants.Constants.GUJRATI
 import com.potentialServices.passwordmanager.utils.constants.Constants.HINDI
 import com.potentialServices.passwordmanager.utils.constants.Constants.MARATHI
 import com.potentialServices.passwordmanager.utils.constants.Constants.ORIYA
+import com.potentialServices.passwordmanager.utils.constants.Constants.RUSSIAN
 import com.potentialServices.passwordmanager.utils.constants.Constants.SECURE_KEY_LOC
 import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import com.potentialServices.passwordmanager.utils.constants.Constants.TAMIL
@@ -69,6 +73,7 @@ import java.io.FileOutputStream
 import java.io.FileWriter
 import java.io.IOException
 import java.io.InputStream
+import java.io.OutputStreamWriter
 import java.util.Locale
 import kotlin.system.exitProcess
 
@@ -90,6 +95,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val savedTheme = getSavedThemePreference()
         setTheme(savedTheme)
+        setLanguageToUi(this,PreferenceUtils.getSharedPreferences(this).getLang())
 
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -309,15 +315,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //        return preferences.getInt("theme", R.style.default_theme) // Replace R.style.DefaultTheme with your default theme
     }
 
-    private fun setLanguage(activity: Activity, language: String) {
-        var local: Locale = Locale(language)
-        Locale.setDefault(local)
-        var configuration = resources.configuration
-        configuration.locale = local
-        baseContext.resources.updateConfiguration(
-            configuration, baseContext.resources.displayMetrics
-        )
-    }
+//    private fun setLanguage(activity: AppCompatActivity, language: String) {
+//        var local: Locale = Locale(language)
+//        Locale.setDefault(local)
+//        var configuration = activity.resources.configuration
+//        configuration.locale = local
+//        baseContext.resources.updateConfiguration(
+//            configuration, baseContext.resources.displayMetrics
+//        )
+//    }
 
 
     override fun onBackPressed() {
@@ -543,27 +549,55 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         exitProcess(0) // Terminate the process
 //        finishAffinity() // Close all activities
     }
+    // Helper function to write CSV data
+    private fun writeCsvData(output: Appendable) {
+        output.append("title,username,password,website,description\n")
+        mainViewModel.mainList.forEach {
+            output.append("${it.title},${it.userName},${it.password},${it.website},${it.description}\n")
+        }
+    }
 
 
     private fun convertToCsv() {
-        val backUpCsvPath =
-            Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath + "/pm_csv_${System.currentTimeMillis()}.csv"
-        val file = File(backUpCsvPath)
+
         var writer: FileWriter? = null
         try {
-            Toast.makeText(this, "t", Toast.LENGTH_SHORT).show()
-            writer = FileWriter(file)
-            writer.append("title,username,password,website,description\n")
-            mainViewModel.mainList.forEach {
-                writer.append("${it.title},${it.userName},${it.password},${it.website},${it.description}\n")
+            val fileName = "pm_csv_${System.currentTimeMillis()}.csv"
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                // For Android 10 and above, save the file using MediaStore
+                val contentValues = ContentValues().apply {
+                    put(MediaStore.MediaColumns.DISPLAY_NAME, fileName)
+                    put(MediaStore.MediaColumns.MIME_TYPE, "text/csv")
+                    put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS)
+                }
+
+                val uri = contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues)
+
+                uri?.let {
+                    contentResolver.openOutputStream(it)?.use { outputStream ->
+                        OutputStreamWriter(outputStream).use { writer ->
+                            writeCsvData(writer)
+                        }
+                    }
+                    PasswordManagerToast.showToast(this, "CSV file saved successfully in Downloads", Toast.LENGTH_SHORT)
+                } ?: run {
+                    PasswordManagerToast.showToast(this, "Error creating file", Toast.LENGTH_SHORT)
+                }
+            } else {
+                // For Android 9 and below, save the file directly to the Downloads folder
+                val backUpCsvPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                    .absolutePath + "/$fileName"
+                val file = File(backUpCsvPath)
+                file.writer().use { writer ->
+                    writeCsvData(writer)
+                }
+                PasswordManagerToast.showToast(this, "CSV file saved successfully in Downloads", Toast.LENGTH_SHORT)
             }
-            writer.flush()
-            writer.close()
-            PasswordManagerToast.showToast(this, "Successfully Exported CSV", Toast.LENGTH_SHORT)
-        } catch (e: IOException) {
-            PasswordManagerToast.showToast(this, "Got Some Exception ", Toast.LENGTH_SHORT)
+        } catch (e: Exception) {
+            PasswordManagerToast.showToast(this, "Failed to export CSV: ${e.message}", Toast.LENGTH_LONG)
             e.printStackTrace()
-        } finally {
+        }finally {
             writer?.close()
         }
 
@@ -572,28 +606,47 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun backupDatabase(context: Context, databaseName: String): Boolean {
         return try {
+            // Close the database before backing up
+            val dbPath = context.getDatabasePath(databaseName).absolutePath
+            val backupFileName = "pm_backup_${System.currentTimeMillis()}.db"
 
-            db.close()
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                // Android 10 and above: Use MediaStore to save the backup in Downloads
+                val contentValues = ContentValues().apply {
+                    put(MediaStore.MediaColumns.DISPLAY_NAME, backupFileName)
+                    put(MediaStore.MediaColumns.MIME_TYPE, "application/octet-stream")
+                    put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS)
+                }
 
-            val currentDBPath = context.getDatabasePath(databaseName).absolutePath
-            val backupDBPath =
-                Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).absolutePath + "/pm_backup_${System.currentTimeMillis()}.db"
+                val uri = context.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues)
 
-            val currentDB = File(currentDBPath)
-            val backupDB = File(backupDBPath)
-
-
-            if (currentDB.exists()) {
-                val src = FileInputStream(currentDB).channel
-                val dst = FileOutputStream(backupDB).channel
-                dst.transferFrom(src, 0, src.size())
-                src.close()
-                dst.close()
-                true
+                uri?.let {
+                    context.contentResolver.openOutputStream(it)?.use { outputStream ->
+                        FileInputStream(File(dbPath)).use { inputStream ->
+                            inputStream.copyTo(outputStream)
+                        }
+                    }
+                    true
+                } ?: false
             } else {
-                false
+                // Android 9 and below: Save directly to the Downloads folder
+                val backupFilePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                    .absolutePath + "/$backupFileName"
+                val currentDB = File(dbPath)
+                val backupDB = File(backupFilePath)
+
+                if (currentDB.exists()) {
+                    FileInputStream(currentDB).channel.use { src ->
+                        FileOutputStream(backupDB).channel.use { dst ->
+                            dst.transferFrom(src, 0, src.size())
+                        }
+                    }
+                    true
+                } else {
+                    false
+                }
             }
-        } catch (e: IOException) {
+        } catch (e: Exception) {
             e.printStackTrace()
             false
         }
@@ -720,6 +773,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.id.gujarati_lang -> GUJRATI
                     R.id.tamil_lang ->TAMIL
                     R.id.marathi_lang -> MARATHI
+                    R.id.russian_lang -> RUSSIAN
                     else ->ENG             // Default to English if no selection
                 }
 
@@ -732,12 +786,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 GUJRATI-> "Gujarati"
                 TAMIL -> "Tamil"
                 MARATHI-> "Marathi"
+                RUSSIAN -> "Russian"
                 else -> "English"
             }
 
+            PreferenceUtils.getSharedPreferences(this).setLang(selectedLanguageCode)
              // If a language is selected, apply the language and recreate the activity
             // if (selectedLanguageCode != "en") { // Only recreate if a different language is selected
-            setLanguage(this, selectedLanguageCode) // Apply the selected language
+            setLanguageToUi(this,selectedLanguageCode) // Apply the selected language
             PasswordManagerToast.showToast(this,
                 languageName+getString(R.string.language_has_been_updated), Toast.LENGTH_SHORT)
 //            Toast.makeText(this, "$languageName language has been updated", Toast.LENGTH_SHORT)

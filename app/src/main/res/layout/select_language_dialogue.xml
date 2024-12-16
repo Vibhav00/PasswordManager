@@ -97,6 +97,15 @@
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
             style="@style/CustomRadioButton"/>
+        <RadioButton
+            android:id="@+id/russian_lang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/russian"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:textColor="?attr/myPrimaryTextColor"
+            style="@style/CustomRadioButton"/>
 
     </RadioGroup>
 

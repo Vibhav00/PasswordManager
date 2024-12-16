@@ -8,6 +8,7 @@ import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.databinding.ActivityAddPasswordBinding
 import com.potentialServices.passwordmanager.db.PasswordDatabase
 import com.potentialServices.passwordmanager.repositories.PasswordRepository
+import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.setLanguageToUi
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 import com.potentialServices.passwordmanager.viewmodelprovider.MainViewModelProviderFactory
 import com.potentialServices.passwordmanager.viewmodels.MainViewModel
@@ -22,6 +23,7 @@ class AddPasswordActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val savedTheme = PreferenceUtils.getSharedPreferences(this).getTheme()
         setTheme(savedTheme)
+        setLanguageToUi(this,PreferenceUtils.getSharedPreferences(this).getLang())
         super.onCreate(savedInstanceState)
         activityAddPassBinding  = ActivityAddPasswordBinding.inflate(layoutInflater)
         setContentView(activityAddPassBinding.root)

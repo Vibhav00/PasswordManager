@@ -9,6 +9,7 @@ import android.view.WindowManager
 import androidx.lifecycle.lifecycleScope
 import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents
+import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.setLanguageToUi
 import com.potentialServices.passwordmanager.utils.constants.Constants.SECURE_KEY_LOC
 import com.potentialServices.passwordmanager.utils.constants.Constants.SERIALIZABLE_EXTRA_KEY
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
@@ -22,6 +23,7 @@ class SplaceActivity : AppCompatActivity() {
         /** initializing the theme before super.onCreate()  **/
         val savedTheme = PreferenceUtils.getSharedPreferences(this).getTheme()
         setTheme(savedTheme)
+        setLanguageToUi(this,PreferenceUtils.getSharedPreferences(this).getLang())
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splace)
 
