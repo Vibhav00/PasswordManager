@@ -185,6 +185,10 @@
     <string name="enter_username_please">Введите имя пользователя</string>
     <string name="select_order">Выберите порядок</string>
     <string name="acending">По возрастанию</string>
+    <string name="russian">Русский</string>
+    <string name="pin">Пин</string>
+    <string name="fingerprint">Биометрический замок</string>
+    <string name="vibhav_kumar">Вибхав Кумар</string>
 
 
 </resources>

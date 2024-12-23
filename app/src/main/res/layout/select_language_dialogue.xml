@@ -11,7 +11,9 @@
         android:id="@+id/select_language_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
         android:text="@string/select_language"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold"
         android:paddingBottom="16dp"
@@ -29,6 +31,7 @@
             android:text="@string/english"
             android:textSize="16sp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             android:padding="8dp"
             style="@style/CustomRadioButton"/>
 
@@ -38,6 +41,7 @@
             android:layout_height="wrap_content"
             android:text="@string/hindi"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             android:textSize="16sp"
             android:padding="8dp"
             style="@style/CustomRadioButton"/>
@@ -48,6 +52,7 @@
             android:layout_height="wrap_content"
             android:text="@string/odia"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             android:textSize="16sp"
             android:padding="8dp"
             style="@style/CustomRadioButton"/>
@@ -58,6 +63,7 @@
             android:layout_height="wrap_content"
             android:text="@string/bengali"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             android:textSize="16sp"
             android:padding="8dp"
             style="@style/CustomRadioButton"/>
@@ -68,6 +74,7 @@
             android:text="@string/telugu"
             android:textSize="16sp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             android:padding="8dp"
             style="@style/CustomRadioButton"/>
         <RadioButton
@@ -78,6 +85,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/tamil_lang"
@@ -87,6 +95,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/marathi_lang"
@@ -96,6 +105,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/russian_lang"
@@ -105,6 +115,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
 
     </RadioGroup>
@@ -124,6 +135,7 @@
             android:layout_weight="1"
             android:background="@drawable/ripple_effect_btn_red"
             android:text="@string/cancel"
+            android:fontFamily="@font/roboto_medium"
             android:textColor="?attr/my_icon_front_color" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -134,7 +146,8 @@
             android:layout_weight="1"
             android:background="@drawable/positive_btn"
             android:text="@string/save"
-            android:textColor="?attr/my_icon_color" />
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="?attr/myTabBackgroundColor" />
     </LinearLayout>
 
 </LinearLayout>

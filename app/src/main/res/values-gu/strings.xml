@@ -178,5 +178,10 @@
     <string name="enter_username_please">કૃપા કરીને વપરાશકર્તા નામ દાખલ કરો</string>
     <string name="select_order">ક્રમ પસંદ કરો</string>
     <string name="acending">આરોહી</string>
+    <string name="russian">રશિયન</string>
+    <string name="pin">પિન</string>
+    <string name="fingerprint">બાયોમેટ્રિક લોક</string>
+    <string name="vibhav_kumar">વિભવ કુમાર</string>
+
 
 </resources>

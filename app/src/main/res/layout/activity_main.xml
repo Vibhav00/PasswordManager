@@ -39,6 +39,7 @@
                     android:textAlignment="textEnd"
                     android:textColor="?attr/myPrimaryTextColor"
                     android:textSize="18sp"
+                    android:fontFamily="@font/roboto_bold"
                     android:textStyle="bold" />
 
 
@@ -101,11 +102,11 @@
                 app:boxStrokeColor="@color/edit_text_background"
                 app:cursorColor="?attr/my_icon_front_color"
                 app:endIconMode="clear_text"
-                app:hintTextColor="@color/white"
+                app:hintTextColor="?attr/mySecondaryTextColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:startIconTint="@color/white"
+                app:startIconTint="?attr/mySecondaryTextColor"
                 app:endIconTint="?attr/my_icon_front_color"
 
                 >
@@ -120,7 +121,8 @@
                     android:imeOptions="actionSearch"
                     android:lines="1"
                     android:text=""
-                    android:textSize="15sp" />
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="14sp" />
 
 
             </com.google.android.material.textfield.TextInputLayout>

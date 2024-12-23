@@ -46,16 +46,16 @@
     <string name="back">వెనక్కి</string>
     <string name="enteryourrecoveryquestionandanswer">మీ పునరుద్ధరణ ప్రశ్న మరియు సమాధానం ఎంటర్ చేయండి</string>
     <string name="enteryourrecoveryanswer">పునరుద్ధరణ సమాధానం ఎంటర్ చేయండి</string>
-    <string name="_0">0</string>
-    <string name="_9">9</string>
-    <string name="_8">8</string>
-    <string name="_7">7</string>
-    <string name="_6">6</string>
-    <string name="_5">5</string>
-    <string name="_4">4</string>
-    <string name="_3">3</string>
-    <string name="_2">2</string>
-    <string name="_1">1</string>
+    <string name="_0">౦</string>
+    <string name="_9">౯</string>
+    <string name="_8">౮</string>
+    <string name="_7">౭</string>
+    <string name="_6">౬</string>
+    <string name="_5">౫</string>
+    <string name="_4">౪</string>
+    <string name="_3">౩</string>
+    <string name="_2">౨</string>
+    <string name="_1">౧</string>
     <string name="add_password">పాస్వర్డ్ చేర్చు</string>
     <string name="cancel">రద్దు చేయి</string>
     <string name="no">కాదు</string>
@@ -179,5 +179,10 @@
     <string name="enter_username_please">దయచేసి వాడుకరిపేరు నమోదు చేయండి</string>
     <string name="select_order">క్రమాన్ని ఎంచుకోండి</string>
     <string name="acending">ఆరోహణ</string>
+    <string name="russian">రష్యా</string>
+    <string name="pin">పిన్</string>
+    <string name="fingerprint">బయోమేట్రిక్ లాక్</string>
+    <string name="vibhav_kumar">విభవ్ కుమార్</string>
+
 
 </resources>

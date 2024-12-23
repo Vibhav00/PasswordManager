@@ -3,8 +3,8 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:background="@drawable/popup_background_all_corner">
+    android:padding="32dp"
+    android:background="@drawable/pop_up_background">
 
     <TextView
         android:id="@+id/select_theme_title"
@@ -13,6 +13,7 @@
         android:text="@string/enter_your_username"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:fontFamily="@font/roboto_bold"
         android:paddingBottom="16dp"
         android:textColor="?attr/myPrimaryTextColor"/>
 
@@ -47,6 +48,7 @@
                 android:textColorHint="?attr/mySecondaryTextColor"
                 android:lines="1"
                 android:text=""
+                android:fontFamily="@font/roboto_regular"
                 android:textColor="?attr/myPrimaryTextColor"
                 android:textSize="15sp" />
 
@@ -69,6 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto_medium"
             android:background="@drawable/ripple_effect_btn_red"
             android:text="@string/skip"
             android:textColor="?attr/my_icon_front_color" />
@@ -78,10 +81,11 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:fontFamily="@font/roboto_medium"
             android:layout_weight="1"
             android:background="@drawable/positive_btn"
             android:text="@string/save"
-            android:textColor="@color/white" />
+            android:textColor="?attr/myTabBackgroundColor" />
 
 
     </LinearLayout>

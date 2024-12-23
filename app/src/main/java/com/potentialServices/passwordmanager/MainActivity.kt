@@ -23,6 +23,7 @@ import android.view.Gravity
 import android.view.MenuItem
 import android.view.View
 import android.view.Window
+import android.view.WindowInsetsController
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -101,6 +102,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
 
+        setStatusBartextColor(savedTheme)
         mainBinding.searchTextContainer.visibility = View.GONE
 
 
@@ -184,7 +186,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                 mainViewModel.handleMainEvents(MainActivityEvents.NoEvent())
             }
-            Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
         }
         mainBinding.sortIcon.setOnClickListener {
             mainBinding.searchTextContainer.visibility = View.GONE
@@ -296,6 +298,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
+    private fun setStatusBartextColor(savedTheme: Int) {
+      if(savedTheme !in arrayOf(R.style.RedTheme,R.style.darkTheme))
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.setSystemBarsAppearance(
+                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+            )
+        } else {
+            @Suppress("DEPRECATION")
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
+    }
+
     private fun setHamburgurData(
         hamburgerHeaderBinding: HamburgerHeaderBinding,
         all: Int,
@@ -347,11 +362,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.save_database -> {
-                PasswordManagerToast.showToast(
-                    this,
-                    backupDatabase(this, DATABASE_NAME).toString(),
-                    Toast.LENGTH_SHORT
-                )
+                if(backupDatabase(this, DATABASE_NAME)){
+                    PasswordManagerToast.showToast(this,"Backup Successful",Toast.LENGTH_SHORT)
+                    startActivity(Intent(this@MainActivity,MainActivity::class.java))
+                    finish()
+                }else{
+
+                }
+//                PasswordManagerToast.showToast(
+//                    this,
+//                    backupDatabase(this, DATABASE_NAME).toString(),
+//                    Toast.LENGTH_SHORT
+//                )
             }
 
             R.id.restore_database -> {
@@ -498,13 +520,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             // Open an input stream to the content URI
             val inputStream: InputStream? = contentResolver.openInputStream(uri)
 
-            val file = getDatabasePath("database_main.db")
+            val file = getDatabasePath(DATABASE_NAME)
             val parent = file.parent
             db.close()
             file.delete()
 
             // Create a new file
-            val newFile = File(parent, "database_main.db")
+            val newFile = File(parent, DATABASE_NAME)
             val fileOutputStream = FileOutputStream(newFile)
 
             // Copy the content from the input stream to the output stream
@@ -514,7 +536,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     input.copyTo(output)
                 }
             }
-
         } catch (e: IOException) {
             e.printStackTrace()
             Toast.makeText(this, "Failed to read or write file", Toast.LENGTH_SHORT).show()
@@ -526,9 +547,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 100 && resultCode == RESULT_OK) {
             val uri = data?.data
+            Log.e("the result = %s", uri.toString())
             if (uri != null) {
                 openFile(uri)
-                restartApp()
+//                restartApp()
             }
         }
     }
@@ -606,6 +628,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun backupDatabase(context: Context, databaseName: String): Boolean {
         return try {
+            // close the database
+            db.close()
+
             // Close the database before backing up
             val dbPath = context.getDatabasePath(databaseName).absolutePath
             val backupFileName = "pm_backup_${System.currentTimeMillis()}.db"
@@ -614,7 +639,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 // Android 10 and above: Use MediaStore to save the backup in Downloads
                 val contentValues = ContentValues().apply {
                     put(MediaStore.MediaColumns.DISPLAY_NAME, backupFileName)
-                    put(MediaStore.MediaColumns.MIME_TYPE, "application/octet-stream")
                     put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS)
                 }
 
@@ -646,6 +670,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     false
                 }
             }
+
+
         } catch (e: Exception) {
             e.printStackTrace()
             false
@@ -871,8 +897,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun saveThemePreference(themeId: Int) {
         if (PreferenceUtils.getSharedPreferences(this).setTheme(themeId)) {
-            PasswordManagerToast.showToast(this,
-                getString(R.string.theme_is_changed),Toast.LENGTH_SHORT)
+//            PasswordManagerToast.showToast(this,
+//                getString(R.string.theme_is_changed),Toast.LENGTH_SHORT)
         } else {
             PasswordManagerToast.showToast(this,
                 getString(R.string.got_some_issue),Toast.LENGTH_SHORT)

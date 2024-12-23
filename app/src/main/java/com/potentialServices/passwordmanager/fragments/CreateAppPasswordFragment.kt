@@ -12,11 +12,13 @@ import android.view.ViewGroup
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import com.potentialServices.passwordmanager.MainActivity
 import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.databinding.EntereUsernameDialogBinding
 import com.potentialServices.passwordmanager.databinding.FragmentCreateAppPasswordBinding
 import com.potentialServices.passwordmanager.toast.PasswordManagerToast
+import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.checkPasswordStrength
 import com.potentialServices.passwordmanager.utils.constants.Constants.A_Z
 import com.potentialServices.passwordmanager.utils.preferenceutils.PreferenceUtils
 import com.potentialServices.passwordmanager.utils.securepreferenceutils.PreferenceUtilsEncrypted
@@ -75,6 +77,12 @@ class CreateAppPasswordFragment : Fragment() {
             lp.height = WindowManager.LayoutParams.WRAP_CONTENT
             lp.gravity = Gravity.CENTER
 
+            dialog.window!!.setBackgroundDrawable(
+                ContextCompat.getDrawable(
+                    this@CreateAppPasswordFragment.requireContext(),
+                    R.drawable.pop_up_background
+                )
+            )
             dialog.window!!.attributes = lp
 
             dialog.show()
@@ -130,6 +138,14 @@ class CreateAppPasswordFragment : Fragment() {
                         checkThePasswordAndAddSave()
                     }else{
                         val text = this.etPassword.text.toString()
+                        if(text.length<8){
+                            PasswordManagerToast.showToast(this@CreateAppPasswordFragment.requireContext(),"Password could not be less than 8 character",Toast.LENGTH_SHORT)
+                            return@setOnClickListener
+                        }
+                        if(checkPasswordStrength(text) <40){
+                            PasswordManagerToast.showToast(this@CreateAppPasswordFragment.requireContext(),"Please choose strong password ",Toast.LENGTH_SHORT)
+                            return@setOnClickListener
+                        }
                         createPasswordItem.firstPassword = text;
                         createPasswordItem.firstPasswordAdded = true//tyu
                         etPassword.setText("")
@@ -182,13 +198,13 @@ class CreateAppPasswordFragment : Fragment() {
                 .setPassword(createPasswordItem.firstPassword)
             PreferenceUtils.getSharedPreferences(this.requireContext()).setLockedByPassword(true)
             val iHome = Intent(this.requireActivity(), MainActivity::class.java)
+            PasswordManagerToast.showToast(this@CreateAppPasswordFragment.requireContext(),
+                getString(R.string.password_updated_successfully),Toast.LENGTH_SHORT)
             startActivity(iHome)
-            Toast.makeText(this.requireContext(),
-                getString(R.string.password_updated_successfully),Toast.LENGTH_SHORT).show()
             this.requireActivity().finish()
         }else{
-            Toast.makeText(this.requireContext(),
-                getString(R.string.confirm_password_is_not_same),Toast.LENGTH_SHORT).show()
+            PasswordManagerToast.showToast(this@CreateAppPasswordFragment.requireContext(),
+                getString(R.string.confirm_password_is_not_same),Toast.LENGTH_SHORT)
             createPasswordItem= CreatePasswordItem(previousPasswordVerified = true);
             setTitleAndDes(getString(R.string.new_password),getString(R.string.enter_your_new_password))
 

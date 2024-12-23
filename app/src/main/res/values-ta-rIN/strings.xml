@@ -46,16 +46,16 @@
     <string name="back">மீண்டும்</string>
     <string name="enteryourrecoveryquestionandanswer">உங்கள் மீட்பு கேள்வியும் பதிலும் உள்ளிடவும்</string>
     <string name="enteryourrecoveryanswer">மீட்பு பதிலை உள்ளிடவும்</string>
-    <string name="_0">0</string>
-    <string name="_9">9</string>
-    <string name="_8">8</string>
-    <string name="_7">7</string>
-    <string name="_6">6</string>
-    <string name="_5">5</string>
-    <string name="_4">4</string>
-    <string name="_3">3</string>
-    <string name="_2">2</string>
-    <string name="_1">1</string>
+    <string name="_0">௦</string>
+    <string name="_9">௯</string>
+    <string name="_8">௮</string>
+    <string name="_7">௭</string>
+    <string name="_6">௬</string>
+    <string name="_5">௫</string>
+    <string name="_4">௪</string>
+    <string name="_3">௩</string>
+    <string name="_2">௨</string>
+    <string name="_1">௧</string>
     <string name="add_password">கடவுச்சொல் சேர்க்கவும்</string>
     <string name="cancel">ரத்து செய்யவும்</string>
     <string name="no">இல்லை</string>
@@ -178,6 +178,11 @@
     <string name="enter_username_please">உங்கள் பயனர்பெயரை உள்ளிடவும்</string>
     <string name="select_order">ஒழுங்கை தேர்வுசெய்க</string>
     <string name="acending">ஏறுவரிசை</string>
+    <string name="russian">ரஷியன்</string>
+    <string name="pin">பின்</string>
+    <string name="fingerprint">பயோமெட்ரிக் லாக்</string>
+    <string name="vibhav_kumar">விபவ் குமாரு</string>
+
 
 
 </resources>

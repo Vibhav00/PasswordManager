@@ -37,7 +37,7 @@
     <color name="redColorAccent">#4CAF50</color>
 
     <color name="redPrimaryText">#DBDBDB</color>
-    <color name="redSecondaryText">#A9A9A9</color>
+    <color name="redSecondaryText">#D3D3D3</color>
     <color name="redBackgroundColor">#F44336</color>
     <color name="redTabBackgroundColor">#BC0909</color>
     <color name="redTabTextColor">#DBDBDB</color>
@@ -98,22 +98,22 @@
 
 <!--    green theme -->
 
-    <color name="greenColorPrimary">#8BC34A</color>
+    <color name="greenColorPrimary">#BDF081</color>
     <color name="greenColorPrimaryDark">#689F38</color>
     <color name="greenColorPrimaryLight">#DCEDC8</color>
     <color name="greenColorAccent">#4CAF50</color>
 
     <color name="greenPrimaryText">#121212</color>
     <color name="greenSecondaryText">#242424</color>
-    <color name="greenBackgroundColor">#DCEDC8</color>
-    <color name="greenTabBackgroundColor">#8BC34A</color>
+    <color name="greenBackgroundColor">#FBFFF6</color>
+    <color name="greenTabBackgroundColor">#BDF081</color>
     <color name="greenTabTextColor">#121212</color>
-    <color name="greenTabTextSelectedColor">#B03052</color>
-    <color name="greenTabIndicatorColor">#B03052</color>
-    <color name="greenIconFrontColor">#B03052</color>
-    <color name="greenIconBackColor">#8BC34A</color>
+    <color name="greenTabTextSelectedColor">#E66D8D</color>
+    <color name="greenTabIndicatorColor">#E66D8D</color>
+    <color name="greenIconFrontColor">#E66D8D</color>
+    <color name="greenIconBackColor">#BDF081</color>
     <color name="greenRipppleColor">#CFEAD2</color>
-    <color name="greenWindowColor">#DCEDC8</color>
+    <color name="greenWindowColor">#F6FDED</color>
     <color name="greeniconColor">#121212</color>
 
 
@@ -129,14 +129,14 @@
     <color name="pinkPrimaryText">#121212</color>
     <color name="pinkSecondaryText">#242424</color>
     <color name="pinkBackgroundColor">#FFB5CE</color>
-    <color name="pinkTabBackgroundColor">#FA5B91</color>
+    <color name="pinkTabBackgroundColor">#F6A1BE</color>
     <color name="pinkTabTextColor">#121212</color>
-    <color name="pinkTabTextSelectedColor">#D1D1D1</color>
-    <color name="pinkTabIndicatorColor">#D1D1D1</color>
-    <color name="pinkIconFrontColor">#D1D1D1</color>
-    <color name="pinkIconBackColor">#FA5B91</color>
+    <color name="pinkTabTextSelectedColor">#EDEDED</color>
+    <color name="pinkTabIndicatorColor">#EDEDED</color>
+    <color name="pinkIconFrontColor">#EDEDED</color>
+    <color name="pinkIconBackColor">#F6A1BE</color>
     <color name="pinkRipppleColor">#CFEAD2</color>
-    <color name="pinkWindowColor">#FFB5CE</color>
+    <color name="pinkWindowColor">#FBD3E1</color>
     <color name="pinkiconColor">#121212</color>
 
 
@@ -153,14 +153,14 @@
     <color name="purplePrimaryText">#121212</color>
     <color name="purpleSecondaryText">#242424</color>
     <color name="purpleBackgroundColor">#D0BEFF</color>
-    <color name="purpleTabBackgroundColor">#8B5DFF</color>
+    <color name="purpleTabBackgroundColor">#C0A8FD</color>
     <color name="purpleTabTextColor">#121212</color>
-    <color name="purpleTabTextSelectedColor">#D1D1D1</color>
-    <color name="purpleTabIndicatorColor">#D1D1D1</color>
-    <color name="purpleIconFrontColor">#FFF7D1</color>
-    <color name="purpleIconBackColor">#8B5DFF</color>
+    <color name="purpleTabTextSelectedColor">#F4F4F4</color>
+    <color name="purpleTabIndicatorColor">#F4F4F4</color>
+    <color name="purpleIconFrontColor">#F4F4F4</color>
+    <color name="purpleIconBackColor">#C0A8FD</color>
     <color name="purpleRipppleColor">#CFEAD2</color>
-    <color name="purpleWindowColor">#D0BEFF</color>
+    <color name="purpleWindowColor">#E8E0FD</color>
     <color name="purpleiconColor">#121212</color>
 
 
@@ -173,18 +173,18 @@
     <color name="darkColorPrimaryLight">#DCEDC8</color>
     <color name="darkColorAccent">#4CAF50</color>
 
-    <color name="darkPrimaryText">#B8B8B8</color>
-    <color name="darkSecondaryText">#626262</color>
+    <color name="darkPrimaryText">#DEDEDE</color>
+    <color name="darkSecondaryText">#A6A6A6</color>
     <color name="darkBackgroundColor">#181818</color>
     <color name="darkTabBackgroundColor">#000000</color>
-    <color name="darkTabTextColor">#626262</color>
-    <color name="darkTabTextSelectedColor">#B8B8B8</color>
-    <color name="darkTabIndicatorColor">#D1D1D1</color>
+    <color name="darkTabTextColor">#A6A6A6</color>
+    <color name="darkTabTextSelectedColor">#DEDEDE</color>
+    <color name="darkTabIndicatorColor">#DEDEDE</color>
     <color name="darkIconFrontColor">#5F5F5F</color>
     <color name="darkIconBackColor">#000000</color>
     <color name="darkRipppleColor">#CFEAD2</color>
     <color name="darkWindowColor">#181818</color>
-    <color name="darkiconColor">#B8B8B8</color>
+    <color name="darkiconColor">#DEDEDE</color>
 
 <!--    tabBackgroundColor -> main color  //  tabs background + status bar  -->
 

@@ -49,6 +49,7 @@
         android:layout_height="wrap_content"
         android:text="@string/enternewpin"
         android:textSize="18sp"
+        android:fontFamily="@font/roboto_regular"
         android:textColor="?attr/mySecondaryTextColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -135,6 +136,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="2"
                 android:id="@+id/btn2lock"
@@ -146,6 +148,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="3"
                 android:layout_width="0dp"
@@ -163,6 +166,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="4"
                 android:layout_width="0dp"
@@ -173,6 +177,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="5"
                 android:layout_width="0dp"
@@ -183,6 +188,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="6"
                 android:layout_width="0dp"
@@ -200,6 +206,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="7"
                 android:layout_width="0dp"
@@ -210,6 +217,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="8"
                 android:layout_width="0dp"
@@ -220,6 +228,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="9"
                 android:layout_width="0dp"
@@ -246,6 +255,7 @@
 
             <Button
                 android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="0"
                 android:layout_width="0dp"
@@ -268,7 +278,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -280,13 +290,14 @@
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnLocked"
             android:paddingHorizontal="20dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="30dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:background="@drawable/positive_btn"
             android:text="@string/activate"
-            android:textColor="?attr/my_icon_color" />
+            android:textColor="?attr/myTabBackgroundColor" />
 
 
 

@@ -181,6 +181,11 @@
     <string name="enter_username_please">অনুগ্রহ করে ব্যবহারকারীর নাম লিখুন</string>
     <string name="select_order">ক্রম নির্বাচন করুন</string>
     <string name="acending">উর্ধ্বক্রম</string>
+    <string name="russian">রাশিয়ান</string>
+    <string name="pin">পিন</string>
+    <string name="fingerprint">বায়োমেট্রিক লক</string>
+    <string name="vibhav_kumar">বিভব কুমার</string>
+
 
 </resources>
 

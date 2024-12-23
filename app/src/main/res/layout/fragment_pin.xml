@@ -117,7 +117,8 @@
                 android:background="#00FFFFFF"
                 android:tag="1"
                 android:text="@string/_1"
-                android:textColor="@color/black"
+                android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="35sp" />
 
             <Button
@@ -128,7 +129,8 @@
                 android:background="#00FFFFFF"
                 android:tag="2"
                 android:text="@string/_2"
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="35sp" />
 
             <Button
@@ -138,7 +140,8 @@
                 android:background="#00FFFFFF"
                 android:tag="3"
                 android:text="@string/_3"
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="35sp"
                 tools:ignore="ButtonStyle" />
         </LinearLayout>
@@ -150,7 +153,8 @@
             android:orientation="horizontal">
 
             <Button
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="4"
                 android:layout_width="0dp"
@@ -160,7 +164,8 @@
                 android:textSize="35sp" />
 
             <Button
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="5"
                 android:layout_width="0dp"
@@ -176,7 +181,8 @@
                 android:background="#00FFFFFF"
                 android:tag="6"
                 android:text="@string/_6"
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:textSize="35sp" />
         </LinearLayout>
 
@@ -187,7 +193,8 @@
             android:orientation="horizontal">
 
             <Button
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="7"
                 android:layout_width="0dp"
@@ -197,7 +204,8 @@
                 android:textSize="35sp" />
 
             <Button
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="8"
                 android:layout_width="0dp"
@@ -207,7 +215,8 @@
                 android:textSize="35sp" />
 
             <Button
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="9"
                 android:layout_width="0dp"
@@ -232,7 +241,8 @@
                 android:textSize="30sp" />
 
             <Button
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:background="#00FFFFFF"
                 android:tag="0"
                 android:layout_width="0dp"
@@ -242,7 +252,8 @@
                 android:textSize="35sp" />
 
             <ImageButton
-                android:textColor="@color/black"
+              android:textColor="?attr/myPrimaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:src="@drawable/baseline_lock_24"
                 android:background="#00FFFFFF"
                 android:tag="-"

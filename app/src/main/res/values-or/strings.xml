@@ -179,6 +179,11 @@
     <string name="enter_username_please">ଦୟାକରି ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ନାମ ଦାଖଲ କରନ୍ତୁ</string>
     <string name="select_order">ଅନୁକ୍ରମ ବାଛନ୍ତୁ</string>
     <string name="acending">ଅରୋହୀ</string>
+    <string name="russian">ରୁସିଆ</string>
+    <string name="pin">ପିନ୍</string>
+    <string name="fingerprint">ବାୟୋମେଟ୍ରିକ୍ ଲକ୍</string>
+    <string name="vibhav_kumar">ବିଭବ କୁମାର</string>
+
 
 </resources>
 

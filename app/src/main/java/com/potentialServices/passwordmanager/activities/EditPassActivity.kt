@@ -1,7 +1,10 @@
 package com.potentialServices.passwordmanager.activities
 
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.view.WindowInsetsController
 import androidx.lifecycle.ViewModelProvider
 import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.databinding.ActivityEditPassBinding
@@ -31,7 +34,21 @@ class EditPassActivity : AppCompatActivity() {
 //        setToolbar()
         getIntentExtra()
         settingRepoAndViewModel()
+        setStatusBartextColor(savedTheme)
 
+    }
+
+    private fun setStatusBartextColor(savedTheme: Int) {
+        if(savedTheme !in arrayOf(R.style.RedTheme,R.style.darkTheme))
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                window.insetsController?.setSystemBarsAppearance(
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                )
+            } else {
+                @Suppress("DEPRECATION")
+                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            }
     }
 
 //    private fun setToolbar() {

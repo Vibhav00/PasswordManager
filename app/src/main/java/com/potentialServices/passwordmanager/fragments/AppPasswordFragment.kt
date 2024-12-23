@@ -12,6 +12,7 @@ import com.potentialServices.passwordmanager.R
 import com.potentialServices.passwordmanager.databinding.FragmentAppPasswordBinding
 import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.AppPasswordEvents.*
+import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.checkPasswordStrength
 import com.potentialServices.passwordmanager.utils.securepreferenceutils.PreferenceUtilsEncrypted
 
 

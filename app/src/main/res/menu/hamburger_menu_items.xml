@@ -53,13 +53,13 @@
                 />
             <item
                 android:id="@+id/pin"
-                android:title="pin"
-                android:icon="@drawable/baseline_lock_24"
+                android:title="@string/pin"
+                android:icon="@drawable/baseline_pin_24"
                 />
             <item
                 android:id="@+id/fingerprint"
-                android:title="Fingerprint"
-                android:icon="@drawable/baseline_lock_24"
+                android:title="@string/fingerprint"
+                android:icon="@drawable/baseline_fingerprint_24"
                 />
         </menu>
     </item>

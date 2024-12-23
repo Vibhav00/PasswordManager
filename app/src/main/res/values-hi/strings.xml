@@ -178,5 +178,9 @@
     <string name="enter_username_please">कृपया उपयोगकर्ता नाम दर्ज करें</string>
     <string name="select_order">आदेश चुनें</string>
     <string name="acending">आरोही</string>
+    <string name="russian">रूसी</string>
+    <string name="pin">पिन</string>
+    <string name="fingerprint">बायोमेट्रिक लॉक</string>
+    <string name="vibhav_kumar">विभव कुमार</string>
 
 </resources>

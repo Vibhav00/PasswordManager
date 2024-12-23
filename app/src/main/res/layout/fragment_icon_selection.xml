@@ -12,12 +12,12 @@
         android:id="@+id/tv_select_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/select_icon"
         android:textAllCaps="true"
 
-        android:textSize="25sp"
+        android:textSize="18sp"
         android:textColor="?attr/myPrimaryTextColor"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,8 +56,8 @@
 
                     <ImageButton
                         android:id="@+id/analytics"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_analytics"
@@ -72,6 +72,8 @@
                         android:text="@string/analytics"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
 
@@ -85,8 +87,8 @@
 
                     <ImageButton
                         android:id="@+id/call"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_phone"
@@ -100,6 +102,8 @@
                         android:text="@string/phone"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -113,8 +117,8 @@
 
                     <ImageButton
                         android:id="@+id/apple"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_apple"
@@ -128,6 +132,8 @@
                         android:text="@string/apple"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -151,8 +157,8 @@
 
                     <ImageButton
                         android:id="@+id/child"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_child"
@@ -166,6 +172,8 @@
                         android:text="@string/child"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -178,8 +186,8 @@
 
                     <ImageButton
                         android:id="@+id/code"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_code"
@@ -193,6 +201,8 @@
                         android:text="@string/code"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -205,8 +215,8 @@
 
                     <ImageButton
                         android:id="@+id/document"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_document"
@@ -220,6 +230,8 @@
                         android:text="@string/document"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -241,8 +253,8 @@
 
                     <ImageButton
                         android:id="@+id/discord"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_discord"
@@ -256,6 +268,8 @@
                         android:text="@string/discord"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -268,8 +282,8 @@
 
                     <ImageButton
                         android:id="@+id/github"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_github"
@@ -283,6 +297,8 @@
                         android:text="@string/github"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -295,8 +311,8 @@
 
                     <ImageButton
                         android:id="@+id/gmail"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_gmail"
@@ -310,6 +326,8 @@
                         android:text="@string/gmail"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -329,8 +347,8 @@
 
                     <ImageButton
                         android:id="@+id/gaming"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_gaming"
@@ -344,6 +362,8 @@
                         android:text="@string/gaming"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -356,8 +376,8 @@
 
                     <ImageButton
                         android:id="@+id/instagram"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_instagram"
@@ -371,6 +391,8 @@
                         android:text="@string/instagram"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -383,8 +405,8 @@
 
                     <ImageButton
                         android:id="@+id/linkedin"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="@string/_0"
@@ -398,6 +420,8 @@
                         android:text="@string/linkedin"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -417,8 +441,8 @@
 
                     <ImageButton
                         android:id="@+id/Health"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="TODO"
@@ -432,6 +456,8 @@
                         android:text="@string/health"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -444,8 +470,8 @@
 
                     <ImageButton
                         android:id="@+id/home"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_home"
@@ -459,6 +485,8 @@
                         android:text="@string/home"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -471,8 +499,8 @@
 
                     <ImageButton
                         android:id="@+id/love"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_love"
@@ -486,6 +514,8 @@
                         android:text="@string/love"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -505,8 +535,8 @@
 
                     <ImageButton
                         android:id="@+id/network"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_network"
@@ -520,6 +550,8 @@
                         android:text="@string/network"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -532,8 +564,8 @@
 
                     <ImageButton
                         android:id="@+id/Netflix"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_netflix"
@@ -547,6 +579,8 @@
                         android:text="@string/netflix"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -559,8 +593,8 @@
 
                     <ImageButton
                         android:id="@+id/fb"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_fb"
@@ -574,6 +608,8 @@
                         android:text="@string/facebook"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -593,8 +629,8 @@
 
                     <ImageButton
                         android:id="@+id/shopping"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_shopping"
@@ -608,6 +644,8 @@
                         android:text="@string/shopping"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -621,7 +659,7 @@
                     <ImageButton
                         android:id="@+id/snapchat"
                         android:layout_width="53dp"
-                        android:layout_height="48dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_snapchat"
@@ -635,6 +673,8 @@
                         android:text="@string/snapchat"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -647,8 +687,8 @@
 
                     <ImageButton
                         android:id="@+id/telegram"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_telegram"
@@ -662,6 +702,8 @@
                         android:text="@string/telegram"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -681,8 +723,8 @@
 
                     <ImageButton
                         android:id="@+id/whatsapp"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_whatsapp"
@@ -696,6 +738,8 @@
                         android:text="@string/whatsapp"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -708,8 +752,8 @@
 
                     <ImageButton
                         android:id="@+id/work"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_work"
@@ -723,6 +767,8 @@
                         android:text="@string/work"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -736,8 +782,8 @@
 
                     <ImageButton
                         android:id="@+id/X"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_x"
@@ -751,6 +797,8 @@
                         android:text="@string/x"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -770,8 +818,8 @@
 
                     <ImageButton
                         android:id="@+id/Music"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_music"
@@ -785,6 +833,8 @@
                         android:text="@string/music"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -797,8 +847,8 @@
 
                     <ImageButton
                         android:id="@+id/photo"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_gravity="center"
                         android:background="@drawable/icon_background"
                         android:contentDescription="img_photos"
@@ -812,6 +862,8 @@
                         android:text="@string/photos"
                         android:textAlignment="center"
                         android:textSize="15sp"
+                        android:textColor="?attr/mySecondaryTextColor"
+                        android:fontFamily="@font/roboto_medium"
                         android:textStyle="bold" />
                 </LinearLayout>
 

@@ -46,6 +46,7 @@
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
                     android:text="@string/website" />
 
                 <com.google.android.material.chip.Chip
@@ -54,6 +55,7 @@
                     android:textColor="@color/chip_text_color"
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_height="wrap_content"
                     android:text="@string/username" />
 
@@ -63,6 +65,7 @@
                     style="@style/CustomChipStyle"
                     app:chipStrokeColor="@color/chip_text_color"
                     android:layout_width="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_height="wrap_content"
                     android:text="@string/title" />
 
@@ -101,6 +104,7 @@
                     style="@style/CustomChipStyle"
                     android:textColor="@color/chip_text_color"
                     app:chipStrokeColor="@color/chip_text_color"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ascending" />
@@ -110,6 +114,7 @@
                     style="@style/CustomChipStyle"
                     android:textColor="@color/chip_text_color"
                     app:chipStrokeColor="@color/chip_text_color"
+                    android:fontFamily="@font/roboto_regular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/descending" />
@@ -142,6 +147,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
                 android:background="@drawable/ripple_effect_btn_red"
                 android:text="@string/cancel"
                 android:textColor="?attr/my_icon_front_color" />
@@ -152,9 +158,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/roboto_medium"
                 android:background="@drawable/positive_btn"
                 android:text="@string/apply"
-                android:textColor="@color/white" />
+                android:textColor="?attr/myTabBackgroundColor" />
 
         </LinearLayout>
 

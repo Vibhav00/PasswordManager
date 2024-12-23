@@ -9,12 +9,14 @@
     <TextView
         android:id="@+id/select_theme_title"
         android:layout_width="match_parent"
+        android:textAlignment="center"
         android:layout_height="wrap_content"
         android:text="@string/select_theme"
         android:textSize="18sp"
         android:textStyle="bold"
         android:paddingBottom="16dp"
-        android:textColor="?attr/myPrimaryTextColor"/>
+        android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_bold" />
 
     <RadioGroup
         android:id="@+id/theme_radio_group"
@@ -30,6 +32,7 @@
             android:padding="8dp"
             android:text="@string/orange"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             android:textSize="16sp" />
 
         <RadioButton
@@ -40,6 +43,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/red_theme"
@@ -49,6 +53,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/pink_theme"
@@ -58,6 +63,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/purple_theme"
@@ -67,6 +73,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/ocean_theme"
@@ -76,6 +83,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
         <RadioButton
             android:id="@+id/dark_theme"
@@ -85,6 +93,7 @@
             android:textSize="16sp"
             android:padding="8dp"
             android:textColor="?attr/myPrimaryTextColor"
+            android:fontFamily="@font/roboto_medium"
             style="@style/CustomRadioButton"/>
     </RadioGroup>
 
@@ -114,7 +123,7 @@
             android:layout_weight="1"
             android:background="@drawable/positive_btn"
             android:text="@string/save"
-            android:textColor="?attr/my_icon_color" />
+            android:textColor="?attr/myTabBackgroundColor" />
 
 
     </LinearLayout>

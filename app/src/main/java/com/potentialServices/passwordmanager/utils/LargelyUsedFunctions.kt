@@ -59,5 +59,56 @@ class LargelyUsedFunctions {
             dialog.getButton(AlertDialog.BUTTON_NEGATIVE)?.setTextColor(color)
         }
 
+        fun checkPasswordStrength(password: String): Int {
+            // Minimum length requirement
+            val minLength = 8
+
+            if (password.length < minLength) return 0
+
+            var score = 0
+
+            // Check for character variety
+            val hasLowercase = password.any { it.isLowerCase() }
+            val hasUppercase = password.any { it.isUpperCase() }
+            val hasDigit = password.any { it.isDigit() }
+            val hasSpecialChar = password.any { !it.isLetterOrDigit() }
+
+            // Increment score based on variety
+            if (hasLowercase) score += 20
+            if (hasUppercase) score += 20
+            if (hasDigit) score += 20
+            if (hasSpecialChar) score += 20
+
+            // Length-based scoring with exponential growth for longer passwords
+            score += when {
+                password.length >= 20 -> 40
+                password.length >= 16 -> 30
+                password.length >= 12 -> 20
+                password.length >= 10 -> 10
+                else -> 0
+            }
+
+            // Check for sequences of repeating characters
+            val repeatingCharPenalty = password.windowed(3).count { it[0] == it[1] && it[1] == it[2] } * 5
+            score -= repeatingCharPenalty
+
+            // Check for common patterns (e.g., "123", "abc")
+//            val commonPatterns = listOf("123", "abc", "password", "qwerty")
+//            val patternPenalty = commonPatterns.sumOf { pattern ->
+//                if (pattern in password.lowercase(Locale.ROOT)) 10 else 0
+//            }
+//            score -= patternPenalty
+
+            // Check for consecutive keyboard patterns (e.g., "asdf")
+            val keyboardRows = listOf("qwertyuiop", "asdfghjkl", "zxcvbnm")
+            val keyboardPatternPenalty = password.windowed(4).count { window ->
+                keyboardRows.any { row -> row.contains(window.toLowerCase()) }
+            } * 10
+            score -= keyboardPatternPenalty
+
+            // Enforce boundaries for the score
+            return score.coerceIn(0, 100)
+        }
+
     }
 }

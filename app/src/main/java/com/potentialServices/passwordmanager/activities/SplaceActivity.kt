@@ -1,10 +1,13 @@
 package com.potentialServices.passwordmanager.activities
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import android.view.WindowInsetsController
 import android.view.WindowManager
 import androidx.lifecycle.lifecycleScope
 import com.potentialServices.passwordmanager.R
@@ -26,6 +29,7 @@ class SplaceActivity : AppCompatActivity() {
         setLanguageToUi(this,PreferenceUtils.getSharedPreferences(this).getLang())
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splace)
+        setStatusBartextColor(savedTheme)
 
         /** creating the intent for the Pin Activity **/
         val iHome = Intent(this@SplaceActivity, AppPasswordActivity::class.java)
@@ -58,5 +62,18 @@ class SplaceActivity : AppCompatActivity() {
         window.setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAGS_CHANGED)
+    }
+
+    private fun setStatusBartextColor(savedTheme: Int) {
+        if(savedTheme !in arrayOf(R.style.RedTheme,R.style.darkTheme))
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                window.insetsController?.setSystemBarsAppearance(
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                )
+            } else {
+                @Suppress("DEPRECATION")
+                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            }
     }
 }
