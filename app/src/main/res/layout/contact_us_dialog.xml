@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
         android:padding="10dp"
-        android:text="Developers"
+        android:text="@string/developers"
         android:textAlignment="center"
         android:textColor="?attr/myPrimaryTextColor"
-        android:textSize="28sp"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 
@@ -26,12 +26,13 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
         android:paddingVertical="8dp">
 
         <ImageView
             android:id="@+id/img_dev1"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/circle_shape"
             android:clipToOutline="true"
             android:contentDescription="img_Dev1"
@@ -39,6 +40,7 @@
             android:src="@drawable/dev_one" />
 
         <LinearLayout
+            android:id="@+id/linkedin1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -55,18 +57,17 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/vibhav_kumar"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/linkedin1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="10dp"
                 android:clickable="true"
                 android:fontFamily="@font/roboto_medium"
                 android:text="LinkedIn Profile"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </LinearLayout>
@@ -77,12 +78,13 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
         android:paddingVertical="8dp">
 
         <ImageView
             android:id="@+id/img_dev2"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/circle_shape"
             android:clipToOutline="true"
             android:contentDescription="img_Dev2"
@@ -90,6 +92,7 @@
             android:src="@drawable/dev_two" />
 
         <LinearLayout
+            android:id="@+id/linkedin2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -106,19 +109,18 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/srikant_mahanty"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/linkedin2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="10dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:fontFamily="@font/roboto_medium"
                 android:text="LinkedIn Profile"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </LinearLayout>
@@ -129,12 +131,13 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
         android:paddingVertical="8dp">
 
         <ImageView
             android:id="@+id/img_dev3"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/circle_shape"
             android:clipToOutline="true"
             android:contentDescription="img_Dev3"
@@ -142,6 +145,7 @@
             android:src="@drawable/dev_three" />
 
         <LinearLayout
+            android:id="@+id/linkedin3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -158,18 +162,17 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/rahul_kumar"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/linkedin3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="10dp"
                 android:clickable="true"
                 android:fontFamily="@font/roboto_medium"
                 android:text="LinkedIn Profile"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
     </LinearLayout>
@@ -180,12 +183,13 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
         android:paddingVertical="8dp">
 
         <ImageView
             android:id="@+id/img_dev4"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@drawable/circle_shape"
             android:clipToOutline="true"
             android:contentDescription="img_Dev4"
@@ -193,6 +197,7 @@
             android:src="@drawable/dev_four" />
 
         <LinearLayout
+            android:id="@+id/linkedin4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -209,18 +214,17 @@
                 android:fontFamily="@font/roboto_medium"
                 android:text="@string/aman_kumar"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="20sp" />
+                android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/linkedin4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="10dp"
                 android:clickable="true"
                 android:fontFamily="@font/roboto_medium"
                 android:text="LinkedIn Profile"
                 android:textColor="?attr/myPrimaryTextColor"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -236,8 +240,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:background="@drawable/ripple_effect_btn_red"
             android:layout_weight="1"
+            android:background="@drawable/ripple_effect_btn_red"
             android:text="@string/dismiss"
             android:textColor="?attr/my_icon_front_color" />
     </LinearLayout>
