@@ -54,6 +54,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.potentialServices.passwordmanager.databinding.ContactUsDialogBinding
 import com.potentialServices.passwordmanager.db.PasswordDatabase.Companion.DATABASE_NAME
 import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.setLanguageToUi
@@ -96,7 +97,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val savedTheme = getSavedThemePreference()
         setTheme(savedTheme)
-        setLanguageToUi(this,PreferenceUtils.getSharedPreferences(this).getLang())
+        setLanguageToUi(this, PreferenceUtils.getSharedPreferences(this).getLang())
 
         super.onCreate(savedInstanceState)
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
@@ -169,8 +170,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         }
         mainBinding.lockIcon.setOnClickListener {
-            PasswordManagerToast.showToast(this,
-                getString(R.string.shutting_down_the_app), Toast.LENGTH_SHORT)
+            PasswordManagerToast.showToast(
+                this,
+                getString(R.string.shutting_down_the_app), Toast.LENGTH_SHORT
+            )
 
             // Add a small delay before shutting down to allow the toast to show
             mainBinding.lockIcon.postDelayed({
@@ -299,16 +302,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun setStatusBartextColor(savedTheme: Int) {
-      if(savedTheme !in arrayOf(R.style.RedTheme,R.style.darkTheme))
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            window.insetsController?.setSystemBarsAppearance(
-                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
-                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
-            )
-        } else {
-            @Suppress("DEPRECATION")
-            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-        }
+        if (savedTheme !in arrayOf(R.style.RedTheme, R.style.darkTheme))
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                window.insetsController?.setSystemBarsAppearance(
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+                    WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+                )
+            } else {
+                @Suppress("DEPRECATION")
+                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            }
     }
 
     private fun setHamburgurData(
@@ -362,11 +365,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.save_database -> {
-                if(backupDatabase(this, DATABASE_NAME)){
-                    PasswordManagerToast.showToast(this,"Backup Successful",Toast.LENGTH_SHORT)
-                    startActivity(Intent(this@MainActivity,MainActivity::class.java))
+                if (backupDatabase(this, DATABASE_NAME)) {
+                    PasswordManagerToast.showToast(this, "Backup Successful", Toast.LENGTH_SHORT)
+                    startActivity(Intent(this@MainActivity, MainActivity::class.java))
                     finish()
-                }else{
+                } else {
 
                 }
 //                PasswordManagerToast.showToast(
@@ -405,12 +408,61 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.fingerprint -> {
                 showFingerprintLockDialog(this)
             }
-        }
 
+            R.id.contact_me -> {
+                showAboutDeveloperDialog(this)
+            }
+        }
 
         mainBinding.drawer.closeDrawer(GravityCompat.START)
         return true
     }
+
+    private fun showAboutDeveloperDialog(context: Context) {
+        val dialogBinding = ContactUsDialogBinding.inflate(layoutInflater)
+        val dialog = Dialog(context)
+        dialog.setContentView(dialogBinding.root)
+
+        // Set dialog properties
+        val lp = WindowManager.LayoutParams()
+        lp.copyFrom(dialog.window!!.attributes)
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT
+        lp.height = WindowManager.LayoutParams.WRAP_CONTENT
+        lp.gravity = Gravity.CENTER
+        dialog.window!!.attributes = lp
+        dialog.window!!.setBackgroundDrawable(
+            ContextCompat.getDrawable(context, R.drawable.pop_up_background)
+        )
+
+        //Handle Linkedin clicks
+        dialogBinding.linkedin1.setOnClickListener {
+            openLinkedInProfile("https://www.linkedin.com/in/vibhavkumargrd00170/")
+        }
+
+        dialogBinding.linkedin2.setOnClickListener {
+            openLinkedInProfile("https://www.linkedin.com/in/srikant-mahanty-a9329322b/")
+        }
+
+        dialogBinding.linkedin3.setOnClickListener {
+            openLinkedInProfile("https://www.linkedin.com/in/rahulkumar1805/")
+        }
+
+        dialogBinding.linkedin4.setOnClickListener {
+            openLinkedInProfile("https://www.linkedin.com/in/aman-kumar-b12085253/")
+        }
+
+        dialogBinding.cancelBtn.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
+    }
+
+    private fun openLinkedInProfile(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
+    }
+
 
     private fun showFingerprintLockDialog(context: Context) {
         val builder = AlertDialog.Builder(context)
@@ -571,6 +623,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         exitProcess(0) // Terminate the process
 //        finishAffinity() // Close all activities
     }
+
     // Helper function to write CSV data
     private fun writeCsvData(output: Appendable) {
         output.append("title,username,password,website,description\n")
@@ -594,7 +647,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS)
                 }
 
-                val uri = contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues)
+                val uri =
+                    contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues)
 
                 uri?.let {
                     contentResolver.openOutputStream(it)?.use { outputStream ->
@@ -602,24 +656,37 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                             writeCsvData(writer)
                         }
                     }
-                    PasswordManagerToast.showToast(this, "CSV file saved successfully in Downloads", Toast.LENGTH_SHORT)
+                    PasswordManagerToast.showToast(
+                        this,
+                        "CSV file saved successfully in Downloads",
+                        Toast.LENGTH_SHORT
+                    )
                 } ?: run {
                     PasswordManagerToast.showToast(this, "Error creating file", Toast.LENGTH_SHORT)
                 }
             } else {
                 // For Android 9 and below, save the file directly to the Downloads folder
-                val backUpCsvPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                    .absolutePath + "/$fileName"
+                val backUpCsvPath =
+                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                        .absolutePath + "/$fileName"
                 val file = File(backUpCsvPath)
                 file.writer().use { writer ->
                     writeCsvData(writer)
                 }
-                PasswordManagerToast.showToast(this, "CSV file saved successfully in Downloads", Toast.LENGTH_SHORT)
+                PasswordManagerToast.showToast(
+                    this,
+                    "CSV file saved successfully in Downloads",
+                    Toast.LENGTH_SHORT
+                )
             }
         } catch (e: Exception) {
-            PasswordManagerToast.showToast(this, "Failed to export CSV: ${e.message}", Toast.LENGTH_LONG)
+            PasswordManagerToast.showToast(
+                this,
+                "Failed to export CSV: ${e.message}",
+                Toast.LENGTH_LONG
+            )
             e.printStackTrace()
-        }finally {
+        } finally {
             writer?.close()
         }
 
@@ -642,7 +709,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     put(MediaStore.MediaColumns.RELATIVE_PATH, Environment.DIRECTORY_DOWNLOADS)
                 }
 
-                val uri = context.contentResolver.insert(MediaStore.Downloads.EXTERNAL_CONTENT_URI, contentValues)
+                val uri = context.contentResolver.insert(
+                    MediaStore.Downloads.EXTERNAL_CONTENT_URI,
+                    contentValues
+                )
 
                 uri?.let {
                     context.contentResolver.openOutputStream(it)?.use { outputStream ->
@@ -654,8 +724,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 } ?: false
             } else {
                 // Android 9 and below: Save directly to the Downloads folder
-                val backupFilePath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
-                    .absolutePath + "/$backupFileName"
+                val backupFilePath =
+                    Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
+                        .absolutePath + "/$backupFileName"
                 val currentDB = File(dbPath)
                 val backupDB = File(backupFilePath)
 
@@ -750,11 +821,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (requestCode) {
             10 -> {
                 if (grantResults.all { it === PackageManager.PERMISSION_GRANTED }) {
-                    PasswordManagerToast.showToast(this,
-                        getString(R.string.permission_granted), Toast.LENGTH_SHORT)
+                    PasswordManagerToast.showToast(
+                        this,
+                        getString(R.string.permission_granted), Toast.LENGTH_SHORT
+                    )
                 } else {
-                    PasswordManagerToast.showToast(this,
-                        getString(R.string.permission_required), Toast.LENGTH_SHORT)
+                    PasswordManagerToast.showToast(
+                        this,
+                        getString(R.string.permission_required), Toast.LENGTH_SHORT
+                    )
                 }
             }
         }
@@ -797,31 +872,33 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     R.id.bengali_lang -> BANGOLI   // Bengali language code
                     R.id.telugu_lang -> TELGU
                     R.id.gujarati_lang -> GUJRATI
-                    R.id.tamil_lang ->TAMIL
+                    R.id.tamil_lang -> TAMIL
                     R.id.marathi_lang -> MARATHI
                     R.id.russian_lang -> RUSSIAN
-                    else ->ENG             // Default to English if no selection
+                    else -> ENG             // Default to English if no selection
                 }
 
             // Determine the language name for the Toast message
             val languageName = when (selectedLanguageCode) {
                 HINDI -> "Hindi"
-                ORIYA   -> "Odia"
+                ORIYA -> "Odia"
                 BANGOLI -> "Bengali"
                 TELGU -> "Telugu"
-                GUJRATI-> "Gujarati"
+                GUJRATI -> "Gujarati"
                 TAMIL -> "Tamil"
-                MARATHI-> "Marathi"
+                MARATHI -> "Marathi"
                 RUSSIAN -> "Russian"
                 else -> "English"
             }
 
             PreferenceUtils.getSharedPreferences(this).setLang(selectedLanguageCode)
-             // If a language is selected, apply the language and recreate the activity
+            // If a language is selected, apply the language and recreate the activity
             // if (selectedLanguageCode != "en") { // Only recreate if a different language is selected
-            setLanguageToUi(this,selectedLanguageCode) // Apply the selected language
-            PasswordManagerToast.showToast(this,
-                languageName+getString(R.string.language_has_been_updated), Toast.LENGTH_SHORT)
+            setLanguageToUi(this, selectedLanguageCode) // Apply the selected language
+            PasswordManagerToast.showToast(
+                this,
+                languageName + getString(R.string.language_has_been_updated), Toast.LENGTH_SHORT
+            )
 //            Toast.makeText(this, "$languageName language has been updated", Toast.LENGTH_SHORT)
 //                .show() // Show a Toast message with the language name
             recreate() // Recreate the activity to apply the language change
@@ -883,8 +960,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             // Clear back stack and restart the activity with the new theme
 
 
-            PasswordManagerToast.showToast(this,
-                getString(R.string.theme_has_been_updated),Toast.LENGTH_SHORT)
+            PasswordManagerToast.showToast(
+                this,
+                getString(R.string.theme_has_been_updated), Toast.LENGTH_SHORT
+            )
             recreate() // Recreate the activity to apply the new theme
             dialog.dismiss()
         }
@@ -900,8 +979,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //            PasswordManagerToast.showToast(this,
 //                getString(R.string.theme_is_changed),Toast.LENGTH_SHORT)
         } else {
-            PasswordManagerToast.showToast(this,
-                getString(R.string.got_some_issue),Toast.LENGTH_SHORT)
+            PasswordManagerToast.showToast(
+                this,
+                getString(R.string.got_some_issue), Toast.LENGTH_SHORT
+            )
         }
 
 //        val preferences = getSharedPreferences("AppPreferences", MODE_PRIVATE)
