@@ -40,7 +40,7 @@
     <string name="language">Language</string>
     <string name="theme">Theme</string>
     <string name="passkey">Passkey</string>
-    <string name="contact_me">Contact me</string>
+    <string name="contact_me">Contact Us</string>
     <string name="rate_us_in_play_store">Rate us in play store</string>
     <string name="my_apps">My apps</string>
     <string name="import_export">Import Export</string>
@@ -189,6 +189,10 @@
     <string name="pin">Pin</string>
     <string name="fingerprint">Biometric lock</string>
     <string name="vibhav_kumar">Vibhav kumar</string>
+    <string name="srikant_mahanty">Srikant Mahanty</string>
+    <string name="rahul_kumar">Rahul Kumar</string>
+    <string name="aman_kumar">Aman Kumar</string>
+    <string name="dismiss">Dismiss</string>
 
 
 </resources>
