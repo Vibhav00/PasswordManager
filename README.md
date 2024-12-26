@@ -13,7 +13,7 @@
 ---
 
 <div align="center">
-<img src = "./assets/mainDemo.jpg" width="90%" />
+<img src = "./assets/Pm.png" width="90%" />
 
 </div>
 
@@ -35,25 +35,36 @@ Password Vault (पासवर्ड वॉल्ट) offers a secure, sleek ex
 
 <table style="width:100%">
   <tr>
-    <th><p p align="center"> 1 </p> </th>
-    <th><p p align="center"> 2  </p></th>
-    <th><p p align="center"> 3   </p></th>
+    <th><p p align="center"> Home </p> </th>
+    <th><p p align="center"> Drawer </p></th>
+    <th><p p align="center"> Sort </p></th>
   </tr>
   <tr>
-    <td><div  align="center"><img src = "./assets/itemDemo.png" width="200px" /> </div></td>
-    <td><div  align="center"><img src = "./assets/itemDemo.png" width="200px" /> </div></td>
-    <td><div  align="center"><img src = "./assets/itemDemo.png" width="200px" /> </div></td>
+    <td><div  align="center"><img src = "./assets/home.png" width="200px" /> </div></td>
+    <td><div  align="center"><img src = "./assets/sideview.png" width="200px" /> </div></td>
+    <td><div  align="center"><img src = "./assets/sort.png" width="200px" /> </div></td>
 
   </tr>
   <tr>
-    <th><p p align="center"> 4 </p> </th>
-    <th><p p align="center"> 5  </p></th>
-    <th><p p align="center"> 6   </p></th>
+    <th><p p align="center"> Search</p> </th>
+    <th><p p align="center"> Add </p></th>
+    <th><p p align="center"> Add Icon  </p></th>
   </tr>
   <tr>
-      <td><div  align="center"><img src = "./assets/itemDemo.png" width="200px" /> </div></td>
-    <td><div  align="center"><img src = "./assets/itemDemo.png" width="200px" /> </div></td>
-    <td><div  align="center"><img src = "./assets/itemDemo.png" width="200px" /> </div></td>
+      <td><div  align="center"><img src = "./assets/search.png" width="200px" /> </div></td>
+    <td><div  align="center"><img src = "./assets/add.png" width="200px" /> </div></td>
+    <td><div  align="center"><img src = "./assets/addicon.png" width="200px" /> </div></td>
+  </tr>
+
+  <tr>
+    <th><p p align="center"> Sample PDF </p> </th>
+    <th><p p align="center"> Theme </p></th>
+    <th><p p align="center"> Language  </p></th>
+  </tr>
+  <tr>
+      <td><div  align="center"><img src = "./assets/samplepdf.png" width="200px" /> </div></td>
+    <td><div  align="center"><img src = "./assets/theme.png" width="200px" /> </div></td>
+    <td><div  align="center"><img src = "./assets/laguage.png" width="200px" /> </div></td>
   </tr>
 </table>
 
@@ -87,6 +98,8 @@ Built with NDK for improved performance and offering both release and debug buil
 ---
 
 ## video 📺💻
+[![Watch the video](https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg)](https://youtu.be/Tpqd4zp0XQA)
+
 
 ---
 
