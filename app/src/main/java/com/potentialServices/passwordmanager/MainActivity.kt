@@ -58,6 +58,9 @@ import com.potentialServices.passwordmanager.databinding.ContactUsDialogBinding
 import com.potentialServices.passwordmanager.db.PasswordDatabase.Companion.DATABASE_NAME
 import com.potentialServices.passwordmanager.toast.PasswordManagerToast
 import com.potentialServices.passwordmanager.utils.LargelyUsedFunctions.Companion.setLanguageToUi
+import com.potentialServices.passwordmanager.utils.PermissionUtils.Companion.checkPermissionsMedia
+import com.potentialServices.passwordmanager.utils.PermissionUtils.Companion.onRequestPermissionsResultMedia
+import com.potentialServices.passwordmanager.utils.PermissionUtils.Companion.requestRuntimePermissionForReadAndWriteFiles
 import com.potentialServices.passwordmanager.utils.constants.Constants.BANGOLI
 import com.potentialServices.passwordmanager.utils.constants.Constants.ENG
 import com.potentialServices.passwordmanager.utils.constants.Constants.GUJRATI
@@ -791,19 +794,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun readPermission() {
 
-
-        var permissions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            mutableListOf(
-                android.Manifest.permission.READ_MEDIA_IMAGES,
-                android.Manifest.permission.READ_MEDIA_VIDEO,
-                android.Manifest.permission.READ_MEDIA_AUDIO
-            )
-        } else {
-            mutableListOf(android.Manifest.permission.READ_EXTERNAL_STORAGE)
-        }
-
-        if (!hasPermission(*permissions.toTypedArray())) {
-            ActivityCompat.requestPermissions(this, permissions.toTypedArray(), 10)
+        if (!checkPermissionsMedia(this)) {
+            requestRuntimePermissionForReadAndWriteFiles(this@MainActivity,this)
         } else {
 
             val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
@@ -818,21 +810,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         requestCode: Int, permissions: Array<out String>, grantResults: IntArray,
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        when (requestCode) {
-            10 -> {
-                if (grantResults.all { it === PackageManager.PERMISSION_GRANTED }) {
-                    PasswordManagerToast.showToast(
-                        this,
-                        getString(R.string.permission_granted), Toast.LENGTH_SHORT
-                    )
-                } else {
-                    PasswordManagerToast.showToast(
-                        this,
-                        getString(R.string.permission_required), Toast.LENGTH_SHORT
-                    )
-                }
-            }
-        }
+        onRequestPermissionsResultMedia(requestCode,permissions,grantResults,this@MainActivity,this@MainActivity,this.packageName)
     }
 
 
