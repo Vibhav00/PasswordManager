@@ -77,3 +77,6 @@ class SplaceActivity : AppCompatActivity() {
             }
     }
 }
+
+
+// i had contributed  in Theme ,Language,Boimetric lock in the previous repo..
