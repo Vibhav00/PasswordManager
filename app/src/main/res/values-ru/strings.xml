@@ -189,6 +189,17 @@
     <string name="pin">Пин</string>
     <string name="fingerprint">Биометрический замок</string>
     <string name="vibhav_kumar">Вибхав Кумар</string>
+    <string name="rahul_kumar">Рахул Кумар</string>
+    <string name="aman_kumar">Аман Кумар</string>
+    <string name="dismiss">Отклонить</string>
+    <string name="developers">Разработчики</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">Для правильной работы этого сообщения требуется разрешение на доступ к изображениям</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"Разрешения предоставлены. Теперь вы можете продолжить доступ к документу"</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">Разрешения отклонены. Пожалуйста, измените функциональность</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">Эта функция недоступна, так как для её работы требуется разрешение на доступ к изображениям. Пожалуйста, перейдите в настройки и предоставьте доступ к изображениям</string>
+    <string name="permissions_required">Требуются разрешения</string>
+    <string name="settings">Настройки</string>
+
 
 
 </resources>

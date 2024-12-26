@@ -185,6 +185,16 @@
     <string name="pin">পিন</string>
     <string name="fingerprint">বায়োমেট্রিক লক</string>
     <string name="vibhav_kumar">বিভব কুমার</string>
+    <string name="rahul_kumar">রাহুল কুমার</string>
+    <string name="aman_kumar">অমন কুমার</string>
+    <string name="dismiss">বাতিল করুন</string>
+    <string name="developers">ডেভেলপাররা</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">এই বার্তাটি সঠিকভাবে কাজ করতে ইমেজ অ্যাক্সেস অনুমতি প্রয়োজন</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"অনুমতি দেওয়া হয়েছে। এখন আপনি ডকুমেন্ট অ্যাক্সেসের সাথে এগিয়ে যেতে পারেন"</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">অনুমতি অস্বীকৃত। দয়া করে বৈশিষ্ট্যটি সামঞ্জস্য করুন</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">এই বৈশিষ্ট্যটি অনুপলব্ধ কারণ এটি সঠিকভাবে কাজ করতে ইমেজ অ্যাক্সেস অনুমতি প্রয়োজন। দয়া করে সেটিংসে যান এবং ইমেজ অ্যাক্সেস অনুমতি দিন</string>
+    <string name="permissions_required">অনুমতি প্রয়োজন</string>
+    <string name="settings">সেটিংস</string>
 
 
 </resources>

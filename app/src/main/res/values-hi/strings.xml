@@ -182,5 +182,16 @@
     <string name="pin">पिन</string>
     <string name="fingerprint">बायोमेट्रिक लॉक</string>
     <string name="vibhav_kumar">विभव कुमार</string>
+    <string name="rahul_kumar">राहुल कुमार</string>
+    <string name="aman_kumar">अमन कुमार</string>
+    <string name="dismiss">खारिज करें</string>
+    <string name="developers">डेवलपर्स</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">इस संदेश को सही से काम करने के लिए आपको इमेज एक्सेस अनुमति देने की आवश्यकता है</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"अनुमतियां दी गईं। अब आप दस्तावेज़ एक्सेस के साथ आगे बढ़ सकते हैं"</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">अनुमतियां अस्वीकृत। कृपया सुविधा को समायोजित करें</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">यह सुविधा अनुपलब्ध है क्योंकि इसे सही ढंग से काम करने के लिए इमेज एक्सेस अनुमतियां देने की आवश्यकता है। कृपया सेटिंग्स पर जाएं और इमेज एक्सेस अनुमतियां दें</string>
+    <string name="permissions_required">अनुमतियां आवश्यक हैं</string>
+    <string name="settings">सेटिंग्स</string>
+
 
 </resources>

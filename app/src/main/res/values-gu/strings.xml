@@ -182,6 +182,16 @@
     <string name="pin">પિન</string>
     <string name="fingerprint">બાયોમેટ્રિક લોક</string>
     <string name="vibhav_kumar">વિભવ કુમાર</string>
+    <string name="rahul_kumar">રાહુલ કુમાર</string>
+    <string name="aman_kumar">અમન કુમાર</string>
+    <string name="dismiss">રદ કરો</string>
+    <string name="developers">ડેવલોપર્સ</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">આ સંદેશા માટે યોગ્ય રીતે કામ કરવા માટે છબી ઍક્સેસ પરવાનગી આપવાની જરૂર છે</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"પરવાનગીઓ મંજૂર. હવે તમે દસ્તાવેજ ઍક્સેસ સાથે આગળ વધી શકો છો"</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">પરવાનગીઓ નકારી. કૃપા કરીને ફીચરને સમાયોજિત કરો</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">આ ફીચર ઉપલબ્ધ નથી કારણ કે આ ફીચર માટે યોગ્ય રીતે કામ કરવા માટે છબી ઍક્સેસ પરવાનગીઓની જરૂર છે. કૃપા કરીને સેટિંગ્સમાં જાઓ અને છબી ઍક્સેસ પરવાનગીઓ આપો</string>
+    <string name="permissions_required">પરવાનગીઓ જરૂરી છે</string>
+    <string name="settings">સેટિંગ્સ</string>
 
 
 </resources>

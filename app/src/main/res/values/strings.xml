@@ -194,6 +194,12 @@
     <string name="aman_kumar">Aman Kumar</string>
     <string name="dismiss">Dismiss</string>
     <string name="developers">Developers</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">This message requires you to grant Image Access Permissions to work correctly</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"Permissions Granted. Now you can proceed with document access "</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">Permissions Denied. Gracefully degrade the feature</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">This feature is unavailable since it requires you to grant Image Access Permissions to work correctly Please go to settings and grant the Image Access permissions</string>
+    <string name="permissions_required">Permissions Required</string>
+    <string name="settings">Settings</string>
 
 
 </resources>

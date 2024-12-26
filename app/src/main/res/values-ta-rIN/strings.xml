@@ -182,6 +182,16 @@
     <string name="pin">பின்</string>
     <string name="fingerprint">பயோமெட்ரிக் லாக்</string>
     <string name="vibhav_kumar">விபவ் குமாரு</string>
+    <string name="rahul_kumar">ராஹுல் குமார்</string>
+    <string name="aman_kumar">அமன் குமார்</string>
+    <string name="dismiss">தவிர்க்கவும்</string>
+    <string name="developers">டெவலப்பர்கள்</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">இந்த செய்தி சரியாக செயல்பட பட அனுமதி தேவையாகிறது</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"அனுமதி வழங்கப்பட்டுள்ளது. இப்போது நீங்கள் ஆவண அணுகலுடன் முன்னேறலாம்"</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">அனுமதி மறுக்கப்பட்டது. தயவுசெய்து அம்சத்தை சரிசெய்க</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">இந்த அம்சம் கிடைக்கவில்லை, ஏனெனில் இது சரியாக செயல்பட பட அனுமதி தேவையாகிறது. தயவுசெய்து அமைப்புகளுக்கு சென்று பட அனுமதி வழங்கவும்</string>
+    <string name="permissions_required">அனுமதி தேவை</string>
+    <string name="settings">அமைப்புகள்</string>
 
 
 

@@ -183,6 +183,16 @@
     <string name="pin">ପିନ୍</string>
     <string name="fingerprint">ବାୟୋମେଟ୍ରିକ୍ ଲକ୍</string>
     <string name="vibhav_kumar">ବିଭବ କୁମାର</string>
+    <string name="rahul_kumar">ରାହୁଲ କୁମାର</string>
+    <string name="aman_kumar">ଅମନ କୁମାର</string>
+    <string name="dismiss">ବାତିଲ୍ କରନ୍ତୁ</string>
+    <string name="developers">ଡେଭଲପର୍ସ</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">ଏହି ସନ୍ଦେଶଟି ଠିକ୍ ଭାବରେ କାମ କରିବାକୁ ଛବି ପ୍ରବେଶ ଅନୁମତି ଦରକାର</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"ଅନୁମତି ଦିଆଯାଇଛି। ବର୍ତ୍ତମାନ ଆପଣ ଡକ୍ୟୁମେଣ୍ଟ ପ୍ରବେଶ ସହିତ ଆଗକୁ ବଢ଼ି ପାରିବେ"</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">ଅନୁମତି ଅସ୍ୱୀକାର କରାଗଲା। କୃପୟା ବିଶେଷତାକୁ ଗୁଣବତାହୀନ କରନ୍ତୁ</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">ଏହି ବିଶେଷତା ଉପଲବ୍ଧ ନାହିଁ କାରଣ ଏହାକୁ ଠିକ୍ ଭାବରେ କାମ କରିବାକୁ ଛବି ପ୍ରବେଶ ଅନୁମତି ଆବଶ୍ୟକ। କୃପୟା ସେଟିଂସକୁ ଯାଆନ୍ତୁ ଏବଂ ଛବି ପ୍ରବେଶ ଅନୁମତି ଦିଅନ୍ତୁ</string>
+    <string name="permissions_required">ଅନୁମତି ଆବଶ୍ୟକ</string>
+    <string name="settings">ସେଟିଂସ୍</string>
 
 
 </resources>

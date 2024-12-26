@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import android.net.Uri
 import android.provider.Settings
+import com.potentialServices.passwordmanager.R
 
 class PermissionUtils {
     companion object {
@@ -51,10 +52,10 @@ class PermissionUtils {
                 ) {
                     // Handling permission rationale
                     val alertDialogBuilder = AlertDialog.Builder(context)
-                    alertDialogBuilder.setMessage("This message requires you to grant Image Access Permissions to work correctly")
-                    alertDialogBuilder.setTitle("Permission Required")
+                    alertDialogBuilder.setMessage(context.getString(R.string.this_message_requires_you_to_grant_image_access_permissions_to_work_correctly))
+                    alertDialogBuilder.setTitle(context.getString(R.string.permission_required))
                         .setCancelable(false)
-                        .setPositiveButton("OK") { dialog, which ->
+                        .setPositiveButton(context.getString(R.string.ok)) { dialog, which ->
                             // Request Permissions when clicked OK
                             ActivityCompat.requestPermissions(
                                 activity,
@@ -63,7 +64,7 @@ class PermissionUtils {
                             )
                             dialog.dismiss()
                         }
-                        .setNegativeButton("Cancel") { dialog, which ->
+                        .setNegativeButton(context.getString(R.string.cancel)) { dialog, which ->
                             dialog.dismiss()
                         }
                     val alertDialog = alertDialogBuilder.create()
@@ -116,7 +117,7 @@ class PermissionUtils {
                     //If permissions granted
                     Toast.makeText(
                         context,
-                        "Permissions Granted. Now you can proceed with document access ",
+                        context.getString(R.string.permissions_granted_now_you_can_proceed_with_document_access),
                         Toast.LENGTH_SHORT
                     ).show()
                     return true;
@@ -131,7 +132,7 @@ class PermissionUtils {
                     //If permissions denied
                     Toast.makeText(
                         context,
-                        "Permissions Denied. Gracefully degrade the feature",
+                        context.getString(R.string.permissions_denied_gracefully_degrade_the_feature),
                         Toast.LENGTH_SHORT
                     ).show()
 
@@ -140,15 +141,14 @@ class PermissionUtils {
 
                     val builder = AlertDialog.Builder(context)
                     builder.setMessage(
-                        "This feature is unavailable since it requires you to grant Image Access Permissions to work correctly" +
-                                "Please go to settings and grant the Image Access permissions"
+                        context.getString(R.string.this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions)
                     )
-                    builder.setTitle("Permissions Required")
+                    builder.setTitle(context.getString(R.string.permissions_required))
                         .setCancelable(false)
-                        .setNegativeButton("Cancel") { dialog, which ->
+                        .setNegativeButton(context.getString(R.string.cancel)) { dialog, which ->
                             dialog.dismiss()
                         }
-                        .setPositiveButton("Settings") { dialog, which ->
+                        .setPositiveButton(context.getString(R.string.settings)) { dialog, which ->
                             val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
                             val uri = Uri.fromParts("package", packageName, null)
                             intent.data = uri

@@ -183,6 +183,16 @@
     <string name="pin">पिन</string>
     <string name="fingerprint">बायोमेट्रिक लॉक</string>
     <string name="vibhav_kumar">विभव कुमार</string>
+    <string name="rahul_kumar">राहुल कुमार</string>
+    <string name="aman_kumar">अमन कुमार</string>
+    <string name="dismiss">रद्द करा</string>
+    <string name="developers">डेव्हलपर्स</string>
+    <string name="this_message_requires_you_to_grant_image_access_permissions_to_work_correctly">या संदेशाला योग्यरित्या कार्य करण्यासाठी इमेज अॅक्सेस परवानगी द्यावी लागेल</string>
+    <string name="permissions_granted_now_you_can_proceed_with_document_access">"परवानगी देण्यात आली आहे. आता तुम्ही दस्तऐवज अॅक्सेससह पुढे जाऊ शकता"</string>
+    <string name="permissions_denied_gracefully_degrade_the_feature">परवानगी नाकारली. कृपया फिचर समायोजित करा</string>
+    <string name="this_feature_is_unavailable_since_it_requires_you_to_grant_image_access_permissions_to_work_correctly_please_go_to_settings_and_grant_the_image_access_permissions">हे फिचर उपलब्ध नाही कारण ते योग्य प्रकारे कार्य करण्यासाठी इमेज अॅक्सेस परवानगी आवश्यक आहे. कृपया सेटिंग्जमध्ये जा आणि इमेज अॅक्सेस परवानगी द्या</string>
+    <string name="permissions_required">परवानगी आवश्यक आहे</string>
+    <string name="settings">सेटिंग्ज</string>
 
 
 </resources>
