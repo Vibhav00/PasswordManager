@@ -24,6 +24,8 @@ This app is your ultimate password manager, offering premium features for free! 
 
 Your passwords deserve the best protection, and we’re here to provide it—completely free! 🎉
 
+[<img src="https://raw.githubusercontent.com/ismartcoding/plain-app/main/assets/get-it-on-github.png" alt='Get it on GitHub' height="80">](https://github.com/Vibhav00/PasswordManager/releases)
+
 ## Different Screens 📱📲📳
 
 Password Manager  offers a secure, sleek experience with a beautifully crafted interface. Enjoy a smooth and intuitive design across features like All Passwords, Add New Password, Saved Passwords, Password Search, Secure Backup, PIN & Biometric Lock, and more. Dive into a user-friendly, visually appealing journey to securely store, manage, and protect your sensitive information! 🔐✨
@@ -89,7 +91,6 @@ Quickly find and manage your passwords with advanced search and filter options. 
 🛠️ Powerful Development Features
 Built with NDK for improved performance and offering both release and debug builds, this app is designed for reliability. A custom package name ensures a unique, conflict-free experience.
 
----
 
 ## video 📺💻
 <a href="https://youtu.be/Tpqd4zp0XQA" target="_blank" >
