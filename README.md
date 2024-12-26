@@ -8,8 +8,6 @@
 - 🌍 Multi-Theme, Multi-Language, and Effortless Data Backup & Restore 🌈
 - 📑 Export Passwords as PDF/CSV with Easy Search & Recent Access 🔎
 
----
-
 <div align="center">
 <img src = "./assets/Pm.png" width="90%" />
 
@@ -65,7 +63,6 @@ Password Manager  offers a secure, sleek experience with a beautifully crafted i
   </tr>
 </table>
 
----
 
 ## About 🔐✨
 
@@ -101,7 +98,6 @@ Built with NDK for improved performance and offering both release and debug buil
 
 Watch it on Youtube ............
 
----
 
 # Working / Workflow 💪⚒
 
@@ -154,7 +150,6 @@ Watch it on Youtube ............
 
 <div align="center"><img src="./assets/mainDemo.jpg.png" width="500px"></div>
 
----
 
 ## Technologies Used 👩‍💻⚙👨‍💻
 
