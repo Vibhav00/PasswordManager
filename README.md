@@ -1,8 +1,7 @@
 # 🔒 Password Manager App: Secure. Simple. Smart.
 
 [![platform](https://img.shields.io/badge/platform-Android-yellow.svg)](https://www.android.com)
-[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
-[![GitHub license](https://img.shields.io/badge/License-Apache.0-blue.svg)]()
+[![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=24)
 
 - 🔐 Advanced Security with AES, PIN, Biometric, and Passkey Locks ✨
 - 🌍 Multi-Theme, Multi-Language, and Effortless Data Backup & Restore 🌈
@@ -24,7 +23,7 @@ This app is your ultimate password manager, offering premium features for free! 
 
 Your passwords deserve the best protection, and we’re here to provide it—completely free! 🎉
 
-[<img src="https://raw.githubusercontent.com/ismartcoding/plain-app/main/assets/get-it-on-github.png" alt='Get it on GitHub' height="80">](https://github.com/Vibhav00/PasswordManager/releases)
+[<img src="https://raw.githubusercontent.com/ismartcoding/plain-app/main/assets/get-it-on-github.png" alt='Get it on GitHub' height="80">](https://github.com/Vibhav00/PasswordManager/releases/tag/v2.0.0)
 
 ## Different Screens 📱📲📳
 
