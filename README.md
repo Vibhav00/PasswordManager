@@ -98,11 +98,11 @@ Built with NDK for improved performance and offering both release and debug buil
 ---
 
 ## video 📺💻
-<a href="https://youtu.be/Tpqd4zp0XQA">
+<a href="https://youtu.be/Tpqd4zp0XQA" target="_blank" >
   <img src="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" alt="Watch the video" style="width:30%;">
 </a>
 
-
+Watch it on Youtube ............
 
 ---
 
