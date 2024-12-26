@@ -4,11 +4,9 @@
 [![API](https://img.shields.io/badge/API-21%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=21)
 [![GitHub license](https://img.shields.io/badge/License-Apache.0-blue.svg)]()
 
-## 🔐 Advanced Security with AES, PIN, Biometric, and Passkey Locks ✨
-
-## 🌍 Multi-Theme, Multi-Language, and Effortless Data Backup & Restore 🌈
-
-## 📑 Export Passwords as PDF/CSV with Easy Search & Recent Access 🔎
+- 🔐 Advanced Security with AES, PIN, Biometric, and Passkey Locks ✨
+- 🌍 Multi-Theme, Multi-Language, and Effortless Data Backup & Restore 🌈
+- 📑 Export Passwords as PDF/CSV with Easy Search & Recent Access 🔎
 
 ---
 
@@ -17,7 +15,6 @@
 
 </div>
 
----
 
 ## Why Password Manager? 🔐✨
 
@@ -31,7 +28,7 @@ Your passwords deserve the best protection, and we’re here to provide it—com
 
 ## Different Screens 📱📲📳
 
-Password Vault (पासवर्ड वॉल्ट) offers a secure, sleek experience with a beautifully crafted interface. Enjoy a smooth and intuitive design across features like All Passwords, Add New Password, Saved Passwords, Password Search, Secure Backup, PIN & Biometric Lock, and more. Dive into a user-friendly, visually appealing journey to securely store, manage, and protect your sensitive information! 🔐✨
+Password Manager  offers a secure, sleek experience with a beautifully crafted interface. Enjoy a smooth and intuitive design across features like All Passwords, Add New Password, Saved Passwords, Password Search, Secure Backup, PIN & Biometric Lock, and more. Dive into a user-friendly, visually appealing journey to securely store, manage, and protect your sensitive information! 🔐✨
 
 <table style="width:100%">
   <tr>
