@@ -67,7 +67,7 @@ Password Manager  offers a secure, sleek experience with a beautifully crafted i
 
 ## About 🔐✨
 
-Password Vault is the ultimate password management solution, offering premium features for free! With a focus on security, usability, and customization, this app ensures your sensitive information is safely encrypted and easily accessible. Whether you're managing a handful of passwords or dozens, Password Vault offers a seamless and visually stunning experience to keep your data protected.
+Password Manager is the ultimate password management solution, offering premium features for free! With a focus on security, usability, and customization, this app ensures your sensitive information is safely encrypted and easily accessible. Whether you're managing a handful of passwords or dozens, Password Manager offers a seamless and visually stunning experience to keep your data protected.
 
 🔐 Top-Tier Security Features
 We use AES encryption to keep your passwords safe, ensuring top-level security. Plus, with PIN lock, biometric lock, and passkey support, you get multiple layers of protection for complete peace of mind.
